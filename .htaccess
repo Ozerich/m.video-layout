@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "mvideo.ozis.by"
-AuthUserFile "/home/ozisby/.htpasswds/projects/mvideo.ozis.by/passwd"
-require valid-user
