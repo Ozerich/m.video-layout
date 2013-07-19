@@ -245,6 +245,8 @@ function Widget(_id) {
 
 
     this.prepareOpened = function () {
+        var deliveryData = Checkout.getDeliveryData();
+
         var $block = $widget.find('.opened');
 
         if (this.id == 'address_time_block') {
@@ -253,10 +255,10 @@ function Widget(_id) {
             $block.find('.pickups .pickup').not('.example').remove();
 
             if (deliveryData.onlyCourier) {
-                $block.find('.block-header').hide();
+                $block.find('.block-line-header').hide();
             }
             else {
-                $block.find('.block-header').show();
+                $block.find('.block-line-header').show();
 
                 for (var i = 0; i < deliveryData.pickups.length; i++) {
                     if (!deliveryData.pickups[i].pickup)continue;
@@ -265,7 +267,7 @@ function Widget(_id) {
 
                     $pickup.show().removeClass('example');
 
-                    $pickup.find('.block-header h3').text('Самовывоз (' + deliveryData.pickups[i].pickup.name + ')');
+                    $pickup.find('.block-line-header h3').text('Самовывоз (' + deliveryData.pickups[i].pickup.name + ')');
 
                     var item_names = [];
                     for (var j = 0; j < deliveryData.pickups[i].items.length; j++) {
@@ -278,7 +280,6 @@ function Widget(_id) {
                 }
             }
         }
-
 
         if (this.id == 'payment_block') {
 
@@ -301,7 +302,24 @@ function Widget(_id) {
                 })
             });
 
+            $('.payment-methods-container.courier-container').toggle(deliveryData.hasCourier);
+            $('.pickups-container').toggle(!deliveryData.onlyCourier);
+
+            if (deliveryData.onlyCourier === false) {
+                $('.pickups-container .pickup').not('.example').remove();
+
+                for (var i = 1; i < deliveryData.pickups.length; i++) {
+                    var $pickup = $('.pickups-container .pickup.example').clone();
+                    $pickup.removeClass('example').show();
+
+                    $pickup.find('.shop-name').text(deliveryData.pickups[i].pickup.name);
+
+                    $('.pickups-container').append($pickup);
+                }
+            }
+
         }
+
     };
 
     this.prepareClosed = function () {

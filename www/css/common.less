@@ -618,10 +618,24 @@ body {
     float: left;
     position: relative;
   }
+
+  .block-line-header {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: 15px;
+    h3 {
+      display: inline-block;
+      font-size: 15px;
+      position: relative;
+      top: 7px;
+      background: #fff;
+      padding: 0 12px;
+    }
+  }
 }
 
 .checkbox-label {
-  background: url('../img/inputs.png') no-repeat 0 7px;
+  background: url('../img/inputs.png') no-repeat 0 0px;
   padding-left: 24px;
   cursor: pointer;
 
@@ -630,7 +644,7 @@ body {
   }
 
   &.checked {
-    background: url('../img/inputs.png') no-repeat 0 -59px;
+    background: url('../img/inputs.png') no-repeat 0 -66px;
   }
 }
 

@@ -2,58 +2,134 @@
   .bonuscard-container {
     .clearfix;
 
-    .bonuscard-button {
-      float: left;
-      display: block;
-      width: 147px;
-      height: 24px;
-
-      padding: 10px 0 8px 11px;
-
-      border: 1px solid #ed1c29;
-      border-radius: 4px;
-
-      background-image: linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
-      background-image: -o-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
-      background-image: -moz-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
-      background-image: -webkit-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
-      background-image: -ms-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
-
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.26, rgb(239, 239, 239)), color-stop(0.86, rgb(255, 255, 255)));
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#efefef);
-      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#efefef)";
-      background-color: #efefef;
-
-      text-decoration: none;
-
-      i {
-        display: block;
+    .bonuscard-no-selected {
+      .bonuscard-button {
         float: left;
-        background: url('../img/bonus_btn_bg.png');
-        width: 23px;
+        display: block;
+        width: 147px;
         height: 24px;
-        margin-right: 8px;
+
+        padding: 10px 0 8px 11px;
+
+        border: 1px solid #ed1c29;
+        border-radius: 4px;
+
+        background-image: linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
+        background-image: -o-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
+        background-image: -moz-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
+        background-image: -webkit-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
+        background-image: -ms-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.26, rgb(239, 239, 239)), color-stop(0.86, rgb(255, 255, 255)));
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#efefef);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#efefef)";
+        background-color: #efefef;
+
+        text-decoration: none;
+
+        i {
+          display: block;
+          float: left;
+          background: url('../img/bonus_btn_bg.png');
+          width: 23px;
+          height: 24px;
+          margin-right: 8px;
+        }
+
+        span {
+          display: block;
+          font-size: 12px;
+          font-family: @font_mvideo_bold;
+          &.first {
+            color: #000;
+            margin-bottom: 1px;
+          }
+          &.second {
+            color: #ed1c29
+          }
+        }
       }
 
-      span {
-        display: block;
-        font-size: 12px;
-        font-family: @font_mvideo_bold;
-        &.first {
-          color: #000;
-          margin-bottom: 1px;
+      .bonuscard-info {
+        margin-left: 175px;
+        color: #8c99aa;
+        font-size: 13px;
+        line-height: 15px;
+      }
+    }
+
+    .bonuscard-selected {
+      padding: 15px;
+      background: #f9f9f9;
+      .clearfix;
+      .logo{
+        background: url('../img/bonus_card.png');
+        width: 49px;
+        height: 31px;
+        float: left;
+      }
+
+      .bonuscard-content{
+        margin-left: 60px;
+
+        .price{
+          color: #ed1c29;
+          font-family: @font_mvideo_bold;
         }
-        &.second {
-          color: #ed1c29
+
+        p{
+          font-size: 13px;
+          line-height: 16px;
+          color: #010101;
+          margin: 0 0 5px 0;
+          &.card-header{
+            color: #000;
+            font-size: 15px;
+            font-family: @font_mvideo_bold;
+          }
+        }
+
+        .btn-another-card{
+          color: #004b8c;
+          border-bottom: 1px dotted #004b8c;
+          text-decoration: none;
+          margin-top: 23px;
+          font-size: 13px;
         }
       }
     }
 
-    .bonuscard-info {
-      margin-left: 175px;
-      color: #8c99aa;
-      font-size: 13px;
-      line-height: 15px;
+    .new-card-form{
+      margin-bottom: 10px;
+      input{
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        margin-right: 10px;
+        font-size: 15px;
+        &.input-day, &.input-month{
+          width: 25px;
+        }
+        &.input-year{
+          width: 30px;
+        }
+      }
+      button{
+        margin-left: 10px;
+        color: #959595;
+        font-size: 14px;
+
+        background-image: linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(251, 251, 251) 86%);
+        background-image: -o-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(251, 251, 251) 86%);
+        background-image: -moz-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(251, 251, 251) 86%);
+        background-image: -webkit-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(251, 251, 251) 86%);
+        background-image: -ms-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(251, 251, 251) 86%);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.26, rgb(239, 239, 239)), color-stop(0.86, rgb(251, 251, 251)));
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#fbfbfb);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#fbfbfb)";
+        background-color: #fbfbfb;
+
+        border: 1px solid #dedede;
+      }
     }
   }
 
@@ -62,7 +138,7 @@
 
     .method {
 
-      b{
+      b {
         font-weight: bold;
       }
 
@@ -87,7 +163,7 @@
           font-size: 15px;
         }
 
-        .card-logos{
+        .card-logos {
           background: url('../img/card_logos.png');
           width: 68px;
           height: 15px;
@@ -103,28 +179,95 @@
           color: #ff953c
         }
 
-        .credit-info{
+        .credit-info {
           display: none;
-          .amount-wr{
+          .amount-wr {
             margin: 10px 0;
             font-size: 15px;
-            .amount{
+            .amount {
               color: #ff953c;
               font-family: @font_mvideo_bold;
             }
 
           }
-          .info{
+          .info {
             margin-left: 15px;
             color: #8c99aa;
           }
         }
       }
 
-      &.method-cardonline{
-        .opened-container{
+      &.method-cardonline {
+
+        .opened-container {
           display: none;
         }
+
+        .bonus-link {
+          color: #004b8c;
+          border-bottom: 1px dotted #004b8c;
+          text-decoration: none;
+        }
+
+        .bonus-sertificates-container {
+          background: #f9f9f9;
+          padding: 21px 16px 21px 16px;
+          margin-top: 10px;
+
+          .header, .summary {
+            font-size: 15px;
+            color: #1b1b1b;
+            margin-bottom: 9px;
+            .price {
+              color: #ed1c29;
+              font-family: @font_mvideo_bold;
+            }
+          }
+
+          table {
+            width: 100%;
+            margin-bottom: 20px;
+            background: #f9f9f9;
+
+            tr {
+              &:nth-child(2n + 1) td {
+                background: #fff;
+              }
+              &.red {
+                .cell-date, .cell-days {
+                  color: #ed1c29;
+                }
+              }
+            }
+
+            th {
+              color: #8c99aa;
+              font-size: 11px;
+              text-align: center;
+              line-height: 16px;
+            }
+
+            td {
+              text-align: center;
+              color: #000000;
+              font-size: 13px;
+              vertical-align: middle;
+              padding: 8px 0;
+            }
+
+            .cell-checkbox {
+              padding: 0 0px 0 16px;
+              label {
+                height: 17px;
+                width: 17px;
+                padding-left: 0;
+                display: block;
+              }
+            }
+
+          }
+        }
+
       }
 
       .method-content {
@@ -139,18 +282,18 @@
         }
       }
 
-      &.method-selected{
-        .method-content{
+      &.method-selected {
+        .method-content {
           color: #000;
         }
 
-        &.method-credit{
-          .credit-info{
+        &.method-credit {
+          .credit-info {
             display: block;
           }
         }
-        &.method-cardonline{
-          .opened-container{
+        &.method-cardonline {
+          .opened-container {
             display: block;
           }
         }
