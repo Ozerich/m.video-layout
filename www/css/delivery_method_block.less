@@ -1,0 +1,116 @@
+#delivery_method_block {
+
+  .closed {
+    .clinic {
+      .item-summary {
+
+        overflow: hidden;
+        padding: 14px 0;
+        border-top: 1px solid #e4e4e4;
+        font-size: 15px;
+        line-height: 18px;
+
+        &.first{
+          padding-top: 0;
+          border-top: 0;
+        }
+
+        .item-name {
+          float: left;
+          padding-right: 10px;
+          width: 350px;
+          color: #8c99aa;
+          display: block;
+
+        }
+
+        .item-pickup {
+          width: 145px;
+          float: right;
+          color: #000;
+          text-align: right;
+          .type{
+            display: block;
+          }
+          a{
+            color: #8c99aa;
+            font-size: 13px;
+            border-bottom: 1px dotted #8c99aa;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .opened {
+    .item {
+      padding: 14px 0;
+      border-bottom: 1px solid #e4e4e4;
+      &.last {
+        border-bottom: 0;
+      }
+      .item-name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-bottom: 12px;
+      }
+
+      .item-actions {
+        overflow: hidden;
+        .buttons {
+          overflow: hidden;
+          display: block;
+          float: left;
+
+          .btn {
+            display: block;
+            float: left;
+            height: 28px;
+            line-height: 28px;
+            margin-right: 12px;
+            color: #1b1b1b;
+            cursor: pointer;
+
+            &.btn-selected {
+              font-family: @font_mvideo_bold;
+              background: #d9e3fa;
+              border-radius: 4px;
+              padding: 0 6px;
+            }
+          }
+        }
+
+        .pickup-block {
+          display: block;
+          margin-top: 8px;
+          font-size: 13px;
+          .address {
+            max-width: 165px;
+            display: block;
+            float: left;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            &.metro {
+              background: url('../img/metro.png') no-repeat left center;
+              padding-left: 14px;
+            }
+          }
+
+          .change-pickup {
+            color: #004b8c;
+            text-decoration: none;
+            border-bottom: 1px dotted #004b8c;
+            margin-left: 10px;
+            display: block;
+            float: left;
+          }
+        }
+      }
+    }
+  }
+
+}

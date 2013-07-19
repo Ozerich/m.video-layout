@@ -1,0 +1,160 @@
+#payment_block {
+  .bonuscard-container {
+    .clearfix;
+
+    .bonuscard-button {
+      float: left;
+      display: block;
+      width: 147px;
+      height: 24px;
+
+      padding: 10px 0 8px 11px;
+
+      border: 1px solid #ed1c29;
+      border-radius: 4px;
+
+      background-image: linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
+      background-image: -o-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
+      background-image: -moz-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
+      background-image: -webkit-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
+      background-image: -ms-linear-gradient(bottom, rgb(239, 239, 239) 26%, rgb(255, 255, 255) 86%);
+
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.26, rgb(239, 239, 239)), color-stop(0.86, rgb(255, 255, 255)));
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#efefef);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#efefef)";
+      background-color: #efefef;
+
+      text-decoration: none;
+
+      i {
+        display: block;
+        float: left;
+        background: url('../img/bonus_btn_bg.png');
+        width: 23px;
+        height: 24px;
+        margin-right: 8px;
+      }
+
+      span {
+        display: block;
+        font-size: 12px;
+        font-family: @font_mvideo_bold;
+        &.first {
+          color: #000;
+          margin-bottom: 1px;
+        }
+        &.second {
+          color: #ed1c29
+        }
+      }
+    }
+
+    .bonuscard-info {
+      margin-left: 175px;
+      color: #8c99aa;
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+
+  .payment-methods-container {
+    margin: 20px 0;
+
+    .method {
+
+      b{
+        font-weight: bold;
+      }
+
+      &.method-no-content {
+        margin-bottom: 15px;
+      }
+
+      .radio-header {
+        cursor: pointer;
+        .radio {
+          background: url('../img/inputs.png') no-repeat 0 -132px;
+          display: block;
+          width: 16px;
+          height: 16px;
+          float: left;
+          &.selected {
+            background-position: 0 -198px;
+          }
+        }
+        .method-name {
+          margin-left: 10px;
+          font-size: 15px;
+        }
+
+        .card-logos{
+          background: url('../img/card_logos.png');
+          width: 68px;
+          height: 15px;
+          margin-left: 5px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+      }
+
+      &.method-credit {
+        .radio-header .method-name {
+          color: #ff953c
+        }
+
+        .credit-info{
+          display: none;
+          .amount-wr{
+            margin: 10px 0;
+            font-size: 15px;
+            .amount{
+              color: #ff953c;
+              font-family: @font_mvideo_bold;
+            }
+
+          }
+          .info{
+            margin-left: 15px;
+            color: #8c99aa;
+          }
+        }
+      }
+
+      &.method-cardonline{
+        .opened-container{
+          display: none;
+        }
+      }
+
+      .method-content {
+        padding: 14px 27px;
+
+        color: #8c99aa;
+        font-size: 13px;
+        line-height: 16px;
+
+        p {
+          margin-bottom: 5px;
+        }
+      }
+
+      &.method-selected{
+        .method-content{
+          color: #000;
+        }
+
+        &.method-credit{
+          .credit-info{
+            display: block;
+          }
+        }
+        &.method-cardonline{
+          .opened-container{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
