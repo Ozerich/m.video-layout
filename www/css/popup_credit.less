@@ -1,0 +1,75 @@
+#popup_credit {
+  width: 640px;
+  .popup-title {
+    background: url('../img/credit_logo.png') right center no-repeat;
+    padding-right: 55px;
+  }
+  p {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 5px;
+    &.bold {
+      font-family: @font_mvideo_bold;
+    }
+  }
+
+  .items-container {
+    margin: 15px 0;
+    .item {
+      .clearfix;
+      border-bottom: 1px solid #e4e4e4;
+      padding: 15px 0;
+
+      &.first {
+        border-top: 1px solid #e4e4e4;
+      }
+
+      .item-image {
+        width: 70px;
+        float: left;
+        text-align: center;
+      }
+
+      .item-content {
+        margin-left: 75px;
+        .item-name {
+          width: 150px;
+          float: left;
+        }
+
+        .item-price {
+          float: right;
+          .price {
+            color: #1b1b1b;
+            font-size: 17px;
+            font-family: @font_mvideo_bold;
+            display: block;
+            margin-bottom: 4px;
+          }
+          .count {
+            font-size: 13px;
+            color: #8c99aa;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .row-submit{
+    margin: 15px 0;
+    text-align: center;
+
+    .remove-success{
+      font-size: 15px;
+      line-height: 17px;
+      a{
+        font-size: 13px;
+        color: #004b8c;
+        border-bottom: 1px dotted #004b8c;
+        margin-left: 10px;
+        text-decoration: none;
+      }
+    }
+  }
+}

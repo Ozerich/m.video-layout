@@ -805,15 +805,14 @@
 </footer>
 
 
-<div class="toshop_popup" style="display: none">
+<div id="popup_pickup" class="popup" style="display: none">
+
+    <div class="popup-header">
+        <a href="#" class="item-link popup-title" target="_blank">3D Телевизор Samsung UE50 ES6907U</a>
+        <a href="#" class="popup-close-btn"></a>
+    </div>
 
     <div class="popup-content">
-
-        <div class="popup-header">
-            <a href="#" class="item-link" target="_blank" rel="nofollow">3D Телевизор Samsung UE50 ES6907U</a>
-            <a href="#" class="close-popup"></a>
-        </div>
-
         <div class="point_take">
             <h3>Заберите заказ в магазине и получите скидку <span class="bold_red">500 рублей</span></h3>
             На все заказы, которые вы можете забрать в магазине, предоставляется скидка 500 рублей на следующую покупку.<br>Воспользоваться
@@ -925,6 +924,119 @@
             </div>
         </div>
     </div>
+</div>
+
+<div id="popup_bonuscard" class="popup" style="display: none">
+
+    <div class="popup-header">
+        <h2 class="popup-title">Бонусная карта</h2>
+        <a href="#" class="popup-close-btn"></a>
+    </div>
+
+    <div class="popup-content">
+        <div class="row row-type">
+            <label>Тип карты</label>
+
+            <div class="param-block">
+                <ul>
+                    <li class="first selected"><a href="#">М.Видео Бонус</a></li>
+                    <li><a href="#">М.Видео Бонус Альфабанк</a></li>
+                    <li><a href="#">М.Видео Бонус - Catelem</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row row-number">
+            <label>Номер карты</label>
+
+            <div class="param-block">
+                <span class="prefix">xxxx - xxx</span>
+                <input type="text" class="number-2" maxlength="2">
+                <span class="delimetr">-</span>
+                <input type="text" class="number-4" maxlength="4">
+                <span class="delimetr">-</span>
+                <input type="text" class="number-3" maxlength="3">
+                <a href="#" class="reset-row">x</a>
+                <a href="#" class="help">
+                    <div class="tooltip-block tooltip-block-arrow-bottom">
+                        <p>Пожалуйста, введите цифры с вашей карты</p>
+
+                        <p class="card-type">М.Видео Бонус</p>
+
+                        <div class="help-image"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row row-birthday">
+            <label>Дата рождения</label>
+
+            <div class="param-block">
+                <input type="text" class="input-day" placeholder="ДД">
+                <input type="text" class="input-month" placeholder="ММ">
+                <input type="text" class="input-year" placeholder="ГГГГ">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-footer">
+        <button class="btn popup-submit">Добавить карту</button>
+    </div>
+
+</div>
+
+<div id="popup_credit" class="popup" style="display: none">
+
+    <div class="popup-header">
+        <h2 class="popup-title">Кредит 0-0-24</h2>
+        <a href="#" class="popup-close-btn"></a>
+    </div>
+
+    <div class="popup-content">
+        <p>Некоторые товары, выбранные Вами для покупки в кредит проходят по программе "Кредит 0-0-24", согласно
+            условиям которой, нельзя покупать вместе с ними товары, проходящие по другим кредитным программам. Чтобы
+            продолжить оформление, вам нужно убрать из корзины следующие товары:</p>
+
+        <div class="items-container">
+            <div class="item first">
+                <div class="item-image">
+                    <img src="/img/order_01.png">
+                </div>
+                <div class="item-content">
+                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
+                    <div class="item-price">
+                        <span class="price">201 292 руб.</span>
+                        <span class="count">2 × 101 646 руб.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-image">
+                    <img src="/img/order_01.png">
+                </div>
+                <div class="item-content">
+                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
+                    <div class="item-price">
+                        <span class="price">201 292 руб.</span>
+                        <span class="count">2 × 101 646 руб.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-submit">
+            <button class="btn">Убрать два товара из корзины</button>
+            <p class="remove-success">2 товара успешно убраны из корзины. <a href="#">Отменить</a></p>
+        </div>
+
+        <p class="bold">Мы вернём остальные товары в Вашу корзину после того, как Вы закончите оформление кредита.</p>
+
+        <p>Приносим свои извинения за доставленные неудобства.</p>
+    </div>
+
+    <div class="popup-footer">
+        <button class="btn popup-submit">Продолжить оформление заказа</button>
+    </div>
+
 </div>
 
 </body>

@@ -525,10 +525,10 @@ function Widget(_id) {
             });
 
             // Попап для самовывоза
-            var $popup = $('.toshop_popup');
+            var $popup = $('#popup_pickup');
 
             // Нажатие на "Закрыть попап"
-            $popup.find('.close-popup').click(function () {
+            $popup.find('.popup-close-btn').click(function () {
                 $.unblockUI();
                 return false;
             });
@@ -656,6 +656,14 @@ function Widget(_id) {
                     $footerTooltip.hide();
                 }
             });
+    }
+
+
+    if (this.id == 'payment_block') {
+        $widget.find('.bonuscard-button').click(function(){
+            Checkout.openPopup($('#popup_bonuscard'));
+            return false;
+        });
     }
 
     that.element.find('.checkbox-label').click(function () {

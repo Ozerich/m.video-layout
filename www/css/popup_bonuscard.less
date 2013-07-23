@@ -1,0 +1,142 @@
+#popup_bonuscard {
+  width: 605px;
+
+  .row {
+    .clearfix;
+    margin: 8px 0;
+
+    label {
+      width: 110px;
+      float: left;
+      font-size: 15px;
+      color: #1b1b1b;
+      text-align: left;
+    }
+
+    .param-block {
+      margin-left: 115px;
+    }
+  }
+
+  .row-type {
+    label {
+      line-height: 28px;
+    }
+    li {
+      float: left;
+      font-size: 13px;
+      margin-left: 5px;
+      border-radius: 5px;
+      line-height: 28px;
+      padding: 0 5px;
+      a {
+        border-bottom: 1px dotted #1f1f1f;
+        text-decoration: none;
+        color: #1f1f1f;
+      }
+
+      &.selected {
+        background: #d9e3fa;
+        font-family: @font_mvideo_bold;
+        a {
+          border-bottom: none;
+        }
+      }
+
+      &.first {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .row-number {
+    label {
+      line-height: 30px;
+    }
+    span {
+      float: left;
+      font-size: 15px;
+      line-height: 30px;
+      color: #1f1f1f;
+      &.prefix {
+        margin-right: 10px;
+      }
+      &.delimetr {
+        margin: 0 6px;
+      }
+    }
+    input {
+      float: left;
+      text-align: center;
+      &.number-2 {
+        width: 21px;
+      }
+      &.number-4 {
+        width: 61px;
+      }
+      &.number-3 {
+        width: 40px;
+      }
+    }
+    .reset-row {
+      float: left;
+      margin: 0 10px;
+      color: #1b1b1b;
+      text-decoration: none;
+      line-height: 30px;
+    }
+    .help {
+      float: left;
+      line-height: 30px;
+      padding-top: 18px;
+    }
+  }
+
+  .row-birthday {
+    label {
+      line-height: 30px;
+    }
+    input {
+      float: left;
+      margin-right: 10px;
+      text-align: center;
+      &.input-day, &.input-month {
+        width: 40px;
+      }
+      &.input-year {
+        width: 50px;
+      }
+    }
+  }
+
+  a.help {
+    position: relative;
+
+    &:hover{
+      .tooltip-block{
+        display: block;
+      }
+    }
+
+    .tooltip-block {
+      display: none;
+      bottom: 34px;
+      left: -103px;
+      .help-image {
+        background: url('../img/cardnumber-help-toolip.jpg');
+        width: 181px;
+        height: 122px;
+      }
+      color: #000;
+      font-size: 13px;
+      text-align: left;
+      line-height: 16px;
+      .card-type {
+        color: #db151c;
+        font-family: @font_mvideo_bold;
+        margin: 10px 0;
+      }
+    }
+  }
+
+}

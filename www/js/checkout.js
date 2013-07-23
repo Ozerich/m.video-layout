@@ -96,6 +96,24 @@ Checkout.Helper = {
     }
 };
 
+Checkout.openPopup = function ($popup) {
+    $popup.find('.popup-close-btn').on('click', function () {
+        $.unblockUI();
+        return false;
+    });
+
+    $.blockUI({
+        message: $popup,
+        css: {
+            top: ($(window).height() - $popup.outerHeight()) / 2 + 'px',
+            left: ($(window).width() - $popup.outerWidth()) / 2 + 'px',
+            width: $popup.outerWidth() + 'px',
+            border: 'none',
+            cursor: 'auto'
+        }
+    });
+};
+
 
 jQuery(function ($) {
 
@@ -124,7 +142,7 @@ jQuery(function ($) {
     });
 
     // Собираю все пункты самовывоза
-    $('.toshop_popup').find('.shop-line').each(function () {
+    $('#popup_pickup').find('.shop-line').each(function () {
         var $pickup = $(this);
 
         var pickup = new Pickup;
@@ -180,6 +198,50 @@ jQuery(function ($) {
     deliveryWidget.setAccepted(true);
     paymentWidget.open(true);
 
+    var $bonuscard_popup = $('#popup_bonuscard');
+    $bonuscard_popup.find('.row-type li a').click(function () {
+
+        if ($(this).parents('li').hasClass('selected')) {
+            return false;
+        }
+
+        $bonuscard_popup.find('.row-type li').removeClass('selected');
+        $(this).parents('li').addClass('selected');
+
+        $bonuscard_popup.find('.tooltip-block .card-type').text($(this).text());
+
+        return false;
+    });
+    $bonuscard_popup.find('.reset-row').click(function () {
+        $bonuscard_popup.find('.row-number input').val('');
+        return false;
+    });
+    $bonuscard_popup.find('.popup-submit').click(function () {
+
+        var validate_inputs = $bonuscard_popup.find('.row-number input');
+        validate_inputs.removeClass('error');
+
+        var error = false;
+        validate_inputs.each(function () {
+            if ($(this).val().length === 0) {
+                $(this).addClass('error');
+                error = true;
+            }
+        });
+
+        if (error) {
+            return false;
+        }
+        else {
+            $.unblockUI();
+        }
+    });
+    $bonuscard_popup.find('input[type=text]').keydown(function () {
+        $(this).removeClass('error');
+    });
+
+
+    Checkout.openPopup($('#popup_credit'));
 
 });
 
