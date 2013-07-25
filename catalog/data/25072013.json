@@ -1,0 +1,183 @@
+{
+    "region": "",
+    "reff": "email_120_hours_sale_",
+    "images_url": "http://www.mvideo.ru/pics/o/mailer/130725/",
+
+    "header": {
+        "text": "Спешите! Распродажа длится только 120 часов!"
+    },
+
+    "catalog": {
+        "header": {
+            "text": "У вас всего 120 часов! С <b>25 по 29 июля</b> в М.Видео тотальная <b>распродажа!</b><br/>Торопитесь, время не ждет!<br/><br/>",
+            "banners": [
+                {
+                    "src": "header_banner.jpg",
+                    "url": "sale_stodva/",
+                    "alt": "120 часов распродажи"
+                }
+            ]
+        },
+        "items": [
+            {
+                "category": "3D Smart-телевизор 47”",
+                "model": "LG 47LA621V",
+                "image": "product_01.jpg",
+                "old_price": "34 990",
+                "price": "29 990",
+                "yellow": "+ Подарочная карта <b>4 000</b>",
+                "alias": "3d-televizor-lg-47la621v",
+                "all_label": "Смотреть все 3D-телевизоры",
+                "all_url": "price/lvl_1/class_1/group_1630/",
+                "features": [
+                    "47” (119 см)",
+                    "Full HD, 3D, Smart TV, 200 Гц, Wi-Fi",
+                    "3D-очки в комплекте (4 шт)"
+                ]
+            },
+            {
+                "category": "Планшет",
+                "model": "Acer Iconia Tab A211 16Gb White (HT.HA8EE.002)",
+                "image": "product_02.jpg",
+                "old_price": "14 990",
+                "price": "12 990",
+                "yellow": "+ Подарочная карта <b>2 000</b>",
+                "alias": "planshet-acer-iconia-tab-a211-16gb-white-ht-ha8ee-002",
+                "all_label": "Смотреть все планшеты",
+                "all_url": "price/lvl_8/class_328/",
+                "features": [
+                    "Модуль 3G",
+                    "4-ядерный процессор NVIDIA Tegra 3 T30L",
+                    "Диагональ 10.1” (1280x800 пикс)"
+                ]
+            },
+            {
+                "category": "Стиральная машина",
+                "model": "Samsung WFM602YQR",
+                "image": "product_03.jpg",
+                "old_price": "22 990",
+                "price": "14 990",
+                "yellow": "+ Подарочная карта <b>3 000</b>",
+                "alias": "stiralnaya-mashina-uzkaya-samsung-wfm602yqr",
+                "all_label": "Смотреть все стиральные машины",
+                "all_url": "price/lvl_2/class_49/",
+                "features": [
+                    "Отжим 1200 об/мин, загрузка 6 кг,<br>цвет — серебристый",
+                    "Технология EcoBubble — деликатная стирка в холодной воде ",
+                    "Сотовый барабан Diamond"
+                ]
+            },
+            {
+                "category": "Smart-телевизор 42”",
+                "model": "Philips 42PFL3208T/60",
+                "image": "product_04.jpg",
+                "old_price": "23 990",
+                "price": "19 990",
+                "yellow": "+ Подарочная карта <b>3 000</b>",
+                "alias": "televizor-philips-42pfl3208t-i-60",
+                "all_label": "Смотреть все телевизоры",
+                "all_url": "price/lvl_1/class_1/",
+                "features": [
+                    "Диагональ 42” (107 см)",
+                    "Технология LED, Smart TV, 100Гц, Full HD",
+                    "Запись с ТВ на USB-устройство"
+                ]
+            },
+            {
+                "category": "Ноутбук",
+                "model": "HP Pavilion g6-2300er D2Y63EA",
+                "image": "product_05.jpg",
+                "old_price": "14 990",
+                "price": "12 990",
+                "yellow": "Ваша экономия: <b>2 000</b>",
+                "alias": "noutbuk-hp-pavilion-g6-2300er-d2y63ea",
+                "all_label": "Смотреть все ноутбуки",
+                "all_url": "price/lvl_8/class_130/",
+                "features": [
+                    "Оперативная память 4ГБ",
+                    "Диагональ 15.6” (1366x768 пикс)",
+                    "Жесткий диск 320 ГБ"
+                ]
+            },
+            {
+                "category": "Холодильник",
+                "model": "Hotpoint-Ariston ECF 1814 L",
+                "image": "product_06.jpg",
+                "old_price": "19 990",
+                "price": "15 990",
+                "yellow": "+ Подарочная карта <b>3 000</b>",
+                "alias": "holodilnik-s-nizhney-morozilnoy-kameroy-hotpoint-ariston-ecf-1814-l",
+                "all_label": "Смотреть все холодильники",
+                "all_url": "price/lvl_135/class_240/",
+                "features": [
+                    "Высота 185 см, полный No Frost",
+                    "Зона сохранения свежести",
+                    "Светодиодное освещение"
+                ]
+            },
+            {
+                "category": "Стиральная машина",
+                "model": "Hotpoint-Ariston ARSL 100 (СSI).L",
+                "image": "product_07.jpg",
+                "old_price": "12 990",
+                "price": "8 990",
+                "yellow": "+ Подарочная карта <b>1 000</b>",
+                "alias": "stiralnaya-mashina-uzkaya-hotpoint-ariston-arsl-100-ssi-l",
+                "all_label": "Смотреть все<br>узкие стиральные машины",
+                "all_url": "price/lvl_2/class_49/group_658/",
+                "features": [
+                    "Узкая - 43 см, отжим 1000 об/мин, загрузка 5 кг",
+                    "Мини-программа (15/30 мин)",
+                    "Отсрочка запуска (3/6/9/12 часов)"
+                ]
+            },
+            {
+                "category": "3D Smart-телевизор 46”",
+                "model": "Toshiba 46TL963RB",
+                "image": "product_08.jpg",
+                "old_price": "27 990",
+                "price": "23 990",
+                "yellow": "Ваша экономия: <b>4 000</b>",
+                "alias": "3d-televizor-toshiba-46tl963rb",
+                "all_label": "Смотреть все 3D телевизоры",
+                "all_url": "price/lvl_1/class_1/group_1630/",
+                "features": [
+                    "Диагональ 46” (117 см)",
+                    "Full HD, 3D, Smart TV, 200 Гц",
+                    "3D-очки в комплекте (1 шт)"
+                ]
+            }
+        ]
+    },
+
+    "footer": {
+        "stocks": [
+            {
+                "label": "120 часов распродажи",
+                "url": "sale_stodva/"
+            },
+            {
+                "label": "Скидка до 50%<br>на следующую покупку",
+                "url": "skidka_pokupka/"
+            },
+            {
+                "label": "Кредит 0-0-24",
+                "url": "o_pereplata_r/"
+            },
+            {
+                "label": "Товар дня",
+                "url": "deal_of_the_day/"
+            },
+            {
+                "label": "Акции",
+                "url": "discount/"
+            }
+        ],
+        "banners": [
+            {
+                "src": "footer_banner.jpg",
+                "alt": "В шаге. В клике. По звонку"
+            }
+        ]
+    }
+}
