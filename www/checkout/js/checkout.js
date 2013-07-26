@@ -83,7 +83,8 @@ var Checkout = {
         return {
             pickups: result,
             hasCourier: result.length > 0 && result[0].pickup === null,
-            onlyCourier: result.length === 1 && result[0].pickup === null
+            onlyCourier: result.length === 1 && result[0].pickup === null,
+            isClinic: result.length > 1
         };
     }
 
@@ -197,11 +198,11 @@ jQuery(function ($) {
 
 
     deliveryWidget.setAccepted(true);
-    addressWidget.open(true);
+    deliveryWidget.open(true);
 
     var $bonuscard_popup = $('#popup_bonuscard');
 
-    $bonuscard_popup.find('.row-type .switch-container').switch(function(selected){
+    $bonuscard_popup.find('.row-type .switch-container').Switch(function(selected){
         $bonuscard_popup.find('.tooltip-block .card-type').text(selected.text());
     });
 

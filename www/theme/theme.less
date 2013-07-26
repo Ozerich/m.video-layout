@@ -224,3 +224,85 @@ input[type=text] {
     }
   }
 }
+
+
+/*
+<div class="popover popover-right">
+    <div class="popover-content"></div>
+    <div class="popover-arrow popover-arrow-border"></div>
+    <div class="popover-arrow"></div>
+</div>
+*/
+
+.popover {
+  background: #fff;
+  border: 1px solid #c2c2c2;
+  .border-radius(5px);
+  .box-shadow(0 0 25px, rgba(202, 202, 202, 0.74));
+  z-index: 99999;
+  position: absolute;
+
+  .popover-content{
+    margin: 16px;
+  }
+
+  .popover-arrow {
+    border: 15px solid transparent;
+    height: 0px;
+    width: 0px;
+    border-width: 10px;
+    float: left;
+    line-height: 0;
+    font-size: 0;
+    position: absolute;
+  }
+
+  &.popover-right {
+    .popover-arrow {
+      border-left-color: #fff;
+      right: -20px;
+      top: 50%;
+      margin-top: -10px;
+      &.popover-arrow-border {
+        border-left-color: #c2c2c2;
+        right: -21px;
+      }
+    }
+  }
+  &.popover-left{
+    .popover-arrow {
+      border-right-color: #fff;
+      left: -20px;
+      top: 50%;
+      margin-top: -10px;
+      &.popover-arrow-border {
+        border-right-color: #c2c2c2;
+        left: -21px;
+      }
+    }
+  }
+  &.popover-bottom{
+    .popover-arrow {
+      border-top-color: #fff;
+      bottom: -20px;
+      left: 50%;
+      margin-left: -10px;
+      &.popover-arrow-border {
+        border-top-color: #c2c2c2;
+        bottom: -21px;
+      }
+    }
+  }
+  &.popover-top{
+    .popover-arrow {
+      border-bottom-color: #fff;
+      top: -20px;
+      left: 50%;
+      margin-left: -10px;
+      &.popover-arrow-border {
+        border-bottom-color: #c2c2c2;
+        top: -21px;
+      }
+    }
+  }
+}

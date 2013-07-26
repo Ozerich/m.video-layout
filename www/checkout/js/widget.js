@@ -283,9 +283,12 @@ function Widget(_id) {
 
         if (this.id == 'payment_block') {
 
-
+            if (deliveryData.isClinic) {
                 $('#basket').hide();
+            }
 
+            $('#basket').toggle(!deliveryData.isClinic);
+            $widget.find('.items-info-block, .summary-clinic-block').toggle(deliveryData.isClinic);
 
             $('.payment-methods-container').each(function () {
                 var $container = $(this);
@@ -297,7 +300,7 @@ function Widget(_id) {
                         if ($(this).hasClass('method-selected')) {
                             return false;
                         }
-
+                        
                         $container.find('.method-selected').removeClass('method-selected').find('.radio.selected').removeClass('selected');
                         $method.addClass('method-selected').find('.radio').addClass('selected');
 
@@ -448,7 +451,7 @@ function Widget(_id) {
         }
 
 
-        if(this.id == 'payment_block'){
+        if (this.id == 'payment_block') {
             $('#basket').show();
         }
 
@@ -523,8 +526,8 @@ function Widget(_id) {
         $widget.find('.item').each(function () {
             var $item = $(this);
 
-            $item.find('.switch-container').switch(function(selected){
-                 $item.data('model').setIsPickup(selected.data('id') === 'pickup');
+            $item.find('.switch-container').Switch(function (selected) {
+                $item.data('model').setIsPickup(selected.data('id') === 'pickup');
             });
 
 
@@ -584,7 +587,7 @@ function Widget(_id) {
 
     if (this.id == 'address_time_block') {
 
-        $widget.find('.row-day .days').switch(function(selected){
+        $widget.find('.row-day .days').Switch(function (selected) {
             if (selected.hasClass('today')) {
                 that.element.find('.row-time .today-period').show();
                 that.element.find('.row-time .period-block').hide();
@@ -595,7 +598,7 @@ function Widget(_id) {
             }
         });
 
-        $widget.find('.row-time .period-block').switch();
+        $widget.find('.row-time .period-block').Switch();
 
         $widget.find('.btn-calendar').click(function (event) {
             if ($(event.target).parents('.tooltip-block').length || $(event.target).hasClass('tooltip-block')) {
@@ -653,7 +656,7 @@ function Widget(_id) {
 
 
     if (this.id == 'payment_block') {
-        $widget.find('.bonuscard-button').click(function(){
+        $widget.find('.bonuscard-button').click(function () {
             Checkout.openPopup($('#popup_bonuscard'));
             return false;
         });

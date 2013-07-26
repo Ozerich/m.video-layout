@@ -562,209 +562,311 @@
 </div>
 <div class="opened">
 <div class="widget-content">
-    <div class="closed">
-        <p>Способ оплаты не выбран</p>
+<div class="closed">
+    <p>Способ оплаты не выбран</p>
+</div>
+<div class="opened">
+
+<div class="bonuscard-container">
+
+    <div class="bonuscard-no-selected">
+        <a href="#" class="bonuscard-button">
+            <i></i>
+            <span class="first">У меня есть карта</span>
+            <span class="second">М.Видео БОНУС</span>
+        </a>
+
+        <p class="bonuscard-info">Вы можете оплатить всю покупку или её часть с помощью бонусов по картам
+            М.Видео Бонус, М.Видео Бонус
+            - Альфа-банк, М.Видео Бонус - Cetelem.</p>
     </div>
-    <div class="opened">
 
-        <div class="bonuscard-container">
+    <div class="bonuscard-selected">
+        <i class="logo"></i>
 
-            <div class="bonuscard-no-selected">
-                <a href="#" class="bonuscard-button">
-                    <i></i>
-                    <span class="first">У меня есть карта</span>
-                    <span class="second">М.Видео БОНУС</span>
-                </a>
+        <div class="bonuscard-content">
+            <p class="card-header">Карта М.Видео Бонус–Альфа-Банк с номером ×××9696×××</p>
 
-                <p class="bonuscard-info">Вы можете оплатить всю покупку или её часть с помощью бонусов по картам
-                    М.Видео Бонус, М.Видео Бонус
-                    - Альфа-банк, М.Видео Бонус - Cetelem.</p>
-            </div>
+            <p>У Вас есть <span class="price">10 000</span> бонусных рублей, которые вы можете потратить на
+                оплату заказа. Еще <span class="price">10 000</span>
+                Вы получите за этот заказ.</p>
 
-            <div class="bonuscard-selected">
-                <i class="logo"></i>
+            <div class="new-card-form">
+                <p>Укажите, пожалуйста, дату рождения.</p>
 
-                <div class="bonuscard-content">
-                    <p class="card-header">Карта М.Видео Бонус–Альфа-Банк с номером ×××9696×××</p>
-
-                    <p>У Вас есть <span class="price">10 000</span> бонусных рублей, которые вы можете потратить на
-                        оплату заказа. Еще <span class="price">10 000</span>
-                        Вы получите за этот заказ.</p>
-
-                    <div class="new-card-form">
-                        <p>Укажите, пожалуйста, дату рождения.</p>
-
-                        <div class="inputs">
-                            <input type="text" placeholder="ДД" maxlength="2" class="input-day">
-                            <input type="text" placeholder="ММ" maxlength="2" class="input-month">
-                            <input type="text" placeholder="ГГГГ" maxlength="4" class="input-year">
-                            <button id="submit_bonuscard_date">Сохранить</button>
-                        </div>
-                    </div>
-
-                    <a href="#" class="btn-another-card">Указать другую карту</a>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="payment-methods-container courier-container">
-
-            <div class="items-info-block">
-                1
-            </div>
-
-            <div class="block-line-header">
-                <h3>Доставка курьером</h3>
-            </div>
-
-            <div class="method method-courier method-selected">
-                <label class="radio-header">
-                    <i class="radio selected"></i>
-                    <span class="method-name">Наличными курьеру</span>
-                </label>
-
-                <div class="method-content">
-                    <p>Вы оплачиваете товар наличными курьеру интернет-магазина М.Видео при доставке. Оплата
-                        производится только в рублях.</p>
-
-                    <p>Вы можете оплатить часть покупки бонусной или акционными картами, предъявив их курьеру.</p>
+                <div class="inputs">
+                    <input type="text" placeholder="ДД" maxlength="2" class="input-day">
+                    <input type="text" placeholder="ММ" maxlength="2" class="input-month">
+                    <input type="text" placeholder="ГГГГ" maxlength="4" class="input-year">
+                    <button id="submit_bonuscard_date">Сохранить</button>
                 </div>
             </div>
-            <div class="method method-credit">
-                <label class="radio-header">
-                    <i class="radio"></i>
-                    <span class="method-name">Онлайн-кредит</span>
 
-                    <div class="method-content">
-                        <p>Первый взнос по кредиту Вы оплачиваете курьеру интернет-магазина М.Видео при доставке.
-                            Оплата производится только в рублях.</p>
-
-                        <div class="credit-info">
-                            <p class="amount-wr">От <span class="amount">1 657 рублей</span> в месяц</p>
-
-                            <p class="info">Суммарно за все товары в корзине. Точная сумма ежемемячного платежа
-                                будет рассчитана
-                                после нажатия на кнопку «Оформить заказ»</p>
-
-                        </div>
-                    </div>
-                </label>
-            </div>
-            <div class="method method-cardonline">
-                <label class="radio-header">
-                    <i class="radio"></i>
-                    <span class="method-name">Пластиковой картой онлайн</span>
-                    <i class="card-logos"></i>
-                </label>
-
-                <div class="method-content">
-                    <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
-
-                    <div class="opened-container">
-                        <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
-                            товара нам нужно будет
-                            <b>проверить карту</b>, которой была совершена.</p>
-
-                        <a href="#" class="bonus-link">Частично оплатить бонусными рублями</a>
-
-                        <div class="bonus-sertificates-container">
-                            <p class="header">Какие бонусные сертификаты вы хотите использовать для оплаты?</p>
-
-                            <table cellpadding="0" cellspacing="0" border="0">
-                                <thead>
-                                <tr>
-                                    <th class="cell-checkbox">&nbsp;</th>
-                                    <th class="cell-amount">Сумма</th>
-                                    <th class="cell-days">Осталось дней</th>
-                                    <th class="cell-date">Использовать до</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr class="red">
-                                    <td class="cell-checkbox"><label class="checkbox-label"></label></td>
-                                    <td class="cell-amount">500 руб.</td>
-                                    <td class="cell-days">40</td>
-                                    <td class="cell-date">25.10.2013</td>
-                                </tr>
-                                <tr>
-                                    <td class="cell-checkbox"><label class="checkbox-label"></label></td>
-                                    <td class="cell-amount">500 руб.</td>
-                                    <td class="cell-days">40</td>
-                                    <td class="cell-date">25.10.2013</td>
-                                </tr>
-                                <tr>
-                                    <td class="cell-checkbox"><label class="checkbox-label"></label></td>
-                                    <td class="cell-amount">500 руб.</td>
-                                    <td class="cell-days">40</td>
-                                    <td class="cell-date">25.10.2013</td>
-                                </tr>
-                                <tr>
-                                    <td class="cell-checkbox"><label class="checkbox-label"></label></td>
-                                    <td class="cell-amount">500 руб.</td>
-                                    <td class="cell-days">40</td>
-                                    <td class="cell-date">25.10.2013</td>
-                                </tr>
-                                <tr>
-                                    <td class="cell-checkbox"><label class="checkbox-label"></label></td>
-                                    <td class="cell-amount">500 руб.</td>
-                                    <td class="cell-days">40</td>
-                                    <td class="cell-date">25.10.2013</td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-                            <p class="summary">Итого <span class="price">1 000</span> бонусных рублей будет
-                                использовано в счёт оплатыэтой покупки.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="method method-cardoffline method-no-content">
-                <label class="radio-header">
-                    <i class="radio"></i>
-                    <span class="method-name">Пластиковой картой при получении заказа</span>
-                </label>
-            </div>
-            <div class="method method-bonus method-no-content">
-                <label class="radio-header">
-                    <i class="radio"></i>
-                    <span class="method-name">Бонусными рублями</span>
-                </label>
-            </div>
-        </div>
-
-        <div class="pickups-container">
-            <div class="payment-methods-container pickup example" style="display: none">
-                <div class="items-info-block">
-                    1
-                </div>
-                <div class="block-line-header">
-                    <h3>Самовывоз (<span class="shop-name"></span>)</h3>
-                </div>
-                <div class="method method-cardonline method-selected">
-                    <label class="radio-header">
-                        <i class="radio selected"></i>
-                        <span class="method-name">Пластиковой картой онлайн</span>
-                        <i class="card-logos"></i>
-                    </label>
-
-                    <div class="method-content">
-                        <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
-
-                        <div class="opened-container">
-                            <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
-                                товара нам нужно будет
-                                <b>проверить карту</b>, которой была совершена.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="#" class="btn-another-card">Указать другую карту</a>
         </div>
 
     </div>
 </div>
+
+<div class="payment-methods-container courier-container">
+
+    <div class="items-info-block">
+        <div class="arrow"></div>
+
+        <div class="items-info-block-header">
+            <div class="items-info-wr">
+                <a href="#">2 товара</a>
+                <div class="popover popover-right">
+                    <div class="popover-content">
+                        <div class="item first">
+                            <div class="item-image">
+                                <img src="img/order_01.png">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
+                                <div class="item-price-block">
+                                    <span class="item-price-total">201 292 руб.</span>
+                                    <span class="item-price">2 × 101 646 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">
+                                <img src="img/order_01.png">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
+                                <div class="item-price-block">
+                                    <span class="item-price-total">201 292 руб.</span>
+                                    <span class="item-price">2 × 101 646 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popover-arrow popover-arrow-border"></div>
+                    <div class="popover-arrow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="items-info-block-content">
+            <div class="items-info-wr">
+                <div class="item-info-row">
+                    <label>Стоимость товаров</label>
+                    <span>214 858 руб.</span>
+                </div>
+                <div class="item-info-row item-info-row-total">
+                    <label>ИТОГО:</label>
+                    <span>214 858 руб.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block-line-header">
+        <h3>Доставка курьером</h3>
+    </div>
+
+    <div class="method method-courier method-selected">
+        <label class="radio-header">
+            <i class="radio selected"></i>
+            <span class="method-name">Наличными курьеру</span>
+        </label>
+
+        <div class="method-content">
+            <p>Вы оплачиваете товар наличными курьеру интернет-магазина М.Видео при доставке. Оплата
+                производится только в рублях.</p>
+
+            <p>Вы можете оплатить часть покупки бонусной или акционными картами, предъявив их курьеру.</p>
+        </div>
+    </div>
+    <div class="method method-credit">
+        <label class="radio-header">
+            <i class="radio"></i>
+            <span class="method-name">Онлайн-кредит</span>
+
+            <div class="method-content">
+                <p>Первый взнос по кредиту Вы оплачиваете курьеру интернет-магазина М.Видео при доставке.
+                    Оплата производится только в рублях.</p>
+
+                <div class="credit-info">
+                    <p class="amount-wr">От <span class="amount">1 657 рублей</span> в месяц</p>
+
+                    <p class="info">Суммарно за все товары в корзине. Точная сумма ежемемячного платежа
+                        будет рассчитана
+                        после нажатия на кнопку «Оформить заказ»</p>
+
+                </div>
+            </div>
+        </label>
+    </div>
+    <div class="method method-cardonline">
+        <label class="radio-header">
+            <i class="radio"></i>
+            <span class="method-name">Пластиковой картой онлайн</span>
+            <i class="card-logos"></i>
+        </label>
+
+        <div class="method-content">
+            <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+            <div class="opened-container">
+                <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
+                    товара нам нужно будет
+                    <b>проверить карту</b>, которой была совершена.</p>
+
+                <a href="#" class="bonus-link">Частично оплатить бонусными рублями</a>
+
+                <div class="bonus-sertificates-container">
+                    <p class="header">Какие бонусные сертификаты вы хотите использовать для оплаты?</p>
+
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <thead>
+                        <tr>
+                            <th class="cell-checkbox">&nbsp;</th>
+                            <th class="cell-amount">Сумма</th>
+                            <th class="cell-days">Осталось дней</th>
+                            <th class="cell-date">Использовать до</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="red">
+                            <td class="cell-checkbox"><label class="checkbox-label"></label></td>
+                            <td class="cell-amount">500 руб.</td>
+                            <td class="cell-days">40</td>
+                            <td class="cell-date">25.10.2013</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-checkbox"><label class="checkbox-label"></label></td>
+                            <td class="cell-amount">500 руб.</td>
+                            <td class="cell-days">40</td>
+                            <td class="cell-date">25.10.2013</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-checkbox"><label class="checkbox-label"></label></td>
+                            <td class="cell-amount">500 руб.</td>
+                            <td class="cell-days">40</td>
+                            <td class="cell-date">25.10.2013</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-checkbox"><label class="checkbox-label"></label></td>
+                            <td class="cell-amount">500 руб.</td>
+                            <td class="cell-days">40</td>
+                            <td class="cell-date">25.10.2013</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-checkbox"><label class="checkbox-label"></label></td>
+                            <td class="cell-amount">500 руб.</td>
+                            <td class="cell-days">40</td>
+                            <td class="cell-date">25.10.2013</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="summary">Итого <span class="price">1 000</span> бонусных рублей будет
+                        использовано в счёт оплатыэтой покупки.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="method method-cardoffline method-no-content">
+        <label class="radio-header">
+            <i class="radio"></i>
+            <span class="method-name">Пластиковой картой при получении заказа</span>
+        </label>
+    </div>
+    <div class="method method-bonus method-no-content">
+        <label class="radio-header">
+            <i class="radio"></i>
+            <span class="method-name">Бонусными рублями</span>
+        </label>
+    </div>
+</div>
+
+<div class="pickups-container">
+    <div class="payment-methods-container pickup example" style="display: none">
+        <div class="items-info-block">
+            <div class="arrow"></div>
+            <div class="items-info-block-header">
+                <div class="items-info-wr">
+                    <a href="#">2 товара</a>
+                    <div class="popover popover-right">
+                        <div class="popover-content">
+                            <div class="item first">
+                                <div class="item-image">
+                                    <img src="img/order_01.png">
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
+                                    <div class="item-price-block">
+                                        <span class="item-price-total">201 292 руб.</span>
+                                        <span class="item-price">2 × 101 646 руб.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="img/order_01.png">
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
+                                    <div class="item-price-block">
+                                        <span class="item-price-total">201 292 руб.</span>
+                                        <span class="item-price">2 × 101 646 руб.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popover-arrow popover-arrow-border"></div>
+                        <div class="popover-arrow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="items-info-block-content">
+                <div class="items-info-wr">
+                    <div class="item-info-row">
+                        <label>Стоимость товаров</label>
+                        <span>214 858 руб.</span>
+                    </div>
+                    <div class="item-info-row item-info-row-total">
+                        <label>ИТОГО:</label>
+                        <span>214 858 руб.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-line-header">
+            <h3>Самовывоз (<span class="shop-name"></span>)</h3>
+        </div>
+        <div class="method method-cardonline method-selected">
+            <label class="radio-header">
+                <i class="radio selected"></i>
+                <span class="method-name">Пластиковой картой онлайн</span>
+                <i class="card-logos"></i>
+            </label>
+
+            <div class="method-content">
+                <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+                <div class="opened-container">
+                    <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
+                        товара нам нужно будет
+                        <b>проверить карту</b>, которой была совершена.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
 <div class="widget-footer widget-footer-info">
+
+    <div class="summary-clinic-block">
+        <div class="summary-clinic-block-wr">
+            <label>ИТОГО ЗА ВСЕ ТОВАРЫ:</label>
+            <span>220 291 руб.</span>
+        </div>
+    </div>
 
     <p class="info">Перед оформлением заказа внимательно<br>проверьте данные, которые Вы указали выше.</p>
 

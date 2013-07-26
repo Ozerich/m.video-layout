@@ -1,4 +1,4 @@
-$.fn.switch = function (onChange) {
+$.fn.Switch = function (onChange) {
 
     onChange = onChange || function () {
     };
