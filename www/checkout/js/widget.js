@@ -284,7 +284,7 @@ function Widget(_id) {
         if (this.id == 'payment_block') {
 
             $('#basket').toggle(!deliveryData.isClinic);
-            $widget.find('.items-info-block, .summary-clinic-block').toggle(deliveryData.isClinic);
+            $widget.find('.items-info-block, .summary-clinic-block, .block-line-header').toggle(deliveryData.isClinic);
 
             $block.find('.payment-methods-container').each(function () {
                 var $container = $(this);

@@ -1,3 +1,5 @@
+@images_dir: "/theme/img/";
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -138,7 +140,7 @@ input[type=text] {
     }
 
     &.error-with-tooltip {
-      background: url('/theme/img/input_error_icon.png') 98% center no-repeat;
+      background: url('@{images_dir}input_error_icon.png') 98% center no-repeat;
     }
   }
 
@@ -202,7 +204,7 @@ input[type=text] {
     }
 
     .popup-close-btn {
-      background: url('/theme/img/popup-close-btn.png');
+      background: url('@{images_dir}popup-close-btn.png');
       width: 17px;
       height: 17px;
       float: right;
@@ -219,10 +221,10 @@ input[type=text] {
   .popup-footer {
     background: #f9f9f9;
     text-align: center;
-    height: 50px;
+    height: 48px;
 
     .popup-submit {
-      margin-top: 7px;
+      margin-top: 8px;
     }
   }
 }
@@ -311,7 +313,7 @@ input[type=text] {
 .checkbox {
   width: 16px;
   height: 14px;
-  background: url('/theme/img/checkbox_radio.png');
+  background: url('@{images_dir}checkbox_radio.png');
   display: block;
   float: left;
   cursor: pointer;
@@ -344,10 +346,13 @@ input[type=text] {
 
 
 .help-icon {
-  background: url('../img/help_tooltip_icon.png') no-repeat left center;
+  background: url('@{images_dir}help-icon.png') no-repeat 0 -63px;
   width: 13px;
   height: 13px;
   vertical-align: middle;
   cursor: pointer;
   display: block;
+  &:hover{
+    background-position: 0 0;
+  }
 }
