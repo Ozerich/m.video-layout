@@ -100,6 +100,8 @@
 
       &.row-phone {
         margin: 30px 0 25px;
+        *z-index: 2;
+
         input[type=text] {
           width: 225px;
           display: block;
@@ -116,15 +118,20 @@
           }
         }
 
-        .checkbox-label {
+        .checkbox-row {
           position: relative;
-          background-position: 0 7px;
-          &.checked {
-            background-position: 0 -59px;
+          margin-top: 8px;
+          line-height: 15px;
+
+          .checkbox-label{
+            float: left;
+          }
+          .help-icon{
+            float: left;
           }
         }
 
-        .tooltip-block {
+        .popover {
           display: none;
           width: 250px;
           left: 30px;
@@ -132,12 +139,12 @@
           line-height: 15px;
         }
 
-        .help {
+        .help-icon {
           position: relative;
           margin: 0 0 3px 8px;
           color: #1f1f1f;
           &:hover {
-            .tooltip-block {
+            .popover {
               display: block;
             }
           }
@@ -148,7 +155,7 @@
         margin-bottom: 30px;
         p {
           color: #8c99aa;
-          margin-top: 12px;
+          margin-top: 9px;
           line-height: 16px;
           font-size: 13px;
         }
@@ -157,7 +164,15 @@
       &.row-day {
         .row-content {
           .clearfix;
-          padding-bottom: 30px;
+        }
+
+        .row-content{
+          padding-left: 7px;
+          padding-bottom: 33px;
+        }
+
+        .switch-item{
+          padding: 0 5px;
         }
 
         .day {
@@ -196,18 +211,7 @@
           float: right;
           background: url('../img/calendar_icon.jpg');
           margin: 6px 4px 0 0;
-          position: relative;
           cursor: pointer;
-          z-index: 99999;
-          .tooltip-block {
-            width: 245px;
-            top: 30px;
-            left: -132px;
-            padding-top: 5px;
-            position: absolute;
-            z-index: 99999;
-            background: #fff;
-          }
         }
 
       }

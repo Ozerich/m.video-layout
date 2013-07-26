@@ -214,7 +214,8 @@ body {
       h2 {
         color: #8c99aa;
         font-family: @font_mvideo_bold;
-        display: inline-block;
+        display: block;
+        float: left;
       }
 
       &.num {
@@ -253,37 +254,10 @@ body {
       background: #f9f9f9;
       position: relative;
 
-      &.widget-footer-info {
-        background: url('../img/footer_info_icon.png') 18px center no-repeat #f9f9f9;
-        padding-left: 50px;
-
-        > .info {
-          float: left;
-          color: #1b1b1b;
-          font-size: 13px;
-          line-height: 16px;
-          margin-top: 3px;
-        }
-      }
-
       .error-tooltip {
-        position: absolute;
-        background: #fff;
         bottom: 55px;
         right: -50px;
         width: 207px;
-
-        p {
-          margin-bottom: 10px;
-        }
-        ul {
-          li {
-            margin-left: 13px;
-            span {
-              color: #db151c;
-            }
-          }
-        }
       }
 
       .widget-submit {
@@ -392,32 +366,12 @@ body {
           }
 
           div.error-tooltip {
-            position: absolute;
-            background: #fff;
             top: -42px;
             right: -251px;
             width: 207px;
             color: #db151c;
             font-size: 13px;
             line-height: 17px;
-            padding: 17px 17px 11px 17px;
-            border: 1px solid #cacaca;
-            border-radius: 5px;
-            z-index: 99999;
-            -webkit-box-shadow: 0px 0px 25px rgba(202, 202, 202, 0.74);
-            -moz-box-shadow: 0px 0px 25px rgba(202, 202, 202, 0.74);
-            box-shadow: 0px 0px 25px rgba(202, 202, 202, 0.74);
-
-            .error-tooltip-arrow {
-              background: url('../img/error_tooltip_arrow_left.png');
-              width: 7px;
-              height: 13px;
-              display: block;
-              position: absolute;
-              top: 47px;
-              left: -7px;
-            }
-
             p {
               margin-bottom: 6px;
               &.bold {
@@ -440,7 +394,7 @@ body {
 
     .widget-header {
       h2 {
-        color: #1b1b1b;;
+        color: #1b1b1b;
       }
     }
 
@@ -448,6 +402,7 @@ body {
       border-bottom: 1px solid #e4e4e4;
       padding: 12px 0;
       overflow: hidden;
+      min-height: 56px;
 
       &.first {
         padding-top: 0;
@@ -468,7 +423,7 @@ body {
       }
 
       .order-item-name {
-
+        font-weight: normal;
         width: 160px;
         display: block;
         float: left;
@@ -525,7 +480,7 @@ body {
 
         &.summary {
           border-top: 1px solid #d4d4d4;
-          padding-top: 13px;
+          padding-top: 20px;
           label {
             font-family: @font_mvideo_bold;
             color: #1b1b1b;
@@ -555,106 +510,29 @@ body {
       padding: 0 12px;
     }
   }
-}
 
-.checkbox-label {
-  background: url('../img/inputs.png') no-repeat 0 0px;
-  padding-left: 24px;
-  cursor: pointer;
 
-  input[type=checkbox] {
-    display: none;
-  }
-
-  &.checked {
-    background: url('../img/inputs.png') no-repeat 0 -66px;
-  }
-}
-
-a.help {
-  background: url('../img/help_tooltip_icon.png') no-repeat left center;
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  vertical-align: middle;
-}
-
-.tooltip-block {
-  position: absolute;
-  background: #ffffff;
-  z-index: 99999;
-  -webkit-box-shadow: 0px 0px 25px rgba(202, 202, 202, 0.74);
-  -moz-box-shadow: 0px 0px 25px rgba(202, 202, 202, 0.74);
-  box-shadow: 0px 0px 25px rgba(202, 202, 202, 0.74);
-  padding: 17px;
-  border-radius: 5px;
-  border: 1px solid #cacaca;
-
-  &:after, &:before {
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-
-  &:after {
-    border-color: rgba(255, 255, 255, 0);
-    border-width: 10px;
-  }
-  &:before {
-    border-color: rgba(202, 202, 202, 0);
-    border-width: 11px;
-  }
-
-  &.tooltip-block-arrow-top {
-    &:after, &:before {
-      bottom: 100%;
-      left: 50%;
+  .error-tooltip{
+    background: #fff;
+    color: #000000;
+    font-size: 13px;
+    line-height: 16px;
+    p {
+      margin-bottom: 7px;
     }
-    &:after {
-      border-bottom-color: #ffffff;
-      margin-left: -10px;
-    }
-    &:before {
-      border-bottom-color: #cacaca;
-      margin-left: -11px;
-    }
-  }
-
-  &.tooltip-block-arrow-bottom {
-    &:after, &:before {
-      top: 100%;
-      left: 50%;
-    }
-    &:after {
-      border-top-color: #ffffff;
-      margin-left: -10px;
-    }
-    &:before {
-      border-top-color: #cacaca;
-      margin-left: -11px;
-    }
-  }
-
-  &.tooltip-block-arrow-left {
-    &:after, &:before {
-      right: 100%;
-      top: 50%;
-    }
-
-    &:after {
-      border-color: rgba(255, 255, 255, 0);
-      border-right-color: #fff;
-      margin-top: -10px;
-    }
-    &:before {
-      border-color: rgba(172, 172, 172, 0);
-      border-right-color: #acacac;
-      margin-top: -11px;
+    ul {
+      li {
+        margin-left: 13px;
+        span {
+          color: #db151c;
+        }
+      }
     }
   }
 
 }
+
+
+
+
 

@@ -32,16 +32,8 @@ function Item(_id) {
             this.setPickup(Checkout.findPickupById(1));
         }
 
-        if (this.isPickup == 0) {
-            $deliveryBlock.find('.pickup-btn').removeClass('btn-selected');
-            $deliveryBlock.find('.courier-btn').addClass('btn-selected');
-            $deliveryBlock.find('.pickup-block').hide();
-        }
-        else {
-            $deliveryBlock.find('.courier-btn').removeClass('btn-selected');
-            $deliveryBlock.find('.pickup-btn').addClass('btn-selected');
-            $deliveryBlock.find('.pickup-block').css('display', 'inline-block');
-        }
+        $deliveryBlock.find('.pickup-block').toggle(this.isPickup);
+
     };
 
     this.pickup = 0;

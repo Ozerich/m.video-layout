@@ -78,7 +78,9 @@ table {
   color: #000;
   line-height: 30px;
   height: 30px;
-  padding: 0 33px;
+  width: auto;
+  padding: 0 15px;
+  *padding: 0;
   cursor: pointer;
 
   &:hover {
@@ -102,7 +104,7 @@ table {
       .gradient(#b10207, #f45b5c);
     }
 
-    &[disabled] {
+    &[disabled], &.btn-disabled {
       .gradient(#f8cccc, #f3b6b8);
     }
 
@@ -160,7 +162,7 @@ input[type=text] {
     cursor: pointer;
     color: #1b1b1b;
     font-size: 13px;
-    padding: 0 4px;
+    padding: 0 7px;
     height: 28px;
     border-radius: 4px;
     line-height: 28px;
@@ -225,7 +227,6 @@ input[type=text] {
   }
 }
 
-
 /*
 <div class="popover popover-right">
     <div class="popover-content"></div>
@@ -242,7 +243,7 @@ input[type=text] {
   z-index: 99999;
   position: absolute;
 
-  .popover-content{
+  .popover-content {
     margin: 16px;
   }
 
@@ -269,7 +270,7 @@ input[type=text] {
       }
     }
   }
-  &.popover-left{
+  &.popover-left {
     .popover-arrow {
       border-right-color: #fff;
       left: -20px;
@@ -281,7 +282,7 @@ input[type=text] {
       }
     }
   }
-  &.popover-bottom{
+  &.popover-bottom {
     .popover-arrow {
       border-top-color: #fff;
       bottom: -20px;
@@ -293,7 +294,7 @@ input[type=text] {
       }
     }
   }
-  &.popover-top{
+  &.popover-top {
     .popover-arrow {
       border-bottom-color: #fff;
       top: -20px;
@@ -305,4 +306,48 @@ input[type=text] {
       }
     }
   }
+}
+
+.checkbox {
+  width: 16px;
+  height: 14px;
+  background: url('/theme/img/checkbox_radio.png');
+  display: block;
+  float: left;
+  cursor: pointer;
+  margin-right: 3px;
+
+  background-position: -55px -19px;
+  &:hover {
+    background-position: -17px -19px;
+  }
+  &.checkbox-disabled {
+    background-position: -36px -19px;
+  }
+  &:active {
+    background-position: 0 -19px;
+  }
+
+  &.checkbox-checked {
+    background-position: -131px -16px;
+    &:hover {
+      background-position: -92px -17px;
+    }
+    &.checkbox-disabled {
+      background-position: -112px -17px;
+    }
+    &:active {
+      background-position: -74px -18px;
+    }
+  }
+}
+
+
+.help-icon {
+  background: url('../img/help_tooltip_icon.png') no-repeat left center;
+  width: 13px;
+  height: 13px;
+  vertical-align: middle;
+  cursor: pointer;
+  display: block;
 }

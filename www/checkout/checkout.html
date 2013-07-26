@@ -17,6 +17,7 @@
     <script src="js/components/calendar.js" type="text/javascript"></script>
     <script src="js/components/autocomplete.js" type="text/javascript"></script>
     <script src="js/components/switch.js" type="text/javascript"></script>
+    <script src="js/components/checkbox.js" type="text/javascript"></script>
 
 
     <script src="js/checkout.js" type="text/javascript"></script>
@@ -171,13 +172,13 @@
     <div class="opened" style="display: none">
         <div class="widget-content">
 
-            <div class="item" data-id="30016391">
+            <div class="item first" data-id="30016391">
                 <p class="item-name">Планшетный компьютер Acer A211</p>
 
                 <div class="item-actions">
 
-                    <div class="buttons switch-container">
-                        <div data-id="courier" class="selected switch-item"><span class="switch-item-text">Доставка курьером</span>
+                    <div class="switch-container">
+                        <div data-id="courier" class="selected first switch-item"><span class="switch-item-text">Доставка курьером</span>
                         </div>
                         <div data-id="pickup" class="switch-item"><span class="switch-item-text">Самовывоз</span></div>
                     </div>
@@ -193,8 +194,8 @@
                 <p class="item-name">Эпилятор Rowenta</p>
 
                 <div class="item-actions">
-                    <div class="buttons switch-container">
-                        <div data-id="courier" class="selected switch-item"><span class="switch-item-text">Доставка курьером</span>
+                    <div class="switch-container">
+                        <div data-id="courier" class="selected first switch-item"><span class="switch-item-text">Доставка курьером</span>
                         </div>
                         <div data-id="pickup" class="switch-item"><span class="switch-item-text">Самовывоз</span></div>
                     </div>
@@ -210,8 +211,8 @@
                 <p class="item-name">Встраиваемая индукционная панель независимая Hansa </p>
 
                 <div class="item-actions">
-                    <div class="buttons switch-container">
-                        <div data-id="courier" class="selected switch-item"><span class="switch-item-text">Доставка курьером</span>
+                    <div class="switch-container">
+                        <div data-id="courier" class="selected first switch-item"><span class="switch-item-text">Доставка курьером</span>
                         </div>
                         <div data-id="pickup" class="switch-item"><span class="switch-item-text">Самовывоз</span></div>
                     </div>
@@ -222,12 +223,12 @@
                 </div>
             </div>
 
-            <div class="item last" data-id="20027674">
+            <div class="item" data-id="20027674">
                 <p class="item-name">Утюг с парогенератором Philips</p>
 
                 <div class="item-actions">
-                    <div class="buttons switch-container">
-                        <div data-id="courier" class="selected switch-item"><span class="switch-item-text">Доставка курьером</span>
+                    <div class="switch-container">
+                        <div data-id="courier" class="selected first switch-item"><span class="switch-item-text">Доставка курьером</span>
                         </div>
                         <div data-id="pickup" class="switch-item"><span class="switch-item-text">Самовывоз</span></div>
                     </div>
@@ -248,42 +249,44 @@
 </div>
 
 <div class="widget" id="address_time_block">
+
 <div class="widget-header num num-2">
     <h2>Адрес и время доставки</h2>
     <a href="#" class="btn-open">Изменить</a>
 </div>
 
-<div class="widget-content closed">
+<div class="closed">
+    <div class="widget-content">
+        <div class="filled" style="display: none">
 
-    <div class="filled" style="display: none">
+            <div class="address-container">
+                <p class="address">Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765</p>
 
-        <div class="address-container">
-            <p class="address">Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765</p>
+                <p class="phone">+ 7 (926) 123-12-12</p>
 
-            <p class="phone">+ 7 (926) 123-12-12</p>
-
-            <p class="user-comment">Этаж 8, подъезд 19, код домофона 123. Приезжайте поскорее.</p>
-        </div>
-
-        <div class="courier-container">
-            <p class="param">Время доставки <span class="not-courier-only">(курьер)</span></p>
-
-            <p class="value delivery-time">Завтра днем (25 сентября с 12:00 до 18:00)</p>
-        </div>
-
-        <div class="pickups-container">
-            <div class="pickup example" style="display: none">
-                <p class="param"></p>
-
-                <p class="value">Вы можете забрать свой заказ, начиная</p>
-
-                <p class="time">с 10:00 следующей пятницы (29 сентября) и до 22:00 субботы (30 сентября).</p>
+                <p class="user-comment">Этаж 8, подъезд 19, код домофона 123. Приезжайте поскорее.</p>
             </div>
+
+            <div class="courier-container">
+                <p class="param">Время доставки <span class="not-courier-only">(курьер)</span></p>
+
+                <p class="value delivery-time">Завтра днем (25 сентября с 12:00 до 18:00)</p>
+            </div>
+
+            <div class="pickups-container">
+                <div class="pickup example" style="display: none">
+                    <p class="param"></p>
+
+                    <p class="value">Вы можете забрать свой заказ, начиная</p>
+
+                    <p class="time">с 10:00 следующей пятницы (29 сентября) и до 22:00 субботы (30 сентября).</p>
+                </div>
+            </div>
+
         </div>
 
+        <p class="no-filled">Адрес и время доставки не указаны</p>
     </div>
-
-    <p class="no-filled">Адрес и время доставки не указаны</p>
 </div>
 
 <div class="opened" style="display: none">
@@ -300,7 +303,7 @@
         <div class="row">
             <label for="address_city">Город <span class="star">*</span></label>
 
-            <div class="row-content" align="left">
+            <div class="row-content">
                 <input type="text" id="address_city">
             </div>
         </div>
@@ -319,8 +322,7 @@
             <div class="row-content">
                 <input type="text" maxlength="5" class="home-input" id="address_home">
 
-                <label for="address_korpus" class="double">Корпус <span
-                        class="small">или строение</span></label>
+                <label for="address_korpus" class="double">Корпус <span class="small">или строение</span></label>
                 <input type="text" maxlength="3" class="korpus-input" id="address_korpus">
 
                 <label for="address_flat" class="double with-star">Квартира <span class="star">*</span><span
@@ -334,19 +336,24 @@
 
             <div class="row-content">
                 <input type="text" class="phone-input" id="address_phone">
-                <label class="checkbox-label">
-                    <input type="checkbox" id="address_attach_phone">
-                    Привязать номер к профилю
 
-                    <a href="#" class="help">
-                        <div class="tooltip-block tooltip-block-arrow-left">
-                            Именно этот номер мы будем использовать для связи с Вами при доставке заказа. Если Вы хотите
-                            указать дополнительный номер, то снимите эту галочку. В этом случае основной номер Вы
-                            сможете указать в блоке «Личные данные»."
+                <div class="checkbox-row">
+                    <div class="checkbox" id="address_attach_phone"></div>
+                    <span class="checkbox-label">Привязать номер к профилю</span>
+
+                    <div class="help-icon">
+                        <div class="popover popover-left">
+                            <div class="popover-content">
+                                Именно этот номер мы будем использовать для связи с Вами при доставке заказа. Если Вы хотите
+                                указать дополнительный номер, то снимите эту галочку. В этом случае основной номер Вы
+                                сможете указать в блоке «Личные данные»."
+                            </div>
+                            <div class="popover-arrow popover-arrow-border"></div>
+                            <div class="popover-arrow"></div>
                         </div>
-                    </a>
+                    </div>
+                </div>
 
-                </label>
             </div>
 
         </div>
@@ -396,11 +403,7 @@
                     </div>
                 </div>
 
-                <div class="btn-calendar">
-                    <div class="tooltip-block tooltip-block-arrow-top" style="display: none">
-                        <div class="calendar" id="delivery_calendar"></div>
-                    </div>
-                </div>
+                <div class="btn-calendar"></div>
 
             </div>
         </div>
@@ -465,31 +468,33 @@
     </div>
     <div class="widget-footer">
         <button class="btn btn-red widget-submit">Продолжить</button>
-        <div class="error-tooltip tooltip-block tooltip-block-arrow-bottom" style="display: none">
-            <p>Пожалуйста, заполните всеобязательные поля.
+        <div class="popover popover-bottom error-tooltip">
+            <div class="popover-content">
+                <p>Пожалуйста, заполните все обязательные поля.
 
-            <p>Вам осталось указать:</p>
-            <ul>
-            </ul>
+                <p>Вам осталось указать:</p>
+                <ul>
+                </ul>
+            </div>
+            <div class="popover-arrow popover-arrow-border"></div>
+            <div class="popover-arrow"></div>
         </div>
+
     </div>
 </div>
 
 </div>
 
-
 <div class="widget" id="personal_block">
+
     <div class="widget-header num num-3">
         <h2>Личные данные</h2>
         <a href="#" class="btn-open">Изменить</a>
     </div>
 
     <div class="widget-content closed">
-
         <div class="filled" style="display: none"></div>
-
         <p class="no-filled">Личные данные не указаны</p>
-
     </div>
 
     <div class="opened" style="display: none">
@@ -514,9 +519,12 @@
                 <div class="row-content">
                     <input type="text" id="personal_email" class="email-input">
 
-                    <div class="error-tooltip-email error-tooltip tooltip-block tooltip-block-arrow-left"
-                         style="display: none">
-                        <div class="error-content"></div>
+                    <div class="error-tooltip-email popover popover-left error-tooltip">
+                        <div class="popover-content">
+                            <div class="error-content"></div>
+                        </div>
+                        <div class="popover-arrow popover-arrow-border"></div>
+                        <div class="popover-arrow"></div>
                     </div>
                 </div>
             </div>
@@ -528,25 +536,30 @@
                     <input type="text" id="personal_phone" class="phone-input">
                 </div>
             </div>
-
         </div>
 
 
         <div class="widget-footer">
+            <div class="checkbox" id="personal_agreement"></div>
 
-            <label class="checkbox-label condition-agreement" id="personal_agreement">
-                <input type="checkbox">
+            <div class="agreement">
                 Я согласен с <a href="#">условиями обработки</a> моих персональных данных.
-            </label>
-
-            <button class="btn btn-red widget-submit">Продолжить</button>
-            <div class="error-tooltip tooltip-block tooltip-block-arrow-bottom" style="display: none">
-                <p>Пожалуйста, заполните всеобязательные поля.
-
-                <p>Вам осталось указать:</p>
-                <ul>
-                </ul>
             </div>
+
+            <button class="btn btn-red  widget-submit">Продолжить</button>
+
+            <div class="popover popover-bottom error-tooltip">
+                <div class="popover-content">
+                    <p>Пожалуйста, заполните все обязательные поля.
+
+                    <p>Вам осталось указать:</p>
+                    <ul>
+                    </ul>
+                </div>
+                <div class="popover-arrow popover-arrow-border"></div>
+                <div class="popover-arrow"></div>
+            </div>
+
         </div>
 
 
@@ -554,18 +567,17 @@
 
 </div>
 
-
 <div class="widget" id="payment_block">
 <div class="widget-header num num-4">
     <h2>Способ оплаты</h2>
     <a href="#" class="btn-open">Изменить</a>
 </div>
-<div class="opened">
-<div class="widget-content">
-<div class="closed">
-    <p>Способ оплаты не выбран</p>
+<div class="closed" style="display: block">
+    <div class="widget-content"><p class="no-filled">Способ оплаты не выбран</p></div>
 </div>
-<div class="opened">
+<div class="opened" style="display: none">
+<div class="widget-content">
+
 
 <div class="bonuscard-container">
 
@@ -616,6 +628,7 @@
         <div class="items-info-block-header">
             <div class="items-info-wr">
                 <a href="#">2 товара</a>
+
                 <div class="popover popover-right">
                     <div class="popover-content">
                         <div class="item first">
@@ -789,6 +802,7 @@
             <div class="items-info-block-header">
                 <div class="items-info-wr">
                     <a href="#">2 товара</a>
+
                     <div class="popover popover-right">
                         <div class="popover-content">
                             <div class="item first">
@@ -796,7 +810,8 @@
                                     <img src="img/order_01.png">
                                 </div>
                                 <div class="item-content">
-                                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
+                                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver
+                                    </div>
                                     <div class="item-price-block">
                                         <span class="item-price-total">201 292 руб.</span>
                                         <span class="item-price">2 × 101 646 руб.</span>
@@ -808,7 +823,8 @@
                                     <img src="img/order_01.png">
                                 </div>
                                 <div class="item-content">
-                                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
+                                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver
+                                    </div>
                                     <div class="item-price-block">
                                         <span class="item-price-total">201 292 руб.</span>
                                         <span class="item-price">2 × 101 646 руб.</span>
@@ -857,7 +873,6 @@
     </div>
 </div>
 
-</div>
 </div>
 <div class="widget-footer widget-footer-info">
 
@@ -914,6 +929,7 @@
 
 </footer>
 
+<div class="calendar" id="delivery_calendar"></div>
 
 <div id="popup_pickup" class="popup" style="display: none">
 

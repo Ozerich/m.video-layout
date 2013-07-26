@@ -37,7 +37,7 @@ function Widget(_id) {
 
         var $footer_tooltip = that.element.find('.widget-footer .error-tooltip');
 
-        if ($(this).hasClass('disabled')) {
+        if ($(this).hasClass('btn-disabled')) {
 
             var tooltipHtml = '';
             var validateResult = that.validate();
@@ -89,7 +89,7 @@ function Widget(_id) {
     this.submitEnabledMode = false;
     this.setSubmitEnabledMode = function (_value) {
         this.submitEnabledMode = _value ? true : false;
-        this.submitButton.toggleClass('disabled', this.submitEnabledMode);
+        this.submitButton.toggleClass('btn-disabled', this.submitEnabledMode);
     };
 
 
@@ -188,7 +188,7 @@ function Widget(_id) {
 
             case "personal_agreement":
 
-                if (input.hasClass('checked') === false) {
+                if (input.hasClass('checkbox-checked') === false) {
                     return {
                         label: '',
                         input: null,
@@ -283,14 +283,10 @@ function Widget(_id) {
 
         if (this.id == 'payment_block') {
 
-            if (deliveryData.isClinic) {
-                $('#basket').hide();
-            }
-
             $('#basket').toggle(!deliveryData.isClinic);
             $widget.find('.items-info-block, .summary-clinic-block').toggle(deliveryData.isClinic);
 
-            $('.payment-methods-container').each(function () {
+            $block.find('.payment-methods-container').each(function () {
                 var $container = $(this);
 
                 $container.find('.method').each(function () {
@@ -300,7 +296,7 @@ function Widget(_id) {
                         if ($(this).hasClass('method-selected')) {
                             return false;
                         }
-                        
+
                         $container.find('.method-selected').removeClass('method-selected').find('.radio.selected').removeClass('selected');
                         $method.addClass('method-selected').find('.radio').addClass('selected');
 
@@ -309,19 +305,19 @@ function Widget(_id) {
                 })
             });
 
-            $('.payment-methods-container.courier-container').toggle(deliveryData.hasCourier);
-            $('.pickups-container').toggle(!deliveryData.onlyCourier);
+            $block.find('.payment-methods-container.courier-container').toggle(deliveryData.hasCourier);
+            $block.find('.pickups-container').toggle(!deliveryData.onlyCourier);
 
             if (deliveryData.onlyCourier === false) {
-                $('.pickups-container .pickup').not('.example').remove();
+                $block.find('.pickups-container .pickup').not('.example').remove();
 
                 for (var i = 1; i < deliveryData.pickups.length; i++) {
-                    var $pickup = $('.pickups-container .pickup.example').clone();
+                    var $pickup = $block.find('.pickups-container .pickup.example').clone();
                     $pickup.removeClass('example').show();
 
                     $pickup.find('.shop-name').text(deliveryData.pickups[i].pickup.name);
 
-                    $('.pickups-container').append($pickup);
+                    $block.find('.pickups-container').append($pickup);
                 }
             }
 
@@ -405,7 +401,7 @@ function Widget(_id) {
                 var $selectedDay = this.element.find('.row-day .day.selected');
                 var $selectedTime = this.element.find('.row-time .period.selected');
                 $block.find('.delivery-time').text($selectedDay.find('a').text() + ' ' + $selectedTime.find('span:first').text() +
-                    '(' + $selectedDay.find('span').text() + ' ' + $selectedTime.find('span:eq(1)').text() + ')'
+                    ' (' + $selectedDay.find('span').text() + ' ' + $selectedTime.find('span:eq(1)').text() + ')'
                 );
 
                 this.element.find('.filled').show();
@@ -639,7 +635,7 @@ function Widget(_id) {
     }
 
     if (this.id == 'address_time_block' || this.id == 'personal_block') {
-        $widget.find(':input').change(function () {
+        $widget.find(':input, .checkbox').change(function () {
 
             if ($(this).hasClass('error') && that.validateInput($(this))) {
                 $(this).removeClass('error');
@@ -652,6 +648,13 @@ function Widget(_id) {
                     $footerTooltip.hide();
                 }
             });
+    }
+
+    if (this.id == 'personal_block') {
+        $("#personal_agreement").Checkbox();
+    }
+    if (this.id == 'address_time_block') {
+        $("#address_attach_phone").Checkbox();
     }
 
 

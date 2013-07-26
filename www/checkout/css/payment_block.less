@@ -1,4 +1,45 @@
 #payment_block {
+
+  .widget-footer {
+    position: relative;
+    background: url('../img/footer_info_icon.png') 18px 14px no-repeat #f9f9f9;
+    padding: 17px 13px 17px 50px;
+
+    > .info {
+      float: left;
+      color: #1b1b1b;
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    .summary-clinic-block {
+      position: absolute;
+      left: 558px;
+      border: 1px solid #d4d4d4;
+      padding: 1px;
+      bottom: -2px;
+      width: 376px;
+      .summary-clinic-block-wr {
+        background: #eef2fb;
+        height: 63px;
+        line-height: 63px;
+        padding: 0 14px;
+        color: #1b1b1b;
+        font-family: @font_mvideo_bold;
+        label {
+          float: left;
+          display: block;
+        }
+        span {
+          float: right;
+          display: block;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+
   .bonuscard-container {
     .clearfix;
 
@@ -426,32 +467,5 @@
     }
   }
 
-  .widget-footer {
-    position: relative;
-    .summary-clinic-block {
-      position: absolute;
-      left: 558px;
-      border: 1px solid #d4d4d4;
-      padding: 1px;
-      bottom: 0;
-      width: 376px;
-      .summary-clinic-block-wr {
-        background: #eef2fb;
-        height: 63px;
-        line-height: 63px;
-        padding: 0 14px;
-        color: #1b1b1b;
-        font-family: @font_mvideo_bold;
-        label {
-          float: left;
-          display: block;
-        }
-        span {
-          float: right;
-          display: block;
-          font-size: 17px;
-        }
-      }
-    }
-  }
+
 }

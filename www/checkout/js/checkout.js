@@ -198,7 +198,7 @@ jQuery(function ($) {
 
 
     deliveryWidget.setAccepted(true);
-    deliveryWidget.open(true);
+    addressWidget.open();
 
     var $bonuscard_popup = $('#popup_bonuscard');
 
