@@ -1,35 +1,3 @@
-@font-face {
-  font-family: 'MVideoRegular';
-  src: url('http://www.mvideo.ru/font/MVideo_regular.eot');
-  src: url('http://www.mvideo.ru/font/MVideo_regular.eot?#iefix') format('embedded-opentype'), url('http://www.mvideo.ru/font/MVideo_regular.woff') format('woff'), url('http://www.mvideo.ru/font/MVideo_regular.ttf') format('truetype'), url('http://www.mvideo.ru/font/MVideo_regular.svg#MVideo-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'MVideoBold';
-  src: url('http://www.mvideo.ru/font/MVideo_bold.eot');
-  src: url('http://www.mvideo.ru/font/MVideo_bold.eot?#iefix') format('embedded-opentype'), url('http://www.mvideo.ru/font/MVideo_bold.woff') format('woff'), url('http://www.mvideo.ru/font/MVideo_bold.ttf') format('truetype'), url('http://www.mvideo.ru/font/MVideo_bold.svg#MVideo-Bold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font_mvideo_bold: MVideoBold, Tahoma, sans-serif;
-@font_mvideo_regular: MVideoRegular, Tahoma, sans-serif;
-@required_star_color: #ed1c29;
-
-.clearfix {
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-  zoom: 1;
-}
-
 body {
   width: 940px;
   margin: 0 auto;
@@ -213,49 +181,7 @@ body {
     position: relative;
   }
 
-  input[type=text] {
-    height: 22px;
-    border: 1px solid #cfcfcf;
-    border-radius: 5px;
-    line-height: 22px;
-    padding: 4px 7px;
-    outline: none;
 
-    font-size: 15px;
-    color: #000;
-    font-family: @font_mvideo_regular;
-
-    &:focus {
-      -webkit-box-shadow: 0px 0px 10px rgba(255, 231, 157, 1);
-      -moz-box-shadow: 0px 0px 10px rgba(255, 231, 157, 1);
-      box-shadow: 0px 0px 10px rgba(255, 231, 157, 1);
-    }
-
-    &.error {
-      border-color: #db151c;
-      &:focus {
-        border-color: #cfcfcf;
-      }
-
-      &.error-with-tooltip {
-        background: url('../img/input_error_icon.png') 98% center no-repeat;
-      }
-    }
-
-  }
-
-  button {
-    background: url('../img/btn.jpg') repeat-x #e74d4e;
-    line-height: 32px;
-    text-align: center;
-    padding: 0 16px;
-    font-size: 14px;
-    font-family: @font_mvideo_bold;
-    color: #fff;
-    border: 0 none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
 
   h1 {
     font-size: 24px;
@@ -362,9 +288,6 @@ body {
 
       .widget-submit {
         float: right;
-        &.disabled {
-          opacity: 0.2;
-        }
       }
     }
 

@@ -106,12 +106,6 @@
         text-align: center;
         margin-right: 10px;
         font-size: 15px;
-        &.input-day, &.input-month{
-          width: 25px;
-        }
-        &.input-year{
-          width: 30px;
-        }
       }
       button{
         margin-left: 10px;
@@ -135,6 +129,16 @@
 
   .payment-methods-container {
     margin: 20px 0;
+    position: relative;
+
+    .items-info-block{
+      position: absolute;
+      left: 550px;
+      height: 200px;
+      width: 200px;
+      border: 1px solid #aaa;
+      .border-radius(5px);
+    }
 
     .method {
 

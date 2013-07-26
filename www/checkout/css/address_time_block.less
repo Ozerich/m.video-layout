@@ -25,7 +25,7 @@
     .pickup {
       margin-top: 12px;
 
-      .time{
+      .time {
         font-weight: bold;
         margin-top: 3px;
         font-size: 12px;
@@ -119,7 +119,7 @@
         .checkbox-label {
           position: relative;
           background-position: 0 7px;
-          &.checked{
+          &.checked {
             background-position: 0 -59px;
           }
         }
@@ -162,31 +162,15 @@
 
         .day {
           position: relative;
-          font-family: Tahoma, sans-serif;
-          font-size: 12px;
-          color: #1b1b1b;
-          display: block;
-          float: left;
-          margin: 8px 13px 0 0;
-
-          &.last {
-            margin-right: 0;
-          }
-
-          a {
-            text-decoration: none;
-            border-bottom: 1px dotted #1b1b1b;
-            color: #1b1b1b;
-          }
 
           &.weekend {
-            a {
+            .switch-item-text {
               color: #df4e51;
               border-color: #df4e51;
             }
           }
 
-          span {
+          .full-day {
             position: absolute;
             bottom: -25px;
             z-index: 99999;
@@ -199,20 +183,7 @@
           }
 
           &.selected {
-            line-height: 28px;
-            height: 28px;
-            font-size: 13px;
-            font-family: @font_mvideo_bold;
-            background: #d9e3fa;
-            border-radius: 4px;
-            margin-top: 0;
-            padding: 0 5px;
-            a {
-              text-decoration: none;
-              color: #1b1b1b;
-              border-bottom: 0;
-            }
-            span {
+            .full-day {
               display: block;
             }
           }
@@ -250,17 +221,12 @@
         height: 64px;
       }
 
-      .period {
-        float: left;
-        cursor: pointer;
+      .period{
         width: 63px;
         height: 46px;
         padding: 9px 6px;
-
-        &.selected {
-          background: #d9e3fa;
-          border-radius: 4px;
-        }
+        line-height: 13px;
+        margin-left: 0;
 
         span {
           display: block;
@@ -275,7 +241,23 @@
             font-family: @font_mvideo_bold;
           }
         }
+
       }
+
+      /*
+      .period {
+        float: left;
+        cursor: pointer;
+
+
+        &.selected {
+          background: #d9e3fa;
+          border-radius: 4px;
+        }
+
+
+      }
+      */
 
       .today-period {
         font-size: 13px;

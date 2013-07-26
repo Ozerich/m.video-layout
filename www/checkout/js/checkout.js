@@ -104,6 +104,7 @@ Checkout.openPopup = function ($popup) {
 
     $.blockUI({
         message: $popup,
+        baseZ: 1000000000,
         css: {
             top: ($(window).height() - $popup.outerHeight()) / 2 + 'px',
             left: ($(window).width() - $popup.outerWidth()) / 2 + 'px',
@@ -196,22 +197,14 @@ jQuery(function ($) {
 
 
     deliveryWidget.setAccepted(true);
-    paymentWidget.open(true);
+    addressWidget.open(true);
 
     var $bonuscard_popup = $('#popup_bonuscard');
-    $bonuscard_popup.find('.row-type li a').click(function () {
 
-        if ($(this).parents('li').hasClass('selected')) {
-            return false;
-        }
-
-        $bonuscard_popup.find('.row-type li').removeClass('selected');
-        $(this).parents('li').addClass('selected');
-
-        $bonuscard_popup.find('.tooltip-block .card-type').text($(this).text());
-
-        return false;
+    $bonuscard_popup.find('.row-type .switch-container').switch(function(selected){
+        $bonuscard_popup.find('.tooltip-block .card-type').text(selected.text());
     });
+
     $bonuscard_popup.find('.reset-row').click(function () {
         $bonuscard_popup.find('.row-number input').val('');
         return false;
@@ -241,7 +234,7 @@ jQuery(function ($) {
     });
 
 
-    Checkout.openPopup($('#popup_credit'));
+   // Checkout.openPopup($('#popup_credit'));
 
 });
 

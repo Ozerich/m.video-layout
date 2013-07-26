@@ -283,6 +283,10 @@ function Widget(_id) {
 
         if (this.id == 'payment_block') {
 
+
+                $('#basket').hide();
+
+
             $('.payment-methods-container').each(function () {
                 var $container = $(this);
 
@@ -323,7 +327,6 @@ function Widget(_id) {
     };
 
     this.prepareClosed = function () {
-
         var $block = $widget.find('.closed');
 
         var deliveryData = Checkout.getDeliveryData();
@@ -444,6 +447,11 @@ function Widget(_id) {
             $block.find('.no-filled').hide();
         }
 
+
+        if(this.id == 'payment_block'){
+            $('#basket').show();
+        }
+
     };
 
     this.close = function (immediately) {
@@ -515,14 +523,10 @@ function Widget(_id) {
         $widget.find('.item').each(function () {
             var $item = $(this);
 
-            // Нажатие на переключатель Курьер/Самовывоз
-            $item.find('.buttons .btn').on('click', function () {
-                if ($(this).hasClass('btn-selected')) {
-                    return false;
-                }
-                $item.data('model').setIsPickup($(this).hasClass('pickup-btn'));
-                return false;
+            $item.find('.switch-container').switch(function(selected){
+                 $item.data('model').setIsPickup(selected.data('id') === 'pickup');
             });
+
 
             // Попап для самовывоза
             var $popup = $('#popup_pickup');
@@ -579,12 +583,9 @@ function Widget(_id) {
     }
 
     if (this.id == 'address_time_block') {
-        $widget.find('.row-day .days .day a').click(function () {
-            $widget.find('.row-day .days .day.selected').removeClass('selected');
-            $(this).parents('.day').addClass('selected');
 
-
-            if ($(this).parents('.day').hasClass('today')) {
+        $widget.find('.row-day .days').switch(function(selected){
+            if (selected.hasClass('today')) {
                 that.element.find('.row-time .today-period').show();
                 that.element.find('.row-time .period-block').hide();
             }
@@ -592,17 +593,9 @@ function Widget(_id) {
                 that.element.find('.row-time .today-period').hide();
                 that.element.find('.row-time .period-block').show();
             }
-
-            return false;
         });
 
-
-        $widget.find('.row-time .period').click(function () {
-            $widget.find('.row-time .period.selected').removeClass('selected');
-            $(this).addClass('selected');
-
-            return false;
-        });
+        $widget.find('.row-time .period-block').switch();
 
         $widget.find('.btn-calendar').click(function (event) {
             if ($(event.target).parents('.tooltip-block').length || $(event.target).hasClass('tooltip-block')) {
