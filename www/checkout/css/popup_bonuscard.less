@@ -1,9 +1,17 @@
 #popup_bonuscard {
   width: 605px;
 
+  .switch-container{
+    margin-left: -5px;
+    .switch-item{
+      padding: 0 5px;
+      margin-left: 0;
+    }
+  }
+
   .row {
     .clearfix;
-    margin: 8px 0;
+    margin: 5px 0 11px;
 
     label {
       width: 110px;
@@ -11,45 +19,13 @@
       font-size: 15px;
       color: #1b1b1b;
       text-align: left;
+      line-height: 28px;
     }
 
     .param-block {
-      margin-left: 115px;
+      margin-left: 125px;
     }
   }
-
-  /*
-  .row-type {
-    label {
-      line-height: 28px;
-    }
-    li {
-      float: left;
-      font-size: 13px;
-      margin-left: 5px;
-      border-radius: 5px;
-      line-height: 28px;
-      padding: 0 5px;
-      a {
-        border-bottom: 1px dotted #1f1f1f;
-        text-decoration: none;
-        color: #1f1f1f;
-      }
-
-      &.selected {
-        background: #d9e3fa;
-        font-family: @font_mvideo_bold;
-        a {
-          border-bottom: none;
-        }
-      }
-
-      &.first {
-        margin-left: 0;
-      }
-    }
-  }
-  */
 
   .row-number {
     label {
@@ -102,11 +78,22 @@
       float: left;
       margin-right: 10px;
       text-align: center;
+      &.input-day{
+        width: 41px;
+      }
+      &.input-month{
+        width: 41px;
+      }
+      &.input-year{
+        width: 51px;
+      }
     }
   }
 
-  a.help {
+  .help-icon {
     position: relative;
+    float: left;
+    margin-top: 10px;
 
     &:hover{
       .tooltip-block{
@@ -116,10 +103,10 @@
 
     .tooltip-block {
       display: none;
-      bottom: 34px;
-      left: -103px;
+      bottom: 30px;
+      left: -101px;
       .help-image {
-        background: url('../img/cardnumber-help-toolip.jpg');
+        background: url('../img/cardnumber-help-tooltip.jpg');
         width: 181px;
         height: 122px;
       }

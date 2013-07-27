@@ -610,7 +610,7 @@
                     <input type="text" placeholder="ДД" maxlength="2" class="input-day">
                     <input type="text" placeholder="ММ" maxlength="2" class="input-month">
                     <input type="text" placeholder="ГГГГ" maxlength="4" class="input-year">
-                    <button id="submit_bonuscard_date">Сохранить</button>
+                    <button id="submit_bonuscard_date" class="btn">Сохранить</button>
                 </div>
             </div>
 
@@ -1083,15 +1083,17 @@
                 <span class="delimetr">-</span>
                 <input type="text" class="number-3" maxlength="3">
                 <a href="#" class="reset-row">x</a>
-                <a href="#" class="help">
-                    <div class="tooltip-block tooltip-block-arrow-bottom">
-                        <p>Пожалуйста, введите цифры с вашей карты</p>
-
-                        <p class="card-type">М.Видео Бонус</p>
-
-                        <div class="help-image"></div>
+                <div class="help-icon">
+                    <div class="tooltip-block popover popover-bottom">
+                        <div class="popover-content">
+                            <p>Пожалуйста, введите цифры с вашей карты</p>
+                            <p class="card-type">М.Видео Бонус</p>
+                            <div class="help-image"></div>
+                        </div>
+                        <div class="popover-arrow popover-arrow-border"></div>
+                        <div class="popover-arrow"></div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
         <div class="row row-birthday">
@@ -1106,7 +1108,7 @@
     </div>
 
     <div class="popup-footer">
-        <button class="btn popup-submit">Добавить карту</button>
+        <button class="btn btn-red popup-submit">Добавить карту</button>
     </div>
 
 </div>
