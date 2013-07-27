@@ -284,7 +284,9 @@ function Widget(_id) {
         if (this.id == 'payment_block') {
 
             $('#basket').toggle(!deliveryData.isClinic);
-            $widget.find('.items-info-block, .summary-clinic-block, .block-line-header').toggle(deliveryData.isClinic);
+            $widget.find('.items-info-block, .summary-clinic-block, .block-line-header').not('.example').toggle(deliveryData.isClinic);
+            $block.find('.payment-methods-container.courier-container').toggle(deliveryData.hasCourier);
+            $block.find('.pickups-container').toggle(!deliveryData.onlyCourier);
 
             $block.find('.payment-methods-container').each(function () {
                 var $container = $(this);
@@ -305,10 +307,7 @@ function Widget(_id) {
                 })
             });
 
-            $block.find('.payment-methods-container.courier-container').toggle(deliveryData.hasCourier);
-            $block.find('.pickups-container').toggle(!deliveryData.onlyCourier);
-
-            if (deliveryData.onlyCourier === false) {
+            if (deliveryData.isClinic) {
                 $block.find('.pickups-container .pickup').not('.example').remove();
 
                 for (var i = 1; i < deliveryData.pickups.length; i++) {
@@ -319,6 +318,48 @@ function Widget(_id) {
 
                     $block.find('.pickups-container').append($pickup);
                 }
+
+                var total_amount = 0;
+                for (i = 0; i < deliveryData.pickups.length; i++) {
+                    var items = deliveryData.pickups[i].items;
+                    var pickup = deliveryData.pickups[i].pickup;
+
+                    var $infoblock = $widget.find('.items-info-block.example').clone();
+                    $infoblock.removeClass('example').show();
+
+                    $infoblock.find('.show-items-btn').text(items.length + ' ' + Checkout.Helper.getItemsCountLabel(items.length));
+
+                    $infoblock.find('.popover-content').empty();
+                    var cost = 0, total = 0, item;
+                    for (j = 0; j < items.length; j++) {
+                        item = items[j];
+                        cost += item.price;
+
+                        var $item = $widget.find('.items-info-block-popover-item.example').clone();
+                        $item.removeClass('example').show();
+                        $item.toggleClass('first', j === 0);
+
+                        $item.find('.item-name').text(item.name);
+                        $item.find('.price-total').text(Checkout.Helper.getAmountLabel(item.price));
+                        $item.find('.items-count').text(item.count);
+                        $item.find('.price-single').text(Checkout.Helper.getAmountLabel(item.singlePrice));
+                        $item.find('.item-image img').attr('src', item.image_src);
+
+                        $infoblock.find('.popover-content').append($item);
+                    }
+
+                    total = cost;
+                    total_amount += total;
+
+                    $infoblock.find('.items-info-block-content .items-cost').text(Checkout.Helper.getAmountLabel(cost));
+                    $infoblock.find('.items-info-block-content .total-amount').text(Checkout.Helper.getAmountLabel(cost));
+
+
+                    var $container = pickup ? $($block.find('.pickups-container .pickup').get(i)) : $block.find('.courier-container');
+                    $container.find('.items-info-block').remove();
+                    $container.find('.block-line-header').after($infoblock);
+                }
+                $('.summary-clinic-block').find('.total-amount').text(Checkout.Helper.getAmountLabel(total_amount));
             }
 
         }
@@ -663,6 +704,7 @@ function Widget(_id) {
             Checkout.openPopup($('#popup_bonuscard'));
             return false;
         });
+        $('.checkbox').Checkbox();
     }
 
     that.element.find('.checkbox-label').click(function () {

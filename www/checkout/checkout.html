@@ -21,10 +21,8 @@
 
 
     <script src="js/checkout.js" type="text/javascript"></script>
-
     <script src="js/item.js" type="text/javascript"></script>
     <script src="js/widget.js" type="text/javascript"></script>
-
 
     <!--[if lt IE 9]>
     <script src="js/thirdparty/html5shiv.js"></script>
@@ -344,7 +342,8 @@
                     <div class="help-icon">
                         <div class="popover popover-left">
                             <div class="popover-content">
-                                Именно этот номер мы будем использовать для связи с Вами при доставке заказа. Если Вы хотите
+                                Именно этот номер мы будем использовать для связи с Вами при доставке заказа. Если Вы
+                                хотите
                                 указать дополнительный номер, то снимите эту галочку. В этом случае основной номер Вы
                                 сможете указать в блоке «Личные данные»."
                             </div>
@@ -568,16 +567,18 @@
 </div>
 
 <div class="widget" id="payment_block">
+
 <div class="widget-header num num-4">
     <h2>Способ оплаты</h2>
     <a href="#" class="btn-open">Изменить</a>
 </div>
+
 <div class="closed" style="display: block">
     <div class="widget-content"><p class="no-filled">Способ оплаты не выбран</p></div>
 </div>
+
 <div class="opened" style="display: none">
 <div class="widget-content">
-
 
 <div class="bonuscard-container">
 
@@ -620,66 +621,54 @@
     </div>
 </div>
 
-<div class="payment-methods-container courier-container">
-
-    <div class="items-info-block">
-        <div class="arrow"></div>
-
-        <div class="items-info-block-header">
-            <div class="items-info-wr">
-                <a href="#">2 товара</a>
-
-                <div class="popover popover-right">
-                    <div class="popover-content">
-                        <div class="item first">
-                            <div class="item-image">
-                                <img src="img/order_01.png">
-                            </div>
-                            <div class="item-content">
-                                <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
-                                <div class="item-price-block">
-                                    <span class="item-price-total">201 292 руб.</span>
-                                    <span class="item-price">2 × 101 646 руб.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="item-image">
-                                <img src="img/order_01.png">
-                            </div>
-                            <div class="item-content">
-                                <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
-                                <div class="item-price-block">
-                                    <span class="item-price-total">201 292 руб.</span>
-                                    <span class="item-price">2 × 101 646 руб.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popover-arrow popover-arrow-border"></div>
-                    <div class="popover-arrow"></div>
-                </div>
-            </div>
+<div class="items-info-block-popover-item example" style="display: none">
+    <div class="item-image">
+        <img src="img/order_01.png">
+    </div>
+    <div class="item-content">
+        <div class="item-name"></div>
+        <div class="item-price-block">
+            <span class="item-price-total"><span class="price-total"></span> руб.</span>
+            <span class="item-price"><span class="items-count"></span> × <span class="price-single"></span> руб.</span>
         </div>
-        <div class="items-info-block-content">
-            <div class="items-info-wr">
-                <div class="item-info-row">
-                    <label>Стоимость товаров</label>
-                    <span>214 858 руб.</span>
+    </div>
+</div>
+
+<div class="items-info-block example" style="display: none">
+    <div class="arrow"></div>
+    <div class="items-info-block-header">
+        <div class="items-info-wr">
+            <a href="#" class="show-items-btn">2 товара</a>
+            <div class="popover popover-right">
+                <div class="popover-content">
                 </div>
-                <div class="item-info-row item-info-row-total">
-                    <label>ИТОГО:</label>
-                    <span>214 858 руб.</span>
-                </div>
+                <div class="popover-arrow popover-arrow-border"></div>
+                <div class="popover-arrow"></div>
             </div>
         </div>
     </div>
+    <div class="items-info-block-content">
+        <div class="items-info-wr">
+            <div class="item-info-row item-info-row-cost">
+                <label>Стоимость товаров</label>
+                <span><span class="items-cost"></span> руб.</span>
+            </div>
+            <div class="item-info-row item-info-row-total">
+                <label>ИТОГО:</label>
+                <span><span class="total-amount"></span> руб.</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="payment-methods-container courier-container">
 
     <div class="block-line-header">
         <h3>Доставка курьером</h3>
     </div>
 
     <div class="method method-courier method-selected">
+
         <label class="radio-header">
             <i class="radio selected"></i>
             <span class="method-name">Наличными курьеру</span>
@@ -743,31 +732,41 @@
                         </thead>
                         <tbody>
                         <tr class="red">
-                            <td class="cell-checkbox"><label class="checkbox-label"></label></td>
+                            <td class="cell-checkbox">
+                                <div class="checkbox"></div>
+                            </td>
                             <td class="cell-amount">500 руб.</td>
                             <td class="cell-days">40</td>
                             <td class="cell-date">25.10.2013</td>
                         </tr>
                         <tr>
-                            <td class="cell-checkbox"><label class="checkbox-label"></label></td>
+                            <td class="cell-checkbox">
+                                <div class="checkbox"></div>
+                            </td>
                             <td class="cell-amount">500 руб.</td>
                             <td class="cell-days">40</td>
                             <td class="cell-date">25.10.2013</td>
                         </tr>
                         <tr>
-                            <td class="cell-checkbox"><label class="checkbox-label"></label></td>
+                            <td class="cell-checkbox">
+                                <div class="checkbox"></div>
+                            </td>
                             <td class="cell-amount">500 руб.</td>
                             <td class="cell-days">40</td>
                             <td class="cell-date">25.10.2013</td>
                         </tr>
                         <tr>
-                            <td class="cell-checkbox"><label class="checkbox-label"></label></td>
+                            <td class="cell-checkbox">
+                                <div class="checkbox"></div>
+                            </td>
                             <td class="cell-amount">500 руб.</td>
                             <td class="cell-days">40</td>
                             <td class="cell-date">25.10.2013</td>
                         </tr>
                         <tr>
-                            <td class="cell-checkbox"><label class="checkbox-label"></label></td>
+                            <td class="cell-checkbox">
+                                <div class="checkbox"></div>
+                            </td>
                             <td class="cell-amount">500 руб.</td>
                             <td class="cell-days">40</td>
                             <td class="cell-date">25.10.2013</td>
@@ -797,59 +796,6 @@
 
 <div class="pickups-container">
     <div class="payment-methods-container pickup example" style="display: none">
-        <div class="items-info-block">
-            <div class="arrow"></div>
-            <div class="items-info-block-header">
-                <div class="items-info-wr">
-                    <a href="#">2 товара</a>
-
-                    <div class="popover popover-right">
-                        <div class="popover-content">
-                            <div class="item first">
-                                <div class="item-image">
-                                    <img src="img/order_01.png">
-                                </div>
-                                <div class="item-content">
-                                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver
-                                    </div>
-                                    <div class="item-price-block">
-                                        <span class="item-price-total">201 292 руб.</span>
-                                        <span class="item-price">2 × 101 646 руб.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="item-image">
-                                    <img src="img/order_01.png">
-                                </div>
-                                <div class="item-content">
-                                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver
-                                    </div>
-                                    <div class="item-price-block">
-                                        <span class="item-price-total">201 292 руб.</span>
-                                        <span class="item-price">2 × 101 646 руб.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popover-arrow popover-arrow-border"></div>
-                        <div class="popover-arrow"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="items-info-block-content">
-                <div class="items-info-wr">
-                    <div class="item-info-row">
-                        <label>Стоимость товаров</label>
-                        <span>214 858 руб.</span>
-                    </div>
-                    <div class="item-info-row item-info-row-total">
-                        <label>ИТОГО:</label>
-                        <span>214 858 руб.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="block-line-header">
             <h3>Самовывоз (<span class="shop-name"></span>)</h3>
         </div>
@@ -874,12 +820,13 @@
 </div>
 
 </div>
+
 <div class="widget-footer widget-footer-info">
 
     <div class="summary-clinic-block">
         <div class="summary-clinic-block-wr">
             <label>ИТОГО ЗА ВСЕ ТОВАРЫ:</label>
-            <span>220 291 руб.</span>
+            <span><span class="total-amount"></span> руб.</span>
         </div>
     </div>
 
@@ -1083,11 +1030,14 @@
                 <span class="delimetr">-</span>
                 <input type="text" class="number-3" maxlength="3">
                 <a href="#" class="reset-row">x</a>
+
                 <div class="help-icon">
                     <div class="tooltip-block popover popover-bottom">
                         <div class="popover-content">
                             <p>Пожалуйста, введите цифры с вашей карты</p>
+
                             <p class="card-type">М.Видео Бонус</p>
+
                             <div class="help-image"></div>
                         </div>
                         <div class="popover-arrow popover-arrow-border"></div>

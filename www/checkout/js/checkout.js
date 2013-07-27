@@ -91,9 +91,36 @@ var Checkout = {
 };
 
 Checkout.Helper = {
+
     validateEmail: function (email) {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
+    },
+
+    getItemsCountLabel: function (count) {
+        if (count === 1) {
+            return 'товар';
+        }
+        if (count >= 2 && count <= 4) {
+            return 'товара';
+        }
+        if (count >= 5) {
+            return 'товаров';
+        }
+    },
+
+    getAmountLabel: function (amount) {
+        amount = amount.toString();
+
+        if (amount.length < 4) {
+            return amount;
+        }
+
+        if (amount.length >= 4 && amount.length <= 6) {
+            return amount.substr(0, amount.length - 3) + ' ' + amount.substr(amount.length - 3, 3);
+        }
+
+        return amount;
     }
 };
 
@@ -137,7 +164,7 @@ jQuery(function ($) {
             item.setIsPickup(false);
         }
         item.setName($item.find('.order-item-name').text());
-        item.setImage($item.find('.order-item-image img').attr('src'));
+        item.setImageSrc($item.find('.order-item-image img').attr('src'));
 
 
         Checkout.addItem(item);
@@ -196,13 +223,23 @@ jQuery(function ($) {
         paymentWidget.open();
     };
 
+    paymentWidget.onOpen = function () {
+
+        paymentWidget.element.find('.popover').each(function (index) {
+            if (index > 0) {
+                $(this).css('top', (18 - ($(this).height() / 2)) + 'px');
+            }
+        });
+
+    };
+
 
     deliveryWidget.setAccepted(true);
     paymentWidget.open();
 
     var $bonuscard_popup = $('#popup_bonuscard');
 
-    $bonuscard_popup.find('.row-type .switch-container').Switch(function(selected){
+    $bonuscard_popup.find('.row-type .switch-container').Switch(function (selected) {
         $bonuscard_popup.find('.tooltip-block .card-type').text(selected.text());
     });
 
@@ -235,7 +272,7 @@ jQuery(function ($) {
     });
 
 
-   // Checkout.openPopup($('#popup_credit'));
+    // Checkout.openPopup($('#popup_credit'));
 
 });
 

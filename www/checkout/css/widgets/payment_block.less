@@ -2,7 +2,7 @@
 
   .widget-footer {
     position: relative;
-    background: url('../img/footer_info_icon.png') 18px 14px no-repeat #f9f9f9;
+    background: url('/checkout/img/footer_info_icon.png') 18px 14px no-repeat #f9f9f9;
     padding: 17px 13px 17px 50px;
 
     > .info {
@@ -30,7 +30,7 @@
           float: left;
           display: block;
         }
-        span {
+        > span {
           float: right;
           display: block;
           font-size: 17px;
@@ -70,7 +70,7 @@
         i {
           display: block;
           float: left;
-          background: url('../img/bonus_btn_bg.png');
+          background: url('/checkout/img/bonus_btn_bg.png');
           width: 23px;
           height: 24px;
           margin-right: 8px;
@@ -103,7 +103,7 @@
       background: #f9f9f9;
       .clearfix;
       .logo {
-        background: url('../img/bonus_card.png');
+        background: url('/checkout/img/bonus_card.png');
         width: 49px;
         height: 31px;
         float: left;
@@ -180,7 +180,7 @@
       .popover-content{
         width: 350px;
       }
-      .item {
+      .items-info-block-popover-item {
         padding: 13px 0;
         border-top: 1px solid #e4e4e4;
         line-height: 20px;
@@ -227,6 +227,7 @@
       position: absolute;
       left: 545px;
       width: 378px;
+      top: 14px;
       border: 1px solid #d4d4d4;
 
       .arrow {
@@ -284,7 +285,8 @@
             display: block;
             width: 250px;
           }
-          span {
+
+          > span {
             float: right;
             display: block;
             font-family: @font_mvideo_bold;
@@ -314,23 +316,14 @@
 
       .radio-header {
         cursor: pointer;
-        .radio {
-          background: url('../img/inputs.png') no-repeat 0 -132px;
-          display: block;
-          width: 16px;
-          height: 16px;
-          float: left;
-          &.selected {
-            background-position: 0 -198px;
-          }
-        }
+
         .method-name {
           margin-left: 10px;
           font-size: 15px;
         }
 
         .card-logos {
-          background: url('../img/card_logos.png');
+          background: url('/checkout/img/card_logos.png');
           width: 68px;
           height: 15px;
           margin-left: 5px;
@@ -342,7 +335,8 @@
 
       &.method-credit {
         .radio-header .method-name {
-          color: #ff953c
+          color: #ff953c;
+          font-family: @font_mvideo_bold;
         }
 
         .credit-info {
@@ -364,6 +358,10 @@
       }
 
       &.method-cardonline {
+
+        .discount{
+          color: #ed1c29;
+        }
 
         .opened-container {
           display: none;
@@ -437,7 +435,7 @@
       }
 
       .method-content {
-        padding: 14px 27px;
+        padding: 12px 24px;
 
         color: #8c99aa;
         font-size: 13px;
@@ -466,6 +464,4 @@
       }
     }
   }
-
-
 }

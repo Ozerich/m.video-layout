@@ -1,4 +1,4 @@
-@images_dir: "/theme/img/";
+@theme_images_dir: "/theme/img/";
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -140,7 +140,7 @@ input[type=text] {
     }
 
     &.error-with-tooltip {
-      background: url('@{images_dir}input_error_icon.png') 98% center no-repeat;
+      background: url('@{theme_images_dir}input_error_icon.png') 98% center no-repeat;
     }
   }
 
@@ -204,7 +204,7 @@ input[type=text] {
     }
 
     .popup-close-btn {
-      background: url('@{images_dir}popup-close-btn.png');
+      background: url('@{theme_images_dir}popup-close-btn.png');
       width: 17px;
       height: 17px;
       float: right;
@@ -313,7 +313,7 @@ input[type=text] {
 .checkbox {
   width: 16px;
   height: 14px;
-  background: url('@{images_dir}checkbox_radio.png');
+  background: url('@{theme_images_dir}checkbox_radio.png');
   display: block;
   float: left;
   cursor: pointer;
@@ -344,15 +344,46 @@ input[type=text] {
   }
 }
 
+.radio {
+  background: url('@{theme_images_dir}checkbox_radio.png');
+  display: block;
+  width: 14px;
+  height: 14px;
+  float: left;
+  background-position: -56px 0;
+
+  &:hover {
+    background-position: -18px 0;
+  }
+  &:active {
+    background-position: 0 0;
+  }
+  &.radio-disabled {
+    background-position: -36px 0;
+  }
+
+  &.selected {
+    background-position: -131px 0;
+    &:hover {
+      background-position: -93px 0;
+    }
+    &:active {
+      background-position: -73px 0;
+    }
+    &.radio-disabled {
+      background-position: -111px 0;
+    }
+  }
+}
 
 .help-icon {
-  background: url('@{images_dir}help-icon.png') no-repeat 0 -63px;
+  background: url('@{theme_images_dir}help-icon.png') no-repeat 0 -63px;
   width: 13px;
   height: 13px;
   vertical-align: middle;
   cursor: pointer;
   display: block;
-  &:hover{
+  &:hover {
     background-position: 0 0;
   }
 }

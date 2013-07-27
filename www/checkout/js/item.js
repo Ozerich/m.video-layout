@@ -24,6 +24,11 @@ function Item(_id) {
     };
     this.setId(_id);
 
+    this.image_src = '';
+    this.setImageSrc = function(_src){
+        this.image_src = _src;
+    };
+
     this.isPickup = false;
     this.setIsPickup = function (_value) {
         this.isPickup = _value ? true : false;
@@ -77,8 +82,4 @@ function Item(_id) {
         this.name = _value;
     };
 
-    this.image = '';
-    this.setImage = function (_value) {
-        this.image = _value;
-    };
 }
