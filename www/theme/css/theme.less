@@ -71,6 +71,9 @@ table {
 
 @import "mixins";
 
+@import "components/calendar";
+@import "components/autocomplete";
+
 .btn {
   border: 1px solid #d1d1d1;
   .border-radius(5px);
@@ -111,10 +114,37 @@ table {
     }
 
   }
+}
+
+.input-eye-wr{
+  float: left;
+  position: relative;
+  i{
+    cursor: pointer;
+    background: url('@{theme_images_dir}input_eye_hide.png');
+    width: 19px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 0px;
+    display: block;
+  }
+  &.input-pass-visible{
+    i{
+      background: url('@{theme_images_dir}input_eye_show.png');
+    }
+  }
+  input[type=text], input[type=password]{
+    padding-right: 37px;
+    &::-ms-clear, &::-ms-reveal {
+      display: none;
+    }
+  }
 
 }
 
-input[type=text] {
+
+input[type=text], input[type=password], input[type=email] {
   height: 22px;
   border: 1px solid #cfcfcf;
   border-radius: 5px;
@@ -213,6 +243,7 @@ input[type=text] {
   }
 
   .popup-content {
+    .clearfix;
     background: #fff;
     padding: 15px;
     text-align: left;
@@ -226,6 +257,7 @@ input[type=text] {
     .popup-submit {
       margin-top: 8px;
     }
+
   }
 }
 
@@ -385,5 +417,67 @@ input[type=text] {
   display: block;
   &:hover {
     background-position: 0 0;
+  }
+}
+
+
+.social-icon{
+  background-image: url('@{theme_images_dir}socials.png');
+  width: 24px;
+  height: 24px;
+  display: block;
+
+  &.social-icon-big{
+    height: 32px;
+    width: 32px;
+  }
+
+  &.social-icon-facebook{
+    background-position: -12px -309px ;
+    &.social-icon-big{
+      background-position: -58px -305px;
+    }
+  }
+
+  &.social-icon-gplus{
+    background-position: -14px -259px ;
+    &.social-icon-big{
+      background-position: -56px -259px ;
+    }
+  }
+
+  &.social-icon-mailru{
+    background-position: -13px -210px ;
+    &.social-icon-big{
+      background-position: -59px -204px ;
+    }
+  }
+
+  &.social-icon-odnoklassniki{
+    background-position: -13px -158px ;
+    &.social-icon-big{
+      background-position: -58px -156px ;
+    }
+  }
+
+  &.social-icon-twitter{
+    background-position: -15px -110px ;
+    &.social-icon-big{
+      background-position: -58px -106px ;
+    }
+  }
+
+  &.social-icon-vk{
+    background-position: -13px -56px ;
+    &.social-icon-big{
+      background-position: -57px -56px ;
+    }
+  }
+
+  &.social-icon-yandex{
+    background-position: -13px -10px ;
+    &.social-icon-big{
+      background-position: -57px -5px ;
+    }
   }
 }
