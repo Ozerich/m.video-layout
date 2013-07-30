@@ -704,7 +704,7 @@ function Widget(_id) {
             Checkout.openPopup($('#popup_bonuscard'));
             return false;
         });
-        $('.checkbox').Checkbox();
+        $widget.find('.checkbox').Checkbox();
     }
 
     that.element.find('.checkbox-label').click(function () {
