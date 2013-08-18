@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Корзина для mvideo.ru</title>
+
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less">
+
+    <script>var less = less || {};
+    less.env = 'development';</script>
+    <script src="../../theme/js/thirdparty/less.js" type="text/javascript"></script>
+    <script src="../../theme/js/thirdparty/jquery-1.8.1.min.js" type="text/javascript"></script>
+    <script src="../../theme/js/thirdparty/jquery.blockUI.js" type="text/javascript"></script>
+    <script src="../../theme/js/thirdparty/jquery.maskedinput.js" type="text/javascript"></script>
+
+    <script src="../../theme/js/components/calendar.js" type="text/javascript"></script>
+    <script src="../../theme/js/components/autocomplete.js" type="text/javascript"></script>
+    <script src="../../theme/js/components/switch.js" type="text/javascript"></script>
+    <script src="../../theme/js/components/checkbox.js" type="text/javascript"></script>
+
+    <script>
+        $(function(){
+
+            $('.switch-container').each(function(){
+                $(this).Switch();
+            });
+
+            $('.checkbox').each(function(){
+                $(this).Checkbox();
+            });
+
+        });
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../../theme/js/thirdparty/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <a href="http://mvideo.ru/" title="На главную">
+            <img src="img/logo.png" alt="М.Видео">
+        </a>
+    </div>
+
+    <div class="actions">
+        <div class="action action-consultant">
+            <div class="action-wr">
+                <span>Спросите</span>
+                <a href="#">онлайн-консультанта</a>
+            </div>
+        </div>
+        <div class="action action-call">
+            <div class="action-wr">
+                <span>Закажите</span>
+                <a href="#">обратный звонок</a>
+            </div>
+        </div>
+        <div class="action action-phone">
+            <div class="action-wr">
+                <span>Позвоните нам</span>
+                <strong>8-800-777-777-5</strong>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-basket">Вернуться в корзину</a>
+
+</header>
+
+<h1>Информация о заказе</h1>
+
+<div class="checkout-content">
+
+<div id="basket" class="order-block widget">
+    <div class="widget-header">
+        <h2>Ваш заказ</h2>
+    </div>
+    <div class="widget-content">
+
+        <div class="order-item first" data-id="30016391" data-price="101646" data-count="2" data-pickup="0">
+            <div class="order-item-image">
+                <img src="img/order_01.png" border="0">
+            </div>
+            <h3 class="order-item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</h3>
+
+            <div class="order-item-price">
+                <span class="price">201 292 руб.</span>
+                <span class="price-additional">2 × 101 646 руб.</span>
+            </div>
+        </div>
+
+        <div class="order-item" data-id="20025089" data-price="291" data-count="2" data-pickup="0">
+            <div class="order-item-image">
+                <img src="img/order_02.png" border="0">
+            </div>
+            <h3 class="order-item-name">Эпилятор Rowenta EP1040F4</h3>
+
+            <div class="order-item-price">
+                <span class="price">582 руб.</span>
+                <span class="price-additional">2 x 291 руб.</span>
+            </div>
+        </div>
+
+        <div class="order-item" data-id="20024698" data-price="1291" data-count="2" data-pickup="0">
+            <div class="order-item-image">
+                <img src="img/order_03.png" border="0">
+            </div>
+            <h3 class="order-item-name">Встраиваемая индукционная панель независимая Hansa BHI64383030</h3>
+
+            <div class="order-item-price">
+                <span class="price">1 291 руб.</span>
+            </div>
+        </div>
+
+        <div class="order-item last" data-id="20027674" data-price="15291" data-count="2" data-pickup="0">
+            <div class="order-item-image">
+                <img src="img/order_04.png" border="0">
+            </div>
+            <h3 class="order-item-name">Утюг с парогенератором Philips GC 6530/02</h3>
+
+            <div class="order-item-price">
+                <span class="price">15 291 руб.</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="widget-footer">
+        <div class="row">
+            <label>Стоимость товаров</label>
+            <span>218 456 руб.</span>
+        </div>
+        <div class="row">
+            <label>Скидка</label>
+            <span class="red">2 000 руб.</span>
+        </div>
+        <div class="row">
+            <label>Доставка по Москве</label>
+            <span class="green">Бесплатно</span>
+        </div>
+        <div class="row summary">
+            <label>ИТОГО:</label>
+            <span>220 291 руб.</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="left-block">
+
+
+<div class="widget" id="delivery_method_block">
+
+    <div class="widget-header num num-1">
+        <h2>Способ доставки</h2>
+        <a href="#" class="btn-open">Изменить</a>
+    </div>
+
+    <div class="widget-content closed" style="display: block">
+        <div class="simple">Все ваши товары будут доставлены курьером</div>
+    </div>
+</div>
+
+<div class="widget" id="delivery_method_block">
+
+    <div class="widget-header num num-1">
+        <h2>Способ доставки</h2>
+        <a href="#" class="btn-open">Изменить</a>
+    </div>
+
+    <div class="widget-content closed" style="display: block">
+        <div class="clinic">
+            <div class="item-summary first" style="display: block">
+                <div class="item-name">
+                    Планшетный компьютер Acer A211
+                </div>
+                <div class="item-pickup">
+                    <span class="type">Доставка курьером</span>
+                </div>
+            </div>
+            <div class="item-summary" style="display: block">
+                <div class="item-name">
+                    Планшетный компьютер Acer A211
+                </div>
+                <div class="item-pickup">
+                    <span class="type">Самовывоз</span>
+                    <a href="#">г. Жуковский</a>
+                </div>
+            </div>
+            <div class="item-summary" style="display: block">
+                <div class="item-name">Эпилятор Rowenta EP1040F4<span class="delimeter"> | </span>Встраиваемая
+                    индукционная панель независимая Hansa BHI64383030<span class="delimeter"> | </span>Утюг с
+                    парогенератором Philips GC 6530/02
+                </div>
+                <div class="item-pickup">
+                    <span class="type">Самовывоз</span>
+                    <a href="#">г. Жуковский</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="widget opened" id="delivery_method_block">
+
+    <div class="widget-header num num-1">
+        <h2>Способ доставки</h2>
+    </div>
+
+
+    <div class="opened" style="display: block">
+        <div class="widget-content">
+
+            <div class="item first">
+                <p class="item-name">Планшетный компьютер Acer A211</p>
+
+                <div class="item-actions">
+
+                    <div class="switch-container">
+                        <div data-id="courier" class="selected first switch-item"><span class="switch-item-text">Доставка курьером</span>
+                        </div>
+                        <div data-id="pickup" class="switch-item"><span class="switch-item-text">Самовывоз</span></div>
+                    </div>
+
+                    <div class="pickup-block" style="display: none">
+                        <span class="address"></span>
+                        <a href="#" class="change-pickup">Изменить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <p class="item-name">Эпилятор Rowenta</p>
+
+                <div class="item-actions">
+                    <div class="switch-container">
+                        <div data-id="courier" class="first switch-item"><span class="switch-item-text">Доставка курьером</span>
+                        </div>
+                        <div data-id="pickup" class="selected switch-item"><span
+                                class="switch-item-text">Самовывоз</span></div>
+                    </div>
+
+                    <div class="pickup-block" style="display: block">
+                        <span class="address">Адрес 1</span>
+                        <a href="#" class="change-pickup">Изменить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <p class="item-name">Встраиваемая индукционная панель независимая Hansa </p>
+
+                <div class="item-actions">
+                    <div class="switch-container">
+                        <div data-id="courier" class="first switch-item"><span class="switch-item-text">Доставка курьером</span>
+                        </div>
+                        <div data-id="pickup" class="selected switch-item"><span class="switch-item-text">Самовывоз</span></div>
+                    </div>
+                    <div class="pickup-block" style="display: block">
+                        <span class="address metro">Адрес 2</span>
+                        <a href="#" class="change-pickup">Изменить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <p class="item-name">Утюг с парогенератором Philips</p>
+
+                <div class="item-actions">
+                    <div class="switch-container">
+                        <div data-id="courier" class="selected first switch-item"><span class="switch-item-text">Доставка курьером</span>
+                        </div>
+                        <div data-id="pickup" class="switch-item"><span class="switch-item-text">Самовывоз</span></div>
+                    </div>
+                    <div class="pickup-block" style="display: none">
+                        <span class="address"></span>
+                        <a href="#" class="change-pickup">Изменить</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="widget-footer ">
+            <button class="btn btn-red widget-submit">Продолжить</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="widget" id="address_time_block">
+
+    <div class="widget-header num num-2">
+        <h2>Адрес и время доставки</h2>
+        <a href="#" class="btn-open">Изменить</a>
+    </div>
+
+    <div class="closed">
+        <div class="widget-content">
+            <p class="no-filled">Адрес и время доставки не указаны</p>
+        </div>
+    </div>
+</div>
+
+<div class="widget" id="address_time_block">
+
+    <div class="widget-header num num-2">
+        <h2>Адрес и время доставки</h2>
+        <a href="#" class="btn-open">Изменить</a>
+    </div>
+
+    <div class="closed">
+        <div class="widget-content">
+            <div class="filled" style="display: block">
+
+                <div class="address-container">
+                    <p class="address">Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765</p>
+
+                    <p class="phone">+ 7 (926) 123-12-12</p>
+
+                    <p class="user-comment">Этаж 8, подъезд 19, код домофона 123. Приезжайте поскорее.</p>
+                </div>
+
+                <div class="courier-container">
+                    <p class="param">Время доставки</p>
+
+                    <p class="value delivery-time">Завтра днем (25 сентября с 12:00 до 18:00)</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="widget" id="address_time_block">
+
+    <div class="widget-header num num-2">
+        <h2>Адрес и время доставки</h2>
+        <a href="#" class="btn-open">Изменить</a>
+    </div>
+
+    <div class="closed">
+        <div class="widget-content">
+            <div class="filled" style="display: block">
+
+                <div class="courier-container">
+                    <p class="param">Время доставки <span class="not-courier-only">(курьер)</span></p>
+
+                    <p class="value delivery-time">Завтра днем (25 сентября с 12:00 до 18:00)</p>
+                </div>
+
+                <div class="pickups-container">
+                    <div class="pickup">
+                        <p class="param">Самовывоз (Магазин 1)</p>
+
+                        <p class="value">Вы можете забрать свой заказ, начиная</p>
+
+                        <p class="time">с 10:00 следующей пятницы (29 сентября) и до 22:00 субботы (30 сентября).</p>
+                    </div>
+                    <div class="pickup">
+                        <p class="param">Самовывоз (Магазин 2)</p>
+
+                        <p class="value">Вы можете забрать свой заказ, начиная</p>
+
+                        <p class="time">с 10:00 следующей пятницы (29 сентября) и до 22:00 субботы (30 сентября).</p>
+                    </div>
+                    <div class="pickup">
+                        <p class="param">Самовывоз (Магазин 3)</p>
+
+                        <p class="value">Вы можете забрать свой заказ, начиная</p>
+
+                        <p class="time">с 10:00 следующей пятницы (29 сентября) и до 22:00 субботы (30 сентября).</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="widget opened" id="address_time_block">
+
+    <div class="widget-header num num-2">
+        <h2>Адрес и время доставки</h2>
+    </div>
+
+
+    <div class="opened" style="display: block">
+        <div class="widget-content">
+
+            <p class="required-message">
+                <span class="star">*</span> — поля, обязательные для заполнения
+            </p>
+
+            <div class="row">
+                <label for="address_city">Город <span class="star">*</span></label>
+
+                <div class="row-content">
+                    <input type="text" id="address_city">
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="address_street">Улица <span class="star">*</span></label>
+
+                <div class="row-content">
+                    <input type="text" id="address_street">
+                </div>
+            </div>
+
+            <div class="row row-street-info">
+                <label for="address_home">Дом <span class="star">*</span></label>
+
+                <div class="row-content">
+                    <input type="text" maxlength="5" class="home-input" id="address_home">
+
+                    <label for="address_korpus" class="double">Корпус <span class="small">или строение</span></label>
+                    <input type="text" maxlength="3" class="korpus-input" id="address_korpus">
+
+                    <label for="address_flat" class="double with-star">Квартира <span class="star">*</span><span
+                            class="small">или офис</span></label>
+                    <input type="text" maxlength="5" class="flat-input" id="address_flat">
+                </div>
+            </div>
+
+            <div class="row row-phone">
+                <label for="address_phone">Телефон <span class="star">*</span></label>
+
+                <div class="row-content">
+                    <input type="text" class="phone-input" id="address_phone">
+
+                    <div class="checkbox-row">
+                        <div class="checkbox" id="address_attach_phone"></div>
+                        <span class="checkbox-label">Привязать номер к профилю</span>
+
+                        <div class="help-icon">
+                            <div class="popover popover-left">
+                                <div class="popover-content">
+                                    Именно этот номер мы будем использовать для связи с Вами при доставке заказа. Если
+                                    Вы
+                                    хотите
+                                    указать дополнительный номер, то снимите эту галочку. В этом случае основной номер
+                                    Вы
+                                    сможете указать в блоке «Личные данные»."
+                                </div>
+                                <div class="popover-arrow popover-arrow-border"></div>
+                                <div class="popover-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row row-comment">
+                <label for="address_comment">Комментарий</label>
+
+                <div class="row-content">
+                    <input type="text" class="address-input" id="address_comment">
+
+                    <p>Вы можете указать, например, ближайшую станцию метро, код домофона. Так мы сможем быстрее Вас
+                        найти.</p>
+                </div>
+            </div>
+
+            <div class="row row-day">
+                <label>В какой день</label>
+
+                <div class="row-content background">
+
+                    <div class="days switch-container">
+
+
+                        <div class="day today switch-item first" data-date="05072013">
+                            <span class="switch-item-text">Сегодня</span>
+                            <span class="full-day">25 сентября, пятница</span>
+                        </div>
+
+                        <div class="day selected switch-item" data-date="05072013">
+                            <span class="switch-item-text">Завтра</span>
+                            <span class="full-day">25 сентября, пятница</span>
+                        </div>
+
+                        <div class="day weekend switch-item" data-date="05072013">
+                            <span class="switch-item-text">Суббота</span>
+                            <span class="full-day">25 сентября, пятница</span>
+                        </div>
+
+                        <div class="day weekend switch-item" data-date="05072013">
+                            <span class="switch-item-text">Воскресенье</span>
+                            <span class="full-day">25 сентября, пятница</span>
+                        </div>
+
+                        <div class="day last switch-item" data-date="05072013">
+                            <span class="switch-item-text">Понедельник</span>
+                            <span class="full-day">25 сентября, пятница</span>
+                        </div>
+                    </div>
+
+                    <div class="btn-calendar"></div>
+
+                </div>
+            </div>
+
+            <div class="row row-time">
+                <label>В какое время</label>
+
+                <div class="row-content background">
+
+                    <p class="today-period" style="display: none">Менеджер свяжется с Вами в ближайшее время для
+                        уточнения
+                        времени доставки. Стоимость доставки составляет <span class="price">250 р.</span></p>
+
+                    <div class="period-block switch-container">
+                        <div class="period selected switch-item first">
+                            <span class="bold">Весь день</span>
+                            <span>10:00 - 20:00</span>
+                            <span class="bold">0 р.</span>
+                        </div>
+
+                        <div class="period switch-item">
+                            <span class="bold">Утром</span>
+                            <span>10:00 - 20:00</span>
+                            <span class="bold">250 р.</span>
+                        </div>
+
+                        <div class="period switch-item">
+                            <span class="bold">Днем</span>
+                            <span>10:00 - 20:00</span>
+                            <span class="bold">250 р.</span>
+                        </div>
+
+                        <div class="period switch-item">
+                            <span class="bold">Вечером</span>
+                            <span>10:00 - 20:00</span>
+                            <span class="bold">250 р.</span>
+                        </div>
+
+                        <div class="period switch-item">
+                            <span class="bold">Ночью</span>
+                            <span>10:00 - 20:00</span>
+                            <span class="bold">250 р.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="widget-footer">
+            <button class="btn btn-red widget-submit">Продолжить</button>
+            <div class="popover popover-bottom error-tooltip">
+                <div class="popover-content">
+                    <p>Пожалуйста, заполните все обязательные поля.
+
+                    <p>Вам осталось указать:</p>
+                    <ul>
+                        <li><span>–</span> Город</li>
+                        <li><span>–</span> Адрес</li>
+                    </ul>
+                </div>
+                <div class="popover-arrow popover-arrow-border"></div>
+                <div class="popover-arrow"></div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="widget opened" id="address_time_block">
+
+<div class="widget-header num num-2">
+    <h2>Адрес и время доставки</h2>
+</div>
+
+
+<div class="opened" style="display: block">
+    <div class="widget-content">
+
+        <p class="required-message">
+            <span class="star">*</span> — поля, обязательные для заполнения
+        </p>
+
+        <div class="block-line-header">
+            <h3>Адрес доставки (для курьера)</h3>
+        </div>
+
+        <div class="row">
+            <label for="address_city">Город <span class="star">*</span></label>
+
+            <div class="row-content">
+                <input type="text" id="address_city">
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="address_street">Улица <span class="star">*</span></label>
+
+            <div class="row-content">
+                <input type="text" id="address_street">
+            </div>
+        </div>
+
+        <div class="row row-street-info">
+            <label for="address_home">Дом <span class="star">*</span></label>
+
+            <div class="row-content">
+                <input type="text" maxlength="5" class="home-input" id="address_home">
+
+                <label for="address_korpus" class="double">Корпус <span class="small">или строение</span></label>
+                <input type="text" maxlength="3" class="korpus-input" id="address_korpus">
+
+                <label for="address_flat" class="double with-star">Квартира <span class="star">*</span><span
+                        class="small">или офис</span></label>
+                <input type="text" maxlength="5" class="flat-input" id="address_flat">
+            </div>
+        </div>
+
+        <div class="row row-phone">
+            <label for="address_phone">Телефон <span class="star">*</span></label>
+
+            <div class="row-content">
+                <input type="text" class="phone-input" id="address_phone">
+
+                <div class="checkbox-row">
+                    <div class="checkbox" id="address_attach_phone"></div>
+                    <span class="checkbox-label">Привязать номер к профилю</span>
+
+                    <div class="help-icon">
+                        <div class="popover popover-left">
+                            <div class="popover-content">
+                                Именно этот номер мы будем использовать для связи с Вами при доставке заказа. Если Вы
+                                хотите
+                                указать дополнительный номер, то снимите эту галочку. В этом случае основной номер Вы
+                                сможете указать в блоке «Личные данные»."
+                            </div>
+                            <div class="popover-arrow popover-arrow-border"></div>
+                            <div class="popover-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row row-comment">
+            <label for="address_comment">Комментарий</label>
+
+            <div class="row-content">
+                <input type="text" class="address-input" id="address_comment">
+
+                <p>Вы можете указать, например, ближайшую станцию метро, код домофона. Так мы сможем быстрее Вас
+                    найти.</p>
+            </div>
+        </div>
+
+        <div class="row row-day">
+            <label>В какой день</label>
+
+            <div class="row-content background">
+
+                <div class="days switch-container">
+
+
+                    <div class="day today switch-item first" data-date="05072013">
+                        <span class="switch-item-text">Сегодня</span>
+                        <span class="full-day">25 сентября, пятница</span>
+                    </div>
+
+                    <div class="day selected switch-item" data-date="05072013">
+                        <span class="switch-item-text">Завтра</span>
+                        <span class="full-day">25 сентября, пятница</span>
+                    </div>
+
+                    <div class="day weekend switch-item" data-date="05072013">
+                        <span class="switch-item-text">Суббота</span>
+                        <span class="full-day">25 сентября, пятница</span>
+                    </div>
+
+                    <div class="day weekend switch-item" data-date="05072013">
+                        <span class="switch-item-text">Воскресенье</span>
+                        <span class="full-day">25 сентября, пятница</span>
+                    </div>
+
+                    <div class="day last switch-item" data-date="05072013">
+                        <span class="switch-item-text">Понедельник</span>
+                        <span class="full-day">25 сентября, пятница</span>
+                    </div>
+                </div>
+
+                <div class="btn-calendar"></div>
+
+            </div>
+        </div>
+
+        <div class="row row-time">
+            <label>В какое время</label>
+
+            <div class="row-content background">
+
+                <p class="today-period" style="display: none">Менеджер свяжется с Вами в ближайшее время для
+                    уточнения
+                    времени доставки. Стоимость доставки составляет <span class="price">250 р.</span></p>
+
+                <div class="period-block switch-container">
+                    <div class="period selected switch-item first">
+                        <span class="bold">Весь день</span>
+                        <span>10:00 - 20:00</span>
+                        <span class="bold">0 р.</span>
+                    </div>
+
+                    <div class="period switch-item">
+                        <span class="bold">Утром</span>
+                        <span>10:00 - 20:00</span>
+                        <span class="bold">250 р.</span>
+                    </div>
+
+                    <div class="period switch-item">
+                        <span class="bold">Днем</span>
+                        <span>10:00 - 20:00</span>
+                        <span class="bold">250 р.</span>
+                    </div>
+
+                    <div class="period switch-item">
+                        <span class="bold">Вечером</span>
+                        <span>10:00 - 20:00</span>
+                        <span class="bold">250 р.</span>
+                    </div>
+
+                    <div class="period switch-item">
+                        <span class="bold">Ночью</span>
+                        <span>10:00 - 20:00</span>
+                        <span class="bold">250 р.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="pickups">
+            <div class="pickup first">
+                <div class="block-line-header">
+                    <h3>Самовывоз (Имя магазина 1)</h3>
+                </div>
+                <p class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver<span class="delimeter"> | </span>Эпилятор Rowenta EP1040F4</p>
+
+                <p class="time">Вы сможете забрать свой заказ, начиная
+                    <strong>с 10:00 следующей пятницы (29 сентября) и до 22:00 субботы (30 сентября).</strong></p>
+                <a class="btn-shop" href="#">Посмотреть адрес магазина</a>
+            </div>
+
+            <div class="pickup">
+                <div class="block-line-header">
+                    <h3>Самовывоз (Имя магазина 1)</h3>
+                </div>
+                <p class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver<span class="delimeter"> | </span>Эпилятор Rowenta EP1040F4</p>
+
+                <p class="time">Вы сможете забрать свой заказ, начиная
+                    <strong>с 10:00 следующей пятницы (29 сентября) и до 22:00 субботы (30 сентября).</strong></p>
+                <a class="btn-shop" href="#">Посмотреть адрес магазина</a>
+            </div>
+
+            <div class="pickup">
+                <div class="block-line-header">
+                    <h3>Самовывоз (Имя магазина 1)</h3>
+                </div>
+                <p class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver<span class="delimeter"> | </span>Эпилятор Rowenta EP1040F4</p>
+
+                <p class="time">Вы сможете забрать свой заказ, начиная
+                    <strong>с 10:00 следующей пятницы (29 сентября) и до 22:00 субботы (30 сентября).</strong></p>
+                <a class="btn-shop" href="#">Посмотреть адрес магазина</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="widget-footer">
+        <button class="btn btn-red widget-submit">Продолжить</button>
+        <div class="popover popover-bottom error-tooltip">
+            <div class="popover-content">
+                <p>Пожалуйста, заполните все обязательные поля.
+
+                <p>Вам осталось указать:</p>
+                <ul>
+                    <li><span>–</span> Город</li>
+                    <li><span>–</span> Адрес</li>
+                </ul>
+            </div>
+            <div class="popover-arrow popover-arrow-border"></div>
+            <div class="popover-arrow"></div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+<div class="widget" id="personal_block">
+
+    <div class="widget-header num num-3">
+        <h2>Личные данные</h2>
+        <a href="#" class="btn-open">Изменить</a>
+    </div>
+
+    <div class="widget-content closed">
+        Личные данные не указаны
+    </div>
+
+</div>
+
+<div class="widget" id="personal_block">
+
+    <div class="widget-header num num-3">
+        <h2>Личные данные</h2>
+        <a href="#" class="btn-open">Изменить</a>
+    </div>
+
+    <div class="widget-content closed">
+        Виталий Прогер, ozicoder@gmail.com, +7 (354) 715-23-23
+    </div>
+
+</div>
+
+<div class="widget opened" id="personal_block">
+
+    <div class="widget-header num num-3">
+        <h2>Личные данные</h2>
+    </div>
+
+    <div class="opened">
+
+        <div class="widget-content">
+            <p class="required-message">
+                <span class="star">*</span> — поля, обязательные для заполнения
+            </p>
+
+            <div class="row">
+                <label for="personal_name">Как вас зовут <span class="star">*</span></label>
+
+                <div class="row-content">
+                    <input type="text" id="personal_name" placeholder="Имя" class="name-input">
+                    <input type="text" id="personal_surname" placeholder="Фамилия" class="surname-input">
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="personal_email">Электронная почта <span class="star">*</span></label>
+
+                <div class="row-content">
+                    <input type="text" id="personal_email" class="email-input">
+
+                    <div class="error-tooltip-email popover popover-left error-tooltip" style="display: none">
+                        <div class="popover-content">
+                            <div class="error-content"></div>
+                        </div>
+                        <div class="popover-arrow popover-arrow-border"></div>
+                        <div class="popover-arrow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="personal_phone">Телефон</label>
+
+                <div class="row-content">
+                    <input type="text" id="personal_phone" class="phone-input">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="widget-footer">
+            <div class="checkbox" id="personal_agreement"></div>
+
+            <div class="agreement">
+                Я согласен с <a href="#">условиями обработки</a> моих персональных данных.
+            </div>
+
+            <button class="btn btn-red  widget-submit">Продолжить</button>
+
+            <div class="popover popover-bottom error-tooltip" style="display: none">
+                <div class="popover-content">
+                    <p>Пожалуйста, заполните все обязательные поля.
+
+                    <p>Вам осталось указать:</p>
+                    <ul>
+                    </ul>
+                </div>
+                <div class="popover-arrow popover-arrow-border"></div>
+                <div class="popover-arrow"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="widget opened" id="personal_block">
+
+    <div class="widget-header num num-3">
+        <h2>Личные данные</h2>
+    </div>
+
+    <div class="opened">
+
+        <div class="widget-content">
+            <p class="required-message">
+                <span class="star">*</span> — поля, обязательные для заполнения
+            </p>
+
+            <div class="row">
+                <label for="personal_name">Как вас зовут <span class="star">*</span></label>
+
+                <div class="row-content">
+                    <input type="text" id="personal_name" placeholder="Имя" class="name-input">
+                    <input type="text" id="personal_surname" placeholder="Фамилия" class="surname-input">
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="personal_email">Электронная почта <span class="star">*</span></label>
+
+                <div class="row-content">
+                    <input type="text" id="personal_email" class="email-input">
+
+                    <div class="error-tooltip-email popover popover-left error-tooltip" style="display: none">
+                        <div class="popover-content">
+                            <div class="error-content"></div>
+                        </div>
+                        <div class="popover-arrow popover-arrow-border"></div>
+                        <div class="popover-arrow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="personal_phone">Телефон</label>
+
+                <div class="row-content">
+                    <input type="text" id="personal_phone" class="phone-input">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="widget-footer">
+            <div class="checkbox" id="personal_agreement"></div>
+
+            <div class="agreement">
+                Я согласен с <a href="#">условиями обработки</a> моих персональных данных.
+            </div>
+
+            <button class="btn btn-red  widget-submit">Продолжить</button>
+
+            <div class="popover popover-bottom error-tooltip">
+                <div class="popover-content">
+                    <p>Пожалуйста, заполните все обязательные поля.
+
+                    <p>Вам осталось указать:</p>
+                    <ul>
+                    </ul>
+                </div>
+                <div class="popover-arrow popover-arrow-border"></div>
+                <div class="popover-arrow"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="widget opened" id="personal_block">
+
+    <div class="widget-header num num-3">
+        <h2>Личные данные</h2>
+    </div>
+
+    <div class="opened">
+
+        <div class="widget-content">
+            <p class="required-message">
+                <span class="star">*</span> — поля, обязательные для заполнения
+            </p>
+
+            <div class="row">
+                <label for="personal_name">Как вас зовут <span class="star">*</span></label>
+
+                <div class="row-content">
+                    <input type="text" id="personal_name" placeholder="Имя" class="name-input error">
+                    <input type="text" id="personal_surname" placeholder="Фамилия" class="surname-input error">
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="personal_email">Электронная почта <span class="star">*</span></label>
+
+                <div class="row-content">
+                    <input type="text" id="personal_email" class="email-input error">
+
+                    <div class="error-tooltip-email popover popover-left error-tooltip" style="display: block">
+                        <div class="popover-content">
+                            <div class="error-content"><p>Неверный формат адреса электронной почты. Он должен выглядеть примерно так:</p><p class="bold">mail@mail.ru</p></div>
+                        </div>
+                        <div class="popover-arrow popover-arrow-border"></div>
+                        <div class="popover-arrow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="personal_phone">Телефон</label>
+
+                <div class="row-content">
+                    <input type="text" id="personal_phone" class="phone-input">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="widget-footer">
+            <div class="checkbox" id="personal_agreement"></div>
+
+            <div class="agreement">
+                Я согласен с <a href="#">условиями обработки</a> моих персональных данных.
+            </div>
+
+            <button class="btn btn-red  widget-submit">Продолжить</button>
+
+            <div class="popover popover-bottom error-tooltip" style="display: none">
+                <div class="popover-content">
+                    <p>Пожалуйста, заполните все обязательные поля.
+
+                    <p>Вам осталось указать:</p>
+                    <ul>
+                    </ul>
+                </div>
+                <div class="popover-arrow popover-arrow-border"></div>
+                <div class="popover-arrow"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="widget" id="payment_block">
+    <div class="widget-header num num-4">
+        <h2>Способ оплаты</h2>
+        <a href="#" class="btn-open">Изменить</a>
+    </div>
+
+    <div class="closed" style="display: block">
+        <div class="widget-content"><p class="no-filled">Способ оплаты не выбран</p></div>
+    </div>
+</div>
+
+<div class="widget opened" id="payment_block">
+
+<div class="widget-header num num-4">
+    <h2>Способ оплаты</h2>
+</div>
+
+<div class="opened">
+    <div class="widget-content">
+
+        <div class="bonuscard-container">
+
+            <div class="bonuscard-selected">
+                <i class="logo"></i>
+
+                <div class="bonuscard-content">
+                    <p class="card-header">Карта М.Видео Бонус–Альфа-Банк с номером ×××9696×××</p>
+
+                    <p>У Вас есть <span class="price">10 000</span> бонусных рублей, которые вы можете потратить на
+                        оплату заказа. Еще <span class="price">10 000</span>
+                        Вы получите за этот заказ.</p>
+
+                    <div class="new-card-form">
+                        <p>Укажите, пожалуйста, дату рождения.</p>
+
+                        <div class="inputs">
+                            <input type="text" placeholder="ДД" maxlength="2" class="input-day">
+                            <input type="text" placeholder="ММ" maxlength="2" class="input-month">
+                            <input type="text" placeholder="ГГГГ" maxlength="4" class="input-year">
+                            <button id="submit_bonuscard_date" class="btn">Сохранить</button>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-another-card">Указать другую карту</a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="payment-methods-container courier-container">
+
+            <div class="block-line-header">
+                <h3>Доставка курьером</h3>
+            </div>
+
+            <div class="method method-courier method-selected">
+
+                <label class="radio-header">
+                    <i class="radio selected"></i>
+                    <span class="method-name">Наличными курьеру</span>
+                </label>
+
+                <div class="method-content">
+                    <p>Вы оплачиваете товар наличными курьеру интернет-магазина М.Видео при доставке. Оплата
+                        производится только в рублях.</p>
+
+                    <p>Вы можете оплатить часть покупки бонусной или акционными картами, предъявив их курьеру.</p>
+                </div>
+            </div>
+            <div class="method method-credit">
+                <label class="radio-header">
+                    <i class="radio"></i>
+                    <span class="method-name">Онлайн-кредит</span>
+
+                    <div class="method-content">
+                        <p>Первый взнос по кредиту Вы оплачиваете курьеру интернет-магазина М.Видео при доставке.
+                            Оплата производится только в рублях.</p>
+
+                        <div class="credit-info">
+                            <p class="amount-wr">От <span class="amount">1 657 рублей</span> в месяц</p>
+
+                            <p class="info">Суммарно за все товары в корзине. Точная сумма ежемемячного платежа
+                                будет рассчитана
+                                после нажатия на кнопку «Оформить заказ»</p>
+
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="method method-cardonline">
+                <label class="radio-header">
+                    <i class="radio"></i>
+                    <span class="method-name">Пластиковой картой онлайн</span>
+                    <i class="card-logos"></i>
+                </label>
+
+                <div class="method-content">
+                    <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+                    <div class="opened-container">
+                        <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
+                            товара нам нужно будет
+                            <b>проверить карту</b>, которой была совершена.</p>
+
+                        <a href="#" class="bonus-link">Частично оплатить бонусными рублями</a>
+
+                        <div class="bonus-sertificates-container">
+                            <p class="header">Какие бонусные сертификаты вы хотите использовать для оплаты?</p>
+
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <thead>
+                                <tr>
+                                    <th class="cell-checkbox">&nbsp;</th>
+                                    <th class="cell-amount">Сумма</th>
+                                    <th class="cell-days">Осталось дней</th>
+                                    <th class="cell-date">Использовать до</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="red">
+                                    <td class="cell-checkbox">
+                                        <div class="checkbox"></div>
+                                    </td>
+                                    <td class="cell-amount">500 руб.</td>
+                                    <td class="cell-days">40</td>
+                                    <td class="cell-date">25.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td class="cell-checkbox">
+                                        <div class="checkbox"></div>
+                                    </td>
+                                    <td class="cell-amount">500 руб.</td>
+                                    <td class="cell-days">40</td>
+                                    <td class="cell-date">25.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td class="cell-checkbox">
+                                        <div class="checkbox"></div>
+                                    </td>
+                                    <td class="cell-amount">500 руб.</td>
+                                    <td class="cell-days">40</td>
+                                    <td class="cell-date">25.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td class="cell-checkbox">
+                                        <div class="checkbox"></div>
+                                    </td>
+                                    <td class="cell-amount">500 руб.</td>
+                                    <td class="cell-days">40</td>
+                                    <td class="cell-date">25.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td class="cell-checkbox">
+                                        <div class="checkbox"></div>
+                                    </td>
+                                    <td class="cell-amount">500 руб.</td>
+                                    <td class="cell-days">40</td>
+                                    <td class="cell-date">25.10.2013</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <p class="summary">Итого <span class="price">1 000</span> бонусных рублей будет
+                                использовано в счёт оплатыэтой покупки.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="method method-cardoffline method-no-content">
+                <label class="radio-header">
+                    <i class="radio"></i>
+                    <span class="method-name">Пластиковой картой при получении заказа</span>
+                </label>
+            </div>
+            <div class="method method-bonus method-no-content">
+                <label class="radio-header">
+                    <i class="radio"></i>
+                    <span class="method-name">Бонусными рублями</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="pickups-container">
+            <div class="payment-methods-container pickup example" style="display: none">
+                <div class="block-line-header">
+                    <h3>Самовывоз (<span class="shop-name"></span>)</h3>
+                </div>
+                <div class="method method-cardonline method-selected">
+                    <label class="radio-header">
+                        <i class="radio selected"></i>
+                        <span class="method-name">Пластиковой картой онлайн</span>
+                        <i class="card-logos"></i>
+                    </label>
+
+                    <div class="method-content">
+                        <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+                        <div class="opened-container">
+                            <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
+                                товара нам нужно будет
+                                <b>проверить карту</b>, которой была совершена.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="widget-footer widget-footer-info">
+
+        <p class="info">Перед оформлением заказа внимательно<br>проверьте данные, которые Вы указали выше.</p>
+
+        <button class="btn btn-red widget-submit">Оформить заказ</button>
+    </div>
+</div>
+
+</div>
+
+<div class="widget opened" id="payment_block">
+
+    <div class="widget-header num num-4">
+        <h2>Способ оплаты</h2>
+    </div>
+
+    <div class="opened">
+        <div class="widget-content">
+
+            <div class="bonuscard-container">
+
+                <div class="bonuscard-no-selected">
+                    <a href="#" class="bonuscard-button">
+                        <i></i>
+                        <span class="first">У меня есть карта</span>
+                        <span class="second">М.Видео БОНУС</span>
+                    </a>
+
+                    <p class="bonuscard-info">Вы можете оплатить всю покупку или её часть с помощью бонусов по картам
+                        М.Видео Бонус, М.Видео Бонус
+                        - Альфа-банк, М.Видео Бонус - Cetelem.</p>
+                </div>
+
+
+            </div>
+
+            <div class="payment-methods-container courier-container">
+
+                <div class="block-line-header">
+                    <h3>Доставка курьером</h3>
+                </div>
+
+                <div class="method method-courier method-selected">
+
+                    <label class="radio-header">
+                        <i class="radio selected"></i>
+                        <span class="method-name">Наличными курьеру</span>
+                    </label>
+
+                    <div class="method-content">
+                        <p>Вы оплачиваете товар наличными курьеру интернет-магазина М.Видео при доставке. Оплата
+                            производится только в рублях.</p>
+
+                        <p>Вы можете оплатить часть покупки бонусной или акционными картами, предъявив их курьеру.</p>
+                    </div>
+                </div>
+                <div class="method method-credit">
+                    <label class="radio-header">
+                        <i class="radio"></i>
+                        <span class="method-name">Онлайн-кредит</span>
+
+                        <div class="method-content">
+                            <p>Первый взнос по кредиту Вы оплачиваете курьеру интернет-магазина М.Видео при доставке.
+                                Оплата производится только в рублях.</p>
+
+                            <div class="credit-info">
+                                <p class="amount-wr">От <span class="amount">1 657 рублей</span> в месяц</p>
+
+                                <p class="info">Суммарно за все товары в корзине. Точная сумма ежемемячного платежа
+                                    будет рассчитана
+                                    после нажатия на кнопку «Оформить заказ»</p>
+
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="method method-cardonline">
+                    <label class="radio-header">
+                        <i class="radio"></i>
+                        <span class="method-name">Пластиковой картой онлайн</span>
+                        <i class="card-logos"></i>
+                    </label>
+
+                    <div class="method-content">
+                        <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+                        <div class="opened-container">
+                            <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
+                                товара нам нужно будет
+                                <b>проверить карту</b>, которой была совершена.</p>
+
+                            <a href="#" class="bonus-link">Частично оплатить бонусными рублями</a>
+
+                            <div class="bonus-sertificates-container">
+                                <p class="header">Какие бонусные сертификаты вы хотите использовать для оплаты?</p>
+
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <thead>
+                                    <tr>
+                                        <th class="cell-checkbox">&nbsp;</th>
+                                        <th class="cell-amount">Сумма</th>
+                                        <th class="cell-days">Осталось дней</th>
+                                        <th class="cell-date">Использовать до</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="red">
+                                        <td class="cell-checkbox">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td class="cell-amount">500 руб.</td>
+                                        <td class="cell-days">40</td>
+                                        <td class="cell-date">25.10.2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cell-checkbox">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td class="cell-amount">500 руб.</td>
+                                        <td class="cell-days">40</td>
+                                        <td class="cell-date">25.10.2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cell-checkbox">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td class="cell-amount">500 руб.</td>
+                                        <td class="cell-days">40</td>
+                                        <td class="cell-date">25.10.2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cell-checkbox">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td class="cell-amount">500 руб.</td>
+                                        <td class="cell-days">40</td>
+                                        <td class="cell-date">25.10.2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cell-checkbox">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td class="cell-amount">500 руб.</td>
+                                        <td class="cell-days">40</td>
+                                        <td class="cell-date">25.10.2013</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <p class="summary">Итого <span class="price">1 000</span> бонусных рублей будет
+                                    использовано в счёт оплатыэтой покупки.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="method method-cardoffline method-no-content">
+                    <label class="radio-header">
+                        <i class="radio"></i>
+                        <span class="method-name">Пластиковой картой при получении заказа</span>
+                    </label>
+                </div>
+                <div class="method method-bonus method-no-content">
+                    <label class="radio-header">
+                        <i class="radio"></i>
+                        <span class="method-name">Бонусными рублями</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="pickups-container">
+                <div class="payment-methods-container pickup example" style="display: none">
+                    <div class="block-line-header">
+                        <h3>Самовывоз (<span class="shop-name"></span>)</h3>
+                    </div>
+                    <div class="method method-cardonline method-selected">
+                        <label class="radio-header">
+                            <i class="radio selected"></i>
+                            <span class="method-name">Пластиковой картой онлайн</span>
+                            <i class="card-logos"></i>
+                        </label>
+
+                        <div class="method-content">
+                            <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+                            <div class="opened-container">
+                                <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При
+                                    доставке
+                                    товара нам нужно будет
+                                    <b>проверить карту</b>, которой была совершена.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="widget-footer widget-footer-info">
+
+            <p class="info">Перед оформлением заказа внимательно<br>проверьте данные, которые Вы указали выше.</p>
+
+            <button class="btn btn-red widget-submit">Оформить заказ</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="widget opened" id="payment_block">
+
+    <div class="widget-header num num-4">
+        <h2>Способ оплаты</h2>
+    </div>
+
+    <div class="opened">
+        <div class="widget-content">
+
+            <div class="bonuscard-container">
+
+                <div class="bonuscard-no-selected">
+                    <a href="#" class="bonuscard-button">
+                        <i></i>
+                        <span class="first">У меня есть карта</span>
+                        <span class="second">М.Видео БОНУС</span>
+                    </a>
+
+                    <p class="bonuscard-info">Вы можете оплатить всю покупку или её часть с помощью бонусов по картам
+                        М.Видео Бонус, М.Видео Бонус
+                        - Альфа-банк, М.Видео Бонус - Cetelem.</p>
+                </div>
+
+
+            </div>
+
+            <div class="payment-methods-container courier-container">
+
+
+                <div class="method method-courier method-selected">
+
+                    <label class="radio-header">
+                        <i class="radio selected"></i>
+                        <span class="method-name">Наличными курьеру</span>
+                    </label>
+
+                    <div class="method-content">
+                        <p>Вы оплачиваете товар наличными курьеру интернет-магазина М.Видео при доставке. Оплата
+                            производится только в рублях.</p>
+
+                        <p>Вы можете оплатить часть покупки бонусной или акционными картами, предъявив их курьеру.</p>
+                    </div>
+                </div>
+
+                <div class="method method-credit method-selected">
+                    <label class="radio-header">
+                        <i class="radio selected"></i>
+                        <span class="method-name">Онлайн-кредит</span>
+
+                        <div class="method-content">
+                            <p>Первый взнос по кредиту Вы оплачиваете курьеру интернет-магазина М.Видео при доставке.
+                                Оплата производится только в рублях.</p>
+
+                            <div class="credit-info">
+                                <p class="amount-wr">От <span class="amount">1 657 рублей</span> в месяц</p>
+
+                                <p class="info">Суммарно за все товары в корзине. Точная сумма ежемемячного платежа
+                                    будет рассчитана
+                                    после нажатия на кнопку «Оформить заказ»</p>
+
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="method method-cardonline method-selected">
+                    <label class="radio-header">
+                        <i class="radio selected"></i>
+                        <span class="method-name">Пластиковой картой онлайн</span>
+                        <i class="card-logos"></i>
+                    </label>
+
+                    <div class="method-content">
+                        <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+                        <div class="opened-container">
+                            <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
+                                товара нам нужно будет
+                                <b>проверить карту</b>, которой была совершена.</p>
+
+                            <a href="#" class="bonus-link">Частично оплатить бонусными рублями</a>
+
+                            <div class="bonus-sertificates-container">
+                                <p class="header">Какие бонусные сертификаты вы хотите использовать для оплаты?</p>
+
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <thead>
+                                    <tr>
+                                        <th class="cell-checkbox">&nbsp;</th>
+                                        <th class="cell-amount">Сумма</th>
+                                        <th class="cell-days">Осталось дней</th>
+                                        <th class="cell-date">Использовать до</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="red">
+                                        <td class="cell-checkbox">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td class="cell-amount">500 руб.</td>
+                                        <td class="cell-days">40</td>
+                                        <td class="cell-date">25.10.2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cell-checkbox">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td class="cell-amount">500 руб.</td>
+                                        <td class="cell-days">40</td>
+                                        <td class="cell-date">25.10.2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cell-checkbox">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td class="cell-amount">500 руб.</td>
+                                        <td class="cell-days">40</td>
+                                        <td class="cell-date">25.10.2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cell-checkbox">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td class="cell-amount">500 руб.</td>
+                                        <td class="cell-days">40</td>
+                                        <td class="cell-date">25.10.2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cell-checkbox">
+                                            <div class="checkbox"></div>
+                                        </td>
+                                        <td class="cell-amount">500 руб.</td>
+                                        <td class="cell-days">40</td>
+                                        <td class="cell-date">25.10.2013</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <p class="summary">Итого <span class="price">1 000</span> бонусных рублей будет
+                                    использовано в счёт оплатыэтой покупки.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method method-cardoffline method-no-content method-selected">
+                    <label class="radio-header">
+                        <i class="radio selected"></i>
+                        <span class="method-name">Пластиковой картой при получении заказа</span>
+                    </label>
+                </div>
+                <div class="method method-bonus method-no-content  method-selected">
+                    <label class="radio-header">
+                        <i class="radio selected"></i>
+                        <span class="method-name">Бонусными рублями</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="pickups-container">
+                <div class="payment-methods-container pickup example" style="display: none">
+                    <div class="block-line-header">
+                        <h3>Самовывоз (<span class="shop-name"></span>)</h3>
+                    </div>
+                    <div class="method method-cardonline method-selected">
+                        <label class="radio-header">
+                            <i class="radio selected"></i>
+                            <span class="method-name">Пластиковой картой онлайн</span>
+                            <i class="card-logos"></i>
+                        </label>
+
+                        <div class="method-content">
+                            <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+                            <div class="opened-container">
+                                <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При
+                                    доставке
+                                    товара нам нужно будет
+                                    <b>проверить карту</b>, которой была совершена.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="widget-footer widget-footer-info">
+
+            <p class="info">Перед оформлением заказа внимательно<br>проверьте данные, которые Вы указали выше.</p>
+
+            <button class="btn btn-red widget-submit">Оформить заказ</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="widget opened" id="payment_block">
+
+<div class="widget-header num num-4">
+    <h2>Способ оплаты</h2>
+</div>
+
+<div class="opened">
+<div class="widget-content">
+
+<div class="bonuscard-container">
+
+    <div class="bonuscard-no-selected">
+        <a href="#" class="bonuscard-button">
+            <i></i>
+            <span class="first">У меня есть карта</span>
+            <span class="second">М.Видео БОНУС</span>
+        </a>
+
+        <p class="bonuscard-info">Вы можете оплатить всю покупку или её часть с помощью бонусов по картам
+            М.Видео Бонус, М.Видео Бонус
+            - Альфа-банк, М.Видео Бонус - Cetelem.</p>
+    </div>
+
+
+</div>
+
+<div class="payment-methods-container courier-container">
+
+    <div class="block-line-header">
+        <h3>Доставка курьером</h3>
+    </div>
+
+    <div class="items-info-block" style="display: block;">
+        <div class="arrow"></div>
+        <div class="items-info-block-header">
+            <div class="items-info-wr">
+                <a href="#" class="show-items-btn">2 товара</a>
+                <div class="popover popover-right" style="top: -94.5px;">
+                    <div class="popover-content"><div class="items-info-block-popover-item first" style="display: block;">
+                        <div class="item-image">
+                            <img src="img/order_03.png">
+                        </div>
+                        <div class="item-content">
+                            <div class="item-name">Встраиваемая индукционная панель независимая Hansa BHI64383030</div>
+                            <div class="item-price-block">
+                                <span class="item-price-total"><span class="price-total">2 582</span> руб.</span>
+                                <span class="item-price"><span class="items-count">2</span> × <span class="price-single">1 291</span> руб.</span>
+                            </div>
+                        </div>
+                    </div><div class="items-info-block-popover-item" style="display: block;">
+                        <div class="item-image">
+                            <img src="img/order_04.png">
+                        </div>
+                        <div class="item-content">
+                            <div class="item-name">Утюг с парогенератором Philips GC 6530/02</div>
+                            <div class="item-price-block">
+                                <span class="item-price-total"><span class="price-total">30 582</span> руб.</span>
+                                <span class="item-price"><span class="items-count">2</span> × <span class="price-single">15 291</span> руб.</span>
+                            </div>
+                        </div>
+                    </div></div>
+                    <div class="popover-arrow popover-arrow-border"></div>
+                    <div class="popover-arrow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="items-info-block-content">
+            <div class="items-info-wr">
+                <div class="item-info-row item-info-row-cost">
+                    <label>Стоимость товаров</label>
+                    <span><span class="items-cost">33 164</span> руб.</span>
+                </div>
+                <div class="item-info-row item-info-row-total">
+                    <label>ИТОГО:</label>
+                    <span><span class="total-amount">33 164</span> руб.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="method method-courier method-selected">
+
+        <label class="radio-header">
+            <i class="radio selected"></i>
+            <span class="method-name">Наличными курьеру</span>
+        </label>
+
+        <div class="method-content">
+            <p>Вы оплачиваете товар наличными курьеру интернет-магазина М.Видео при доставке. Оплата
+                производится только в рублях.</p>
+
+            <p>Вы можете оплатить часть покупки бонусной или акционными картами, предъявив их курьеру.</p>
+        </div>
+    </div>
+    <div class="method method-credit">
+        <label class="radio-header">
+            <i class="radio"></i>
+            <span class="method-name">Онлайн-кредит</span>
+
+            <div class="method-content">
+                <p>Первый взнос по кредиту Вы оплачиваете курьеру интернет-магазина М.Видео при доставке.
+                    Оплата производится только в рублях.</p>
+
+                <div class="credit-info">
+                    <p class="amount-wr">От <span class="amount">1 657 рублей</span> в месяц</p>
+
+                    <p class="info">Суммарно за все товары в корзине. Точная сумма ежемемячного платежа
+                        будет рассчитана
+                        после нажатия на кнопку «Оформить заказ»</p>
+
+                </div>
+            </div>
+        </label>
+    </div>
+    <div class="method method-cardonline">
+        <label class="radio-header">
+            <i class="radio"></i>
+            <span class="method-name">Пластиковой картой онлайн</span>
+            <i class="card-logos"></i>
+        </label>
+
+        <div class="method-content">
+            <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+            <div class="opened-container">
+                <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
+                    товара нам нужно будет
+                    <b>проверить карту</b>, которой была совершена.</p>
+
+                <a href="#" class="bonus-link">Частично оплатить бонусными рублями</a>
+
+                <div class="bonus-sertificates-container">
+                    <p class="header">Какие бонусные сертификаты вы хотите использовать для оплаты?</p>
+
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <thead>
+                        <tr>
+                            <th class="cell-checkbox">&nbsp;</th>
+                            <th class="cell-amount">Сумма</th>
+                            <th class="cell-days">Осталось дней</th>
+                            <th class="cell-date">Использовать до</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="red">
+                            <td class="cell-checkbox">
+                                <div class="checkbox"></div>
+                            </td>
+                            <td class="cell-amount">500 руб.</td>
+                            <td class="cell-days">40</td>
+                            <td class="cell-date">25.10.2013</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-checkbox">
+                                <div class="checkbox"></div>
+                            </td>
+                            <td class="cell-amount">500 руб.</td>
+                            <td class="cell-days">40</td>
+                            <td class="cell-date">25.10.2013</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-checkbox">
+                                <div class="checkbox"></div>
+                            </td>
+                            <td class="cell-amount">500 руб.</td>
+                            <td class="cell-days">40</td>
+                            <td class="cell-date">25.10.2013</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-checkbox">
+                                <div class="checkbox"></div>
+                            </td>
+                            <td class="cell-amount">500 руб.</td>
+                            <td class="cell-days">40</td>
+                            <td class="cell-date">25.10.2013</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-checkbox">
+                                <div class="checkbox"></div>
+                            </td>
+                            <td class="cell-amount">500 руб.</td>
+                            <td class="cell-days">40</td>
+                            <td class="cell-date">25.10.2013</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="summary">Итого <span class="price">1 000</span> бонусных рублей будет
+                        использовано в счёт оплатыэтой покупки.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="method method-cardoffline method-no-content">
+        <label class="radio-header">
+            <i class="radio"></i>
+            <span class="method-name">Пластиковой картой при получении заказа</span>
+        </label>
+    </div>
+    <div class="method method-bonus method-no-content">
+        <label class="radio-header">
+            <i class="radio"></i>
+            <span class="method-name">Бонусными рублями</span>
+        </label>
+    </div>
+</div>
+
+<div class="pickups-container" style="display: block;">
+    <div class="payment-methods-container pickup example" style="display: none">
+        <div class="block-line-header" style="display: block;">
+            <h3>Самовывоз (<span class="shop-name"></span>)</h3>
+        </div>
+        <div class="method method-cardonline method-selected">
+            <label class="radio-header">
+                <i class="radio selected"></i>
+                <span class="method-name">Пластиковой картой онлайн</span>
+                <i class="card-logos"></i>
+            </label>
+
+            <div class="method-content">
+                <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+                <div class="opened-container">
+                    <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
+                        товара нам нужно будет
+                        <b>проверить карту</b>, которой была совершена.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="payment-methods-container pickup" style="display: block;">
+        <div class="block-line-header" style="display: block;">
+            <h3>Самовывоз (<span class="shop-name">Имя магазина 1</span>)</h3>
+        </div>
+        <div class="items-info-block" style="display: block;">
+            <div class="arrow"></div>
+            <div class="items-info-block-header">
+                <div class="items-info-wr">
+                    <a href="#" class="show-items-btn">1 товар</a>
+
+                    <div class="popover popover-right" style="top: -51px;">
+                        <div class="popover-content">
+                            <div class="items-info-block-popover-item first" style="display: block;">
+                                <div class="item-image">
+                                    <img src="img/order_01.png">
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver
+                                    </div>
+                                    <div class="item-price-block">
+                                        <span class="item-price-total"><span
+                                                class="price-total">203 292</span> руб.</span>
+                                        <span class="item-price"><span class="items-count">2</span> × <span
+                                                class="price-single">101 646</span> руб.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popover-arrow popover-arrow-border"></div>
+                        <div class="popover-arrow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="items-info-block-content">
+                <div class="items-info-wr">
+                    <div class="item-info-row item-info-row-cost">
+                        <label>Стоимость товаров</label>
+                        <span><span class="items-cost">203 292</span> руб.</span>
+                    </div>
+                    <div class="item-info-row item-info-row-total">
+                        <label>ИТОГО:</label>
+                        <span><span class="total-amount">203 292</span> руб.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="method method-cardonline method-selected">
+            <label class="radio-header">
+                <i class="radio selected"></i>
+                <span class="method-name">Пластиковой картой онлайн</span>
+                <i class="card-logos"></i>
+            </label>
+
+            <div class="method-content">
+                <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+                <div class="opened-container">
+                    <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
+                        товара нам нужно будет
+                        <b>проверить карту</b>, которой была совершена.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="payment-methods-container pickup" style="display: block;">
+        <div class="block-line-header" style="display: block;">
+            <h3>Самовывоз (<span class="shop-name">Имя магазина 2</span>)</h3>
+        </div>
+        <div class="items-info-block" style="display: block;">
+            <div class="arrow"></div>
+            <div class="items-info-block-header">
+                <div class="items-info-wr">
+                    <a href="#" class="show-items-btn">1 товар</a>
+
+                    <div class="popover popover-right" style="top: -34px;">
+                        <div class="popover-content">
+                            <div class="items-info-block-popover-item first" style="display: block;">
+                                <div class="item-image">
+                                    <img src="img/order_02.png">
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-name">Эпилятор Rowenta EP1040F4</div>
+                                    <div class="item-price-block">
+                                        <span class="item-price-total"><span class="price-total">582</span> руб.</span>
+                                        <span class="item-price"><span class="items-count">2</span> × <span
+                                                class="price-single">291</span> руб.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popover-arrow popover-arrow-border"></div>
+                        <div class="popover-arrow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="items-info-block-content">
+                <div class="items-info-wr">
+                    <div class="item-info-row item-info-row-cost">
+                        <label>Стоимость товаров</label>
+                        <span><span class="items-cost">582</span> руб.</span>
+                    </div>
+                    <div class="item-info-row item-info-row-total">
+                        <label>ИТОГО:</label>
+                        <span><span class="total-amount">582</span> руб.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="method method-cardonline method-selected">
+            <label class="radio-header">
+                <i class="radio selected"></i>
+                <span class="method-name">Пластиковой картой онлайн</span>
+                <i class="card-logos"></i>
+            </label>
+
+            <div class="method-content">
+                <p><span class="discount">Скидка 5%</span> на весь заказ при оплате пластиковой картой.</p>
+
+                <div class="opened-container">
+                    <p class="add-info">К оплате принимаются пластиковые карты VISA и MasterCard. При доставке
+                        товара нам нужно будет
+                        <b>проверить карту</b>, которой была совершена.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="widget-footer widget-footer-info">
+
+    <p class="info">Перед оформлением заказа внимательно<br>проверьте данные, которые Вы указали выше.</p>
+
+    <button class="btn btn-red widget-submit">Оформить заказ</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+    <div class="blocks">
+
+        <div class="block left">
+            <p class="header">Оплачивайте покупки онлайн – это безопасно!</p>
+
+            <p>Процессинг М.Видео поддерживает стандарты безопасности ведущих мировых платёжных систем.</p>
+        </div>
+
+        <div class="block right">
+            <p class="header">Обмен и возврат без проблем</p>
+
+            <p>Будте уверены в покупке. Обменяйте товар или возвратите его в любой магазин без объясненияпричины.
+                Выбирайте уверенно.</p>
+        </div>
+
+    </div>
+
+    <div class="bottom">
+        <div class="left">
+            <p>Copyright © М.Видео, 2013</p>
+
+            <p>Центр Ответственности за Клиента: <strong>8-800-777-777-5</strong></p>
+
+            <div class="links"><a href="#">Официальное уведомление</a> | <a href="#">Обратная связь</a></div>
+        </div>
+        <div class="right">
+            Информация действительна на 15:58 3 апреля 2013
+        </div>
+    </div>
+
+</footer>
+
+<div class="calendar" id="delivery_calendar"></div>
+
+<div id="popup_pickup" class="popup" style="display: none">
+
+    <div class="popup-header">
+        <a href="#" class="item-link popup-title" target="_blank">3D Телевизор Samsung UE50 ES6907U</a>
+        <a href="#" class="popup-close-btn"></a>
+    </div>
+
+    <div class="popup-content">
+        <div class="point_take">
+            <h3>Заберите заказ в магазине и получите скидку <span class="bold_red">500 рублей</span></h3>
+            На все заказы, которые вы можете забрать в магазине, предоставляется скидка 500 рублей на следующую покупку.<br>Воспользоваться
+            скидкой вы можете сразу же, выбрав что-то в магазине или на mvideo.ru<br>
+        </div>
+
+        <div class="table-container">
+
+            <div class="table-header">
+
+                <div class="corners">
+                    <b class="c7 bg_bababa"></b>
+                    <b class="c5 bg_bababa"><b class="c2 bg_ff7e00"></b></b>
+                    <b class="c4 bg_bababa"><b class="c1 bg_ff7e00"></b></b>
+                    <b class="c3 bg_bababa"><b class="c1 bg_ff7e00"></b></b>
+                    <b class="c2 bg_bababa"><b class="c1 bg_ff7e00"></b></b>
+                    <b class="c1 bg_bababa c_h2"><b class="c1 bg_ff7e00 c_h2"></b></b>
+                </div>
+
+                <div class="caption">Список магазинов, в которых Вы можете забрать этот товар:</div>
+
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <td class="cell-metro">Метро</td>
+                        <td class="cell-address">Адрес</td>
+                        <td class="cell-order">Заказать</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="table-body">
+
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <td id="no_border" colspan="3" class="allshops">
+                            <div>Все магазины</div>
+                        </td>
+                    </tr>
+
+                    <tr class="shop-line" data-id="1" data-name="Имя магазина 1"
+                        data-address="Адрес 1»" data-metro="Метро 1">
+                        <td class="cell-metro">
+                            <a href="#" target="_blank" rel="nofollow">Метро<br>Римская</a>
+                        </td>
+
+                        <td class="cell-address">
+                            <a href="#" target="_blank" rel="nofollow">Адрес 1</a>
+                        </td>
+
+                        <td class="cell-order">
+                            <div class="pickup_ref">
+                                <a href="#">Выбрать</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="shop-line" data-id="2" data-name="Имя магазина 2"
+                        data-address="Адрес 2»" data-metro="Метро 2">
+                        <td class="cell-metro">
+                            <a href="#" target="_blank" rel="nofollow">Метро<br> около м.видео</a>
+                        </td>
+
+                        <td class="cell-address">
+                            <a href="#" target="_blank" rel="nofollow">Адрес 2</a>
+                        </td>
+
+                        <td class="cell-order">
+                            <div class="pickup_ref">
+                                <a href="#">Выбрать</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="shop-line" data-id="3" data-name="Имя магазина 3"
+                        data-address="Адрес 3»" data-metro="Метро 3">
+                        <td class="cell-metro">
+                            <a href="#" target="_blank" rel="nofollow">Метро<br> нету</a>
+                        </td>
+
+                        <td class="cell-address">
+                            <a href="#" target="_blank" rel="nofollow">Адрес 3</a>
+                        </td>
+
+                        <td class="cell-order">
+                            <div class="pickup_ref">
+                                <a href="#">Выбрать</a>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <div class="corners">
+                    <b class="c1 bg_bababa c_h2"><b class="c1 bg_fff c_h2"></b></b>
+                    <b class="c2 bg_bababa"><b class="c1 bg_fff"></b></b>
+                    <b class="c3 bg_bababa"><b class="c1 bg_fff"></b></b>
+                    <b class="c4 bg_bababa"><b class="c1 bg_fff"></b></b>
+                    <b class="c5 bg_bababa"><b class="c2 bg_fff"></b></b>
+                    <b class="c7 bg_bababa"></b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup_bonuscard" class="popup" style="display: none">
+
+    <div class="popup-header">
+        <h2 class="popup-title">Бонусная карта</h2>
+        <a href="#" class="popup-close-btn"></a>
+    </div>
+
+    <div class="popup-content">
+        <div class="row row-type">
+            <label>Тип карты</label>
+
+            <div class="param-block">
+                <div class="switch-container">
+                    <div class="switch-item first selected"><span class="switch-item-text">М.Видео Бонус</span></div>
+                    <div class="switch-item"><span class="switch-item-text">М.Видео Бонус Альфабанк</span></div>
+                    <div class="switch-item"><span class="switch-item-text">М.Видео Бонус - Catelem</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-number">
+            <label>Номер карты</label>
+
+            <div class="param-block">
+                <span class="prefix">xxxx - xxx</span>
+                <input type="text" class="number-2" maxlength="2">
+                <span class="delimetr">-</span>
+                <input type="text" class="number-4" maxlength="4">
+                <span class="delimetr">-</span>
+                <input type="text" class="number-3" maxlength="3">
+                <a href="#" class="reset-row">x</a>
+
+                <div class="help-icon">
+                    <div class="tooltip-block popover popover-bottom">
+                        <div class="popover-content">
+                            <p>Пожалуйста, введите цифры с вашей карты</p>
+
+                            <p class="card-type">М.Видео Бонус</p>
+
+                            <div class="help-image"></div>
+                        </div>
+                        <div class="popover-arrow popover-arrow-border"></div>
+                        <div class="popover-arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-birthday">
+            <label>Дата рождения</label>
+
+            <div class="param-block">
+                <input type="text" class="input-day" placeholder="ДД">
+                <input type="text" class="input-month" placeholder="ММ">
+                <input type="text" class="input-year" placeholder="ГГГГ">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-footer">
+        <button class="btn btn-red popup-submit">Добавить карту</button>
+    </div>
+
+</div>
+
+<div id="popup_credit" class="popup" style="display: none">
+
+    <div class="popup-header">
+        <h2 class="popup-title">Кредит 0-0-24</h2>
+        <a href="#" class="popup-close-btn"></a>
+    </div>
+
+    <div class="popup-content">
+        <p>Некоторые товары, выбранные Вами для покупки в кредит проходят по программе "Кредит 0-0-24", согласно
+            условиям которой, нельзя покупать вместе с ними товары, проходящие по другим кредитным программам. Чтобы
+            продолжить оформление, вам нужно убрать из корзины следующие товары:</p>
+
+        <div class="items-container">
+            <div class="item first">
+                <div class="item-image">
+                    <img src="/img/order_01.png">
+                </div>
+                <div class="item-content">
+                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
+                    <div class="item-price">
+                        <span class="price">201 292 руб.</span>
+                        <span class="count">2 × 101 646 руб.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-image">
+                    <img src="/img/order_01.png">
+                </div>
+                <div class="item-content">
+                    <div class="item-name">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</div>
+                    <div class="item-price">
+                        <span class="price">201 292 руб.</span>
+                        <span class="count">2 × 101 646 руб.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-submit">
+            <button class="btn">Убрать два товара из корзины</button>
+            <p class="remove-success">2 товара успешно убраны из корзины. <a href="#">Отменить</a></p>
+        </div>
+
+        <p class="bold">Мы вернём остальные товары в Вашу корзину после того, как Вы закончите оформление кредита.</p>
+
+        <p>Приносим свои извинения за доставленные неудобства.</p>
+    </div>
+
+    <div class="popup-footer">
+        <button class="btn popup-submit">Продолжить оформление заказа</button>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -17,7 +17,7 @@ $(function () {
         $arrow_right.toggle($items.length > 3 && index < $items.length - 3);
 
         $long.animate({
-            left: -index * 278
+            left: -index * 280
         });
 
         $page_circles.removeClass('active');

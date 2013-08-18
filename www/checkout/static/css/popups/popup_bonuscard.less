@@ -1,0 +1,125 @@
+#popup_bonuscard {
+  width: 605px;
+
+  .switch-container{
+    margin-left: -5px;
+    .switch-item{
+      padding: 0 5px;
+      margin-left: 0;
+    }
+  }
+
+  .row {
+    .clearfix;
+    margin: 5px 0 11px;
+
+    label {
+      width: 110px;
+      float: left;
+      font-size: 15px;
+      color: #1b1b1b;
+      text-align: left;
+      line-height: 28px;
+    }
+
+    .param-block {
+      margin-left: 125px;
+    }
+  }
+
+  .row-number {
+    label {
+      line-height: 30px;
+    }
+    span {
+      float: left;
+      font-size: 15px;
+      line-height: 30px;
+      color: #1f1f1f;
+      &.prefix {
+        margin-right: 10px;
+      }
+      &.delimetr {
+        margin: 0 6px;
+      }
+    }
+    input {
+      float: left;
+      text-align: center;
+      &.number-2 {
+        width: 21px;
+      }
+      &.number-4 {
+        width: 61px;
+      }
+      &.number-3 {
+        width: 40px;
+      }
+    }
+    .reset-row {
+      float: left;
+      margin: 0 10px;
+      color: #1b1b1b;
+      text-decoration: none;
+      line-height: 30px;
+    }
+    .help {
+      float: left;
+      line-height: 30px;
+      padding-top: 18px;
+    }
+  }
+
+  .row-birthday {
+    label {
+      line-height: 30px;
+    }
+    input {
+      float: left;
+      margin-right: 10px;
+      text-align: center;
+      &.input-day{
+        width: 41px;
+      }
+      &.input-month{
+        width: 41px;
+      }
+      &.input-year{
+        width: 51px;
+      }
+    }
+  }
+
+  .help-icon {
+    position: relative;
+    float: left;
+    margin-top: 10px;
+
+    &:hover{
+      .tooltip-block{
+        display: block;
+      }
+    }
+
+    .tooltip-block {
+      display: none;
+      bottom: 30px;
+      left: -101px;
+      .help-image {
+        background: url('@{images_dir}/cardnumber-help-tooltip.jpg');
+        width: 181px;
+        height: 122px;
+      }
+      color: #000;
+      font-size: 13px;
+      text-align: left;
+      line-height: 16px;
+      .card-type {
+        color: #db151c;
+        font-family: @font_mvideo_bold;
+        margin: 10px 0;
+      }
+    }
+  }
+
+}

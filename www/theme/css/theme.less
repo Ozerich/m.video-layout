@@ -1,4 +1,5 @@
-@theme_images_dir: "/theme/img/";
+@images_dir: "/checkout/static/img";
+@theme_images_dir: "/theme/img";
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -120,7 +121,7 @@ table {
   position: relative;
   i{
     cursor: pointer;
-    background: url('@{theme_images_dir}input_eye_hide.png');
+    background: url('@{theme_images_dir}/input_eye_hide.png');
     width: 19px;
     height: 16px;
     position: absolute;
@@ -130,7 +131,7 @@ table {
   }
   &.input-pass-visible{
     i{
-      background: url('@{theme_images_dir}input_eye_show.png');
+      background: url('@{theme_images_dir}/input_eye_show.png');
     }
   }
   input[type=text], input[type=password]{
@@ -169,7 +170,7 @@ input[type=text], input[type=password], input[type=email] {
     }
 
     &.error-with-tooltip {
-      background: url('@{theme_images_dir}input_error_icon.png') 98% center no-repeat;
+      background: url('@{theme_images_dir}/input_error_icon.png') 98% center no-repeat;
     }
   }
 
@@ -233,7 +234,7 @@ input[type=text], input[type=password], input[type=email] {
     }
 
     .popup-close-btn {
-      background: url('@{theme_images_dir}popup-close-btn.png');
+      background: url('@{theme_images_dir}/popup-close-btn.png');
       width: 17px;
       height: 17px;
       float: right;
@@ -345,7 +346,7 @@ input[type=text], input[type=password], input[type=email] {
 .checkbox {
   width: 16px;
   height: 14px;
-  background: url('@{theme_images_dir}checkbox_radio.png');
+  background: url('@{theme_images_dir}/checkbox_radio.png');
   display: block;
   float: left;
   cursor: pointer;
@@ -377,7 +378,7 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 .radio {
-  background: url('@{theme_images_dir}checkbox_radio.png');
+  background: url('@{theme_images_dir}/checkbox_radio.png');
   display: block;
   width: 14px;
   height: 14px;
@@ -409,7 +410,7 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 .help-icon {
-  background: url('@{theme_images_dir}help-icon.png') no-repeat 0 -63px;
+  background: url('@{theme_images_dir}/help-icon.png') no-repeat 0 -63px;
   width: 13px;
   height: 13px;
   vertical-align: middle;
@@ -422,7 +423,7 @@ input[type=text], input[type=password], input[type=email] {
 
 
 .social-icon{
-  background-image: url('@{theme_images_dir}socials.png');
+  background-image: url('@{theme_images_dir}/socials.png');
   width: 24px;
   height: 24px;
   display: block;
