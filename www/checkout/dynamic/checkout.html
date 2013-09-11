@@ -6,7 +6,8 @@
 
     <link rel="stylesheet/less" type="text/css" href="css/styles.less">
 
-    <script>var less = less || {};less.env = 'development';</script>
+    <script>var less = less || {};
+    less.env = 'development';</script>
     <script src="../../theme/js/thirdparty/less.js" type="text/javascript"></script>
     <script src="../../theme/js/thirdparty/jquery-1.8.1.min.js" type="text/javascript"></script>
     <script src="../../theme/js/thirdparty/jquery.blockUI.js" type="text/javascript"></script>
@@ -369,7 +370,7 @@
         <div class="row row-day">
             <label>В какой день</label>
 
-            <div class="row-content background">
+            <div class="row-content">
 
                 <div class="days switch-container">
 
@@ -408,42 +409,74 @@
         <div class="row row-time">
             <label>В какое время</label>
 
-            <div class="row-content background">
+            <div class="row-content">
 
-                <p class="today-period" style="display: none">Менеджер свяжется с Вами в ближайшее время для
-                    уточнения
-                    времени доставки. Стоимость доставки составляет <span class="price">250 р.</span></p>
+                <div class="time-all-day">
 
-                <div class="period-block switch-container">
-                    <div class="period selected switch-item first">
-                        <span class="bold">Весь день</span>
-                        <span>10:00 - 20:00</span>
-                        <span class="bold">0 р.</span>
+                    <div class="radio-container selected radio-container-all-day">
+                        <i class="radio selected"></i>
+                        <i class="icon-time"></i>
+                        <span>В любое время с 10:00 до 19:00</span>
+                        <span class="price free">Бесплатно</span>
                     </div>
 
-                    <div class="period switch-item">
-                        <span class="bold">Утром</span>
-                        <span>10:00 - 20:00</span>
-                        <span class="bold">250 р.</span>
+                    <p class="info">
+                        Мы бесплатно привезем Ваш заказ по адресу, который Вы указали, 10:00 до 19:00 в пятницу 25
+                        сентября.Наш курьер свяжется с вами.
+                    </p>
+                </div>
+
+                <div class="additional-times">
+
+                    <p class="bold">Управляйте своим временем</p>
+                    <p>Выберите более точный интервал доставки.</p>
+
+                    <div class="radio-container first">
+                        <i class="radio"></i>
+                        <span class="period">Утром</span>
+                        <span class="time"> с 07:00 до 11:00</span>
+                        <span class="price">+250 руб.</span>
                     </div>
 
-                    <div class="period switch-item">
-                        <span class="bold">Днем</span>
-                        <span>10:00 - 20:00</span>
-                        <span class="bold">250 р.</span>
+                    <div class="radio-container">
+                        <i class="radio"></i>
+                        <span class="period">Утром</span>
+                        <span class="time"> с 07:00 до 11:00</span>
+                        <span class="price">+250 руб.</span>
                     </div>
 
-                    <div class="period switch-item">
-                        <span class="bold">Вечером</span>
-                        <span>10:00 - 20:00</span>
-                        <span class="bold">250 р.</span>
+                    <div class="show-more">
+                        <a href="#">Показать больше интервалов</a>
                     </div>
 
-                    <div class="period switch-item">
-                        <span class="bold">Ночью</span>
-                        <span>10:00 - 20:00</span>
-                        <span class="bold">250 р.</span>
+                    <div class="radio-container" style="display: none">
+                        <i class="radio"></i>
+                        <span class="period">Утром</span>
+                        <span class="time"> с 07:00 до 11:00</span>
+                        <span class="price">+250 руб.</span>
                     </div>
+
+                    <div class="radio-container" style="display: none">
+                        <i class="radio"></i>
+                        <span class="period">Утром</span>
+                        <span class="time"> с 07:00 до 11:00</span>
+                        <span class="price">+250 руб.</span>
+                    </div>
+
+                    <div class="radio-container" style="display: none">
+                        <i class="radio"></i>
+                        <span class="period">Утром</span>
+                        <span class="time"> с 07:00 до 11:00</span>
+                        <span class="price">+250 руб.</span>
+                    </div>
+
+                    <div class="radio-container" style="display: none">
+                        <i class="radio"></i>
+                        <span class="period">Утром</span>
+                        <span class="time"> с 07:00 до 11:00</span>
+                        <span class="price">+250 руб.</span>
+                    </div>
+
                 </div>
 
             </div>
@@ -637,6 +670,7 @@
     <div class="items-info-block-header">
         <div class="items-info-wr">
             <a href="#" class="show-items-btn">2 товара</a>
+
             <div class="popover popover-right">
                 <div class="popover-content">
                 </div>

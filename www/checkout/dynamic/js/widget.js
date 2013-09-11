@@ -279,6 +279,22 @@ function Widget(_id) {
                     $block.find('.pickups').append($pickup);
                 }
             }
+
+            $block.find('.row-time .time-all-day, .row-time .additional-times .radio-container').on('click', function () {
+
+                $('.row-time').find('.selected').removeClass('selected');
+
+                if ($(this).hasClass('time-all-day')) {
+                    $(this).find('.radio-container').addClass('selected');
+                    $(this).find('.radio').addClass('selected');
+                }
+                else {
+                    $(this).addClass('selected');
+                    $(this).find('.radio').addClass('selected');
+                }
+
+                return false;
+            });
         }
 
         if (this.id == 'payment_block') {
@@ -310,7 +326,7 @@ function Widget(_id) {
             if (deliveryData.isClinic) {
                 $block.find('.pickups-container .pickup').not('.example').remove();
 
-                for (var i = 1; i < deliveryData.pickups.length; i++) {
+                for (var i = deliveryData.hasCourier ? 1 : 0; i < deliveryData.pickups.length; i++) {
                     var $pickup = $block.find('.pickups-container .pickup.example').clone();
                     $pickup.removeClass('example').show();
 
@@ -408,6 +424,7 @@ function Widget(_id) {
         }
 
         if (this.id == 'address_time_block') {
+
 
             if ($('#address_city').val().length === 0) {
                 this.element.find('.filled').hide();
@@ -635,7 +652,6 @@ function Widget(_id) {
             }
         });
 
-        $widget.find('.row-time .period-block').Switch();
 
         $widget.find('.btn-calendar').click(function (event) {
             if ($(event.target).parents('.tooltip-block').length || $(event.target).hasClass('tooltip-block')) {
@@ -671,6 +687,12 @@ function Widget(_id) {
             onSelect: function (object) {
                 return object.city;
             }
+        });
+
+        $widget.find('.show-more').on('click', function () {
+            $(this).hide();
+            $widget.find('.additional-times .radio-container').show();
+            return false;
         });
 
     }
@@ -713,4 +735,5 @@ function Widget(_id) {
     });
 
     $widget.data('api', this);
+
 }
