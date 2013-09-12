@@ -287,230 +287,231 @@
 </div>
 
 <div class="opened" style="display: none">
-    <div class="widget-content">
+<div class="widget-content">
 
-        <p class="required-message">
-            <span class="star">*</span> — поля, обязательные для заполнения
-        </p>
+<p class="required-message">
+    <span class="star">*</span> — поля, обязательные для заполнения
+</p>
 
+<div class="block-line-header">
+    <h3>Адрес доставки (для курьера)</h3>
+</div>
+
+<div class="row">
+    <label for="address_city">Город <span class="star">*</span></label>
+
+    <div class="row-content">
+        <input type="text" id="address_city">
+    </div>
+</div>
+
+<div class="row">
+    <label for="address_street">Улица <span class="star">*</span></label>
+
+    <div class="row-content">
+        <input type="text" id="address_street">
+    </div>
+</div>
+
+<div class="row row-street-info">
+    <label for="address_home">Дом <span class="star">*</span></label>
+
+    <div class="row-content">
+        <input type="text" maxlength="5" class="home-input" id="address_home">
+
+        <label for="address_korpus" class="double">Корпус <span class="small">или строение</span></label>
+        <input type="text" maxlength="3" class="korpus-input" id="address_korpus">
+
+        <label for="address_flat" class="double with-star">Квартира <span class="star">*</span><span
+                class="small">или офис</span></label>
+        <input type="text" maxlength="5" class="flat-input" id="address_flat">
+    </div>
+</div>
+
+<div class="row row-phone">
+    <label for="address_phone">Телефон <span class="star">*</span></label>
+
+    <div class="row-content">
+        <input type="text" class="phone-input" id="address_phone">
+
+        <div class="checkbox-row">
+            <div class="checkbox" id="address_attach_phone"></div>
+            <span class="checkbox-label">Привязать номер к профилю</span>
+
+            <div class="help-icon">
+                <div class="popover popover-left">
+                    <div class="popover-content">
+                        Именно этот номер мы будем использовать для связи с Вами при доставке заказа. Если Вы
+                        хотите
+                        указать дополнительный номер, то снимите эту галочку. В этом случае основной номер Вы
+                        сможете указать в блоке «Личные данные»."
+                    </div>
+                    <div class="popover-arrow popover-arrow-border"></div>
+                    <div class="popover-arrow"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row row-comment">
+    <label for="address_comment">Комментарий</label>
+
+    <div class="row-content">
+        <input type="text" class="address-input" id="address_comment">
+
+        <p>Вы можете указать, например, ближайшую станцию метро, код домофона. Так мы сможем быстрее Вас
+            найти.</p>
+    </div>
+</div>
+
+<div class="row row-day">
+    <label>В какой день</label>
+
+    <div class="row-content">
+
+        <div class="days switch-container">
+
+
+            <div class="day today switch-item first" data-date="05072013">
+                <span class="switch-item-text">Сегодня</span>
+                <span class="full-day">25 сентября, пятница</span>
+            </div>
+
+            <div class="day selected switch-item" data-date="05072013">
+                <span class="switch-item-text">Завтра</span>
+                <span class="full-day">25 сентября, пятница</span>
+            </div>
+
+            <div class="day weekend switch-item" data-date="05072013">
+                <span class="switch-item-text">Суббота</span>
+                <span class="full-day">25 сентября, пятница</span>
+            </div>
+
+            <div class="day weekend switch-item" data-date="05072013">
+                <span class="switch-item-text">Воскресенье</span>
+                <span class="full-day">25 сентября, пятница</span>
+            </div>
+
+            <div class="day last switch-item" data-date="05072013">
+                <span class="switch-item-text">Понедельник</span>
+                <span class="full-day">25 сентября, пятница</span>
+            </div>
+        </div>
+
+        <div class="btn-calendar"></div>
+
+    </div>
+</div>
+
+<div class="row row-time">
+    <label>В какое время</label>
+
+    <div class="row-content">
+
+        <div class="time-all-day">
+
+            <div class="radio-container selected radio-container-all-day">
+                <i class="radio selected"></i>
+                <i class="icon-time"></i>
+                <span>В любое время с 10:00 до 19:00</span>
+                <span class="price free">Бесплатно</span>
+            </div>
+
+            <p class="info">
+                Мы бесплатно привезем Ваш заказ по адресу, который Вы указали, 10:00 до 19:00 в пятницу 25
+                сентября.Наш курьер свяжется с вами.
+            </p>
+        </div>
+
+        <div class="additional-times">
+
+            <p class="bold">Управляйте своим временем</p>
+
+            <p>Выберите более точный интервал доставки.</p>
+
+            <div class="radio-container first">
+                <i class="radio"></i>
+                <span class="period">Утром</span>
+                <span class="time"> с 07:00 до 11:00</span>
+                <span class="price">+250 руб.</span>
+            </div>
+
+            <div class="radio-container">
+                <i class="radio"></i>
+                <span class="period">Утром</span>
+                <span class="time"> с 07:00 до 11:00</span>
+                <span class="price">+250 руб.</span>
+            </div>
+
+            <div class="show-more">
+                <a href="#">Показать больше интервалов</a>
+            </div>
+
+            <div class="radio-container" style="display: none">
+                <i class="radio"></i>
+                <span class="period">Утром</span>
+                <span class="time"> с 07:00 до 11:00</span>
+                <span class="price">+250 руб.</span>
+            </div>
+
+            <div class="radio-container" style="display: none">
+                <i class="radio"></i>
+                <span class="period">Утром</span>
+                <span class="time"> с 07:00 до 11:00</span>
+                <span class="price">+250 руб.</span>
+            </div>
+
+            <div class="radio-container" style="display: none">
+                <i class="radio"></i>
+                <span class="period">Утром</span>
+                <span class="time"> с 07:00 до 11:00</span>
+                <span class="price">+250 руб.</span>
+            </div>
+
+            <div class="radio-container" style="display: none">
+                <i class="radio"></i>
+                <span class="period">Утром</span>
+                <span class="time"> с 07:00 до 11:00</span>
+                <span class="price">+250 руб.</span>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="pickups">
+    <div class="pickup example" style="display: none">
         <div class="block-line-header">
-            <h3>Адрес доставки (для курьера)</h3>
+            <h3></h3>
         </div>
+        <p class="item-name"></p>
 
-        <div class="row">
-            <label for="address_city">Город <span class="star">*</span></label>
-
-            <div class="row-content">
-                <input type="text" id="address_city">
-            </div>
-        </div>
-
-        <div class="row">
-            <label for="address_street">Улица <span class="star">*</span></label>
-
-            <div class="row-content">
-                <input type="text" id="address_street">
-            </div>
-        </div>
-
-        <div class="row row-street-info">
-            <label for="address_home">Дом <span class="star">*</span></label>
-
-            <div class="row-content">
-                <input type="text" maxlength="5" class="home-input" id="address_home">
-
-                <label for="address_korpus" class="double">Корпус <span class="small">или строение</span></label>
-                <input type="text" maxlength="3" class="korpus-input" id="address_korpus">
-
-                <label for="address_flat" class="double with-star">Квартира <span class="star">*</span><span
-                        class="small">или офис</span></label>
-                <input type="text" maxlength="5" class="flat-input" id="address_flat">
-            </div>
-        </div>
-
-        <div class="row row-phone">
-            <label for="address_phone">Телефон <span class="star">*</span></label>
-
-            <div class="row-content">
-                <input type="text" class="phone-input" id="address_phone">
-
-                <div class="checkbox-row">
-                    <div class="checkbox" id="address_attach_phone"></div>
-                    <span class="checkbox-label">Привязать номер к профилю</span>
-
-                    <div class="help-icon">
-                        <div class="popover popover-left">
-                            <div class="popover-content">
-                                Именно этот номер мы будем использовать для связи с Вами при доставке заказа. Если Вы
-                                хотите
-                                указать дополнительный номер, то снимите эту галочку. В этом случае основной номер Вы
-                                сможете указать в блоке «Личные данные»."
-                            </div>
-                            <div class="popover-arrow popover-arrow-border"></div>
-                            <div class="popover-arrow"></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="row row-comment">
-            <label for="address_comment">Комментарий</label>
-
-            <div class="row-content">
-                <input type="text" class="address-input" id="address_comment">
-
-                <p>Вы можете указать, например, ближайшую станцию метро, код домофона. Так мы сможем быстрее Вас
-                    найти.</p>
-            </div>
-        </div>
-
-        <div class="row row-day">
-            <label>В какой день</label>
-
-            <div class="row-content">
-
-                <div class="days switch-container">
-
-
-                    <div class="day today switch-item first" data-date="05072013">
-                        <span class="switch-item-text">Сегодня</span>
-                        <span class="full-day">25 сентября, пятница</span>
-                    </div>
-
-                    <div class="day selected switch-item" data-date="05072013">
-                        <span class="switch-item-text">Завтра</span>
-                        <span class="full-day">25 сентября, пятница</span>
-                    </div>
-
-                    <div class="day weekend switch-item" data-date="05072013">
-                        <span class="switch-item-text">Суббота</span>
-                        <span class="full-day">25 сентября, пятница</span>
-                    </div>
-
-                    <div class="day weekend switch-item" data-date="05072013">
-                        <span class="switch-item-text">Воскресенье</span>
-                        <span class="full-day">25 сентября, пятница</span>
-                    </div>
-
-                    <div class="day last switch-item" data-date="05072013">
-                        <span class="switch-item-text">Понедельник</span>
-                        <span class="full-day">25 сентября, пятница</span>
-                    </div>
-                </div>
-
-                <div class="btn-calendar"></div>
-
-            </div>
-        </div>
-
-        <div class="row row-time">
-            <label>В какое время</label>
-
-            <div class="row-content">
-
-                <div class="time-all-day">
-
-                    <div class="radio-container selected radio-container-all-day">
-                        <i class="radio selected"></i>
-                        <i class="icon-time"></i>
-                        <span>В любое время с 10:00 до 19:00</span>
-                        <span class="price free">Бесплатно</span>
-                    </div>
-
-                    <p class="info">
-                        Мы бесплатно привезем Ваш заказ по адресу, который Вы указали, 10:00 до 19:00 в пятницу 25
-                        сентября.Наш курьер свяжется с вами.
-                    </p>
-                </div>
-
-                <div class="additional-times">
-
-                    <p class="bold">Управляйте своим временем</p>
-                    <p>Выберите более точный интервал доставки.</p>
-
-                    <div class="radio-container first">
-                        <i class="radio"></i>
-                        <span class="period">Утром</span>
-                        <span class="time"> с 07:00 до 11:00</span>
-                        <span class="price">+250 руб.</span>
-                    </div>
-
-                    <div class="radio-container">
-                        <i class="radio"></i>
-                        <span class="period">Утром</span>
-                        <span class="time"> с 07:00 до 11:00</span>
-                        <span class="price">+250 руб.</span>
-                    </div>
-
-                    <div class="show-more">
-                        <a href="#">Показать больше интервалов</a>
-                    </div>
-
-                    <div class="radio-container" style="display: none">
-                        <i class="radio"></i>
-                        <span class="period">Утром</span>
-                        <span class="time"> с 07:00 до 11:00</span>
-                        <span class="price">+250 руб.</span>
-                    </div>
-
-                    <div class="radio-container" style="display: none">
-                        <i class="radio"></i>
-                        <span class="period">Утром</span>
-                        <span class="time"> с 07:00 до 11:00</span>
-                        <span class="price">+250 руб.</span>
-                    </div>
-
-                    <div class="radio-container" style="display: none">
-                        <i class="radio"></i>
-                        <span class="period">Утром</span>
-                        <span class="time"> с 07:00 до 11:00</span>
-                        <span class="price">+250 руб.</span>
-                    </div>
-
-                    <div class="radio-container" style="display: none">
-                        <i class="radio"></i>
-                        <span class="period">Утром</span>
-                        <span class="time"> с 07:00 до 11:00</span>
-                        <span class="price">+250 руб.</span>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-        <div class="pickups">
-            <div class="pickup example" style="display: none">
-                <div class="block-line-header">
-                    <h3></h3>
-                </div>
-                <p class="item-name"></p>
-
-                <p class="time">Вы сможете забрать свой заказ, начиная
-                    <strong>с 10:00 следующей пятницы (29 сентября) и до 22:00 субботы (30 сентября).</strong></p>
-                <a class="btn-shop" href="#">Посмотреть адрес магазина</a>
-            </div>
-        </div>
-
+        <p class="time">Вы сможете забрать свой заказ, начиная
+            <strong>с 10:00 следующей пятницы (29 сентября) и до 22:00 субботы (30 сентября).</strong></p>
+        <a class="btn-shop" href="#">Посмотреть адрес магазина</a>
     </div>
-    <div class="widget-footer">
-        <button class="btn btn-red widget-submit">Продолжить</button>
-        <div class="popover popover-bottom error-tooltip">
-            <div class="popover-content">
-                <p>Пожалуйста, заполните все обязательные поля.
+</div>
 
-                <p>Вам осталось указать:</p>
-                <ul>
-                </ul>
-            </div>
-            <div class="popover-arrow popover-arrow-border"></div>
-            <div class="popover-arrow"></div>
+</div>
+<div class="widget-footer">
+    <button class="btn btn-red widget-submit">Продолжить</button>
+    <div class="popover popover-bottom error-tooltip">
+        <div class="popover-content">
+            <p>Пожалуйста, заполните все обязательные поля.
+
+            <p>Вам осталось указать:</p>
+            <ul>
+            </ul>
         </div>
-
+        <div class="popover-arrow popover-arrow-border"></div>
+        <div class="popover-arrow"></div>
     </div>
+
+</div>
 </div>
 
 </div>
@@ -551,7 +552,9 @@
 
                     <div class="error-tooltip-email popover popover-left error-tooltip">
                         <div class="popover-content">
-                            <div class="error-content"></div>
+                            <div class="error-content"><p>Неверный формат адреса электронной почты. Он должен выглядеть
+                                примерно так:</p>
+                                <p class="bold">mail@mail.ru</p></div>
                         </div>
                         <div class="popover-arrow popover-arrow-border"></div>
                         <div class="popover-arrow"></div>

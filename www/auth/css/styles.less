@@ -280,6 +280,21 @@ body {
     background: #f9f9f9;
     margin-bottom: 10px;
     padding-top: 20px;
+    position: relative;
+
+    .popover {
+      display: none;
+      right: -158px;
+      top: -25px;
+      width: 210px;
+      color: #db151c;
+      p {
+        margin-bottom: 6px;
+        &.bold {
+          font-family: @font_mvideo_bold;
+        }
+      }
+    }
 
     label {
       float: left;
@@ -309,6 +324,18 @@ body {
       margin-bottom: 19px;
       .clearfix;
 
+      .switch-container {
+        width: 415px;
+        .switch-input-container {
+          .clearfix;
+          clear: both;
+          input {
+            height: 18px;
+            line-height: 18px;
+          }
+        }
+      }
+
       .switch-item {
         margin-left: 0;
       }
@@ -324,7 +351,7 @@ body {
         float: left;
         width: 75px;
         display: block;
-        margin-right: 15px;
+        margin: 8px 15px 0 0;
       }
       &.last {
         margin-bottom: 0;

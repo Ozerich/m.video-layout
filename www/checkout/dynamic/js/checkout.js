@@ -84,7 +84,7 @@ var Checkout = {
             pickups: result,
             hasCourier: result.length > 0 && result[0].pickup === null,
             onlyCourier: result.length === 1 && result[0].pickup === null,
-            isClinic: result.length > 1
+            isClinic: result.length > 1 || (result.length == 1 && result[0].pickup !== null),
         };
     }
 

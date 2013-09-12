@@ -10,6 +10,7 @@
     less.env = 'development';</script>
     <script src="../theme/js/thirdparty/less.js" type="text/javascript"></script>
     <script src="../theme/js/thirdparty/jquery-1.8.1.min.js" type="text/javascript"></script>
+    <script src="../theme/js/thirdparty/jquery.maskedinput.js" type="text/javascript"></script>
     <script src="js/auth.js"></script>
     <script src="../theme/js/components/passwordEye.js" type="text/javascript"></script>
     <script src="../theme/js/components/checkbox.js" type="text/javascript"></script>
@@ -39,6 +40,7 @@
                 <form action="#" id="auth_form">
                     <div class="row">
                         <label>Электронная почта</label>
+
                         <div class="input-block">
                             <input type="text" class="email" placeholder="или логин или телефон">
                         </div>
@@ -57,10 +59,12 @@
 
                 <form action="#" id="password_form" style="display: none">
                     <div class="row">
-                        <p>Новый пароль будет отправлен на электронную почту или телефон, которые вы указали при регистрации</p>
+                        <p>Новый пароль будет отправлен на электронную почту или телефон, которые вы указали при
+                            регистрации</p>
                     </div>
                     <div class="row">
                         <label>Электронная почта</label>
+
                         <div class="input-block">
                             <input type="text" class="email-2" placeholder="или логин или телефон">
                         </div>
@@ -151,6 +155,15 @@
         <div class="block-email">
             <label>Электронная почта</label>
             <input type="text">
+            <div class="error-tooltip-email popover popover-left error-tooltip">
+                <div class="popover-content">
+                    <div class="error-content"><p>Неверный формат адреса электронной почты. Он должен выглядеть
+                        примерно так:</p>
+                        <p class="bold">mail@mail.ru</p></div>
+                </div>
+                <div class="popover-arrow popover-arrow-border"></div>
+                <div class="popover-arrow"></div>
+            </div>
         </div>
     </div>
     <div class="popup-footer">
@@ -184,12 +197,20 @@
                 <label>Имя</label>
 
                 <div class="switch-container">
-                    <div class="selected first switch-item"><span class="switch-item-text">Константин</span></div>
-                    <div class="switch-item"><span class="switch-item-text">Константинушка</span></div>
-                    <div class="switch-item" data-last="1"><span class="switch-item-text">Другое</span></div>
+                    <div class="selected first switch-item">
+                        <span class="switch-item-text">Константин</span>
+                    </div>
+                    <div class="switch-item">
+                        <span class="switch-item-text">Константинушка</span>
+                    </div>
+                    <div class="switch-input-container">
+                        <div class="switch-item" data-last="1">
+                            <span class="switch-item-text">Другое</span>
+                        </div>
+                        <input type="text">
+                    </div>
                 </div>
 
-                <input type="text">
             </div>
             <div class="row">
                 <label>Фамилия</label>
@@ -198,9 +219,10 @@
                     <div class="selected first switch-item"><span class="switch-item-text">Константинопольский</span>
                     </div>
                     <div class="switch-item"><span class="switch-item-text">Федосеев</span></div>
-                    <div class="switch-item" data-last="1"><span class="switch-item-text">Другая</span></div>
+                    <div class="switch-input-container">
+                        <div class="switch-item" data-last="1"><span class="switch-item-text">Другая</span></div>
+                        <input type="text"></div>
                 </div>
-                <input type="text">
             </div>
             <div class="row last">
                 <label>Телефон</label>
@@ -209,9 +231,10 @@
                     <div class="selected first switch-item"><span class="switch-item-text">+7 (921) 123-12-12</span>
                     </div>
                     <div class="switch-item"><span class="switch-item-text">+7 (921) 123-12-12</span></div>
-                    <div class="switch-item" data-last="1"><span class="switch-item-text">Другой</span></div>
+                    <div class="switch-input-container">
+                        <div class="switch-item" data-last="1"><span class="switch-item-text">Другой</span></div>
+                        <input type="text" class="phone-input"></div>
                 </div>
-                <input type="text">
             </div>
 
         </div>
@@ -221,20 +244,6 @@
         <button class="popup-submit btn btn-red">Продолжить</button>
     </div>
 </div>
-
-<script>
-    $('[type=password]').each(function () {
-        $(this).PasswordEye();
-    });
-
-    $('.checkbox-container .checkbox').Checkbox();
-
-    $('.switch-container').each(function () {
-        $(this).Switch(function (selected) {
-            selected.parents('.row').find('input[type=text]').toggle(selected.data('last') == 1);
-        });
-    });
-</script>
 
 </body>
 

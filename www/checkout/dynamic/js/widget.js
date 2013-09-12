@@ -370,8 +370,8 @@ function Widget(_id) {
                     $infoblock.find('.items-info-block-content .items-cost').text(Checkout.Helper.getAmountLabel(cost));
                     $infoblock.find('.items-info-block-content .total-amount').text(Checkout.Helper.getAmountLabel(cost));
 
-
-                    var $container = pickup ? $($block.find('.pickups-container .pickup').get(i)) : $block.find('.courier-container');
+                    var pickupNum = deliveryData.hasCourier ? i - 1 : i;
+                    var $container = pickup ? $($block.find('.pickups-container .pickup').not('.example').get(pickupNum)) : $block.find('.courier-container');
                     $container.find('.items-info-block').remove();
                     $container.find('.block-line-header').after($infoblock);
                 }
