@@ -90,7 +90,13 @@ body {
       }
       .row {
         .clearfix;
+
         margin-bottom: 15px;
+        &.row-error{
+          margin-bottom: 5px;
+          color: #db151c;
+          font-size: 14px;
+        }
 
         label {
           width: 145px;
@@ -102,13 +108,15 @@ body {
         }
 
         .input-block {
-          margin-left: 145px;
           display: block;
           input[type=text], input[type=password] {
             width: 184px;
           }
           input[type=submit] {
             float: left;
+            &#send_password_btn{
+              *width: 147px;
+            }
           }
           a {
             float: right;
@@ -119,6 +127,13 @@ body {
             margin-top: 8px;
           }
         }
+
+        &.row-submit{
+          .input-block{
+            margin-left: 145px;
+          }
+        }
+
       }
     }
 

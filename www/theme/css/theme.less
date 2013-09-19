@@ -109,12 +109,15 @@ table {
       .gradient(#b10207, #f45b5c);
     }
 
-    &[disabled], &.btn-disabled {
+    &[disabled], &.btn-disabled, &.disabled {
       .gradient(#f8cccc, #f3b6b8);
+      color: #fff;
+      cursor: default;
     }
 
   }
 }
+
 
 .input-eye-wr{
   float: left;
@@ -126,7 +129,7 @@ table {
     height: 16px;
     position: absolute;
     top: 7px;
-    right: 0px;
+    right: 12px;
     display: block;
   }
   &.input-pass-visible{
@@ -136,9 +139,6 @@ table {
   }
   input[type=text], input[type=password]{
     padding-right: 37px;
-    &::-ms-clear, &::-ms-reveal {
-      display: none;
-    }
   }
 
 }

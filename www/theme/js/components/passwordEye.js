@@ -1,13 +1,18 @@
 $.fn.PasswordEye = function (options) {
+
+    if($.browser.msie && $.browser.version <= 9){
+        return;
+    }
+
     var that = this;
     var $item = $(this);
 
-    $item.wrap('<div class="input-eye-wr" style="width: ' + $item.innerWidth() + 'px"/>');
+    $item.wrap('<div class="input-eye-wr" style="width: ' + $item.outerWidth() + 'px"/>');
     $item.after('<i/>').after('<input style="display: none" type="text"/>');
 
     var $wrapper = $item.parent();
 
-    $wrapper.find('input').width($wrapper.find('input[type=text]').width() - 20);
+    $wrapper.find('input').width($wrapper.find('input[type=text]').width() - 30);
 
     var value = $wrapper.find('input[type=password]').val();
 

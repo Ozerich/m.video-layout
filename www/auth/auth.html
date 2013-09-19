@@ -11,6 +11,7 @@
     <script src="../theme/js/thirdparty/less.js" type="text/javascript"></script>
     <script src="../theme/js/thirdparty/jquery-1.8.1.min.js" type="text/javascript"></script>
     <script src="../theme/js/thirdparty/jquery.maskedinput.js" type="text/javascript"></script>
+    <script src="../theme/js/thirdparty/jquery.placeholder.js" type="text/javascript"></script>
     <script src="js/auth.js"></script>
     <script src="../theme/js/components/passwordEye.js" type="text/javascript"></script>
     <script src="../theme/js/components/checkbox.js" type="text/javascript"></script>
@@ -38,20 +39,26 @@
 
             <div class="auth-form">
                 <form action="#" id="auth_form">
+                    <div class="row row-error">
+                        Электронная почта или пароль указаны неверно.<br>
+                        Пожалуйста проверьте введенные данные.
+                    </div>
                     <div class="row">
                         <label>Электронная почта</label>
 
                         <div class="input-block">
-                            <input type="text" class="email" placeholder="или логин или телефон">
+                            <input type="text" class="email" placeholder="или логин">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row row-password">
                         <label>Пароль</label>
-                        <input type="password">
+						<div class="input-block">
+							<input type="password" class="password-input">
+						</div>
                     </div>
                     <div class="row row-submit">
                         <div class="input-block">
-                            <input type="submit" class="btn btn-red" disabled value="Войти">
+                            <input type="submit" class="btn btn-red" value="Войти">
                             <a href="#" class="open-password-form">Забыли пароль</a>
                         </div>
                     </div>
@@ -64,14 +71,13 @@
                     </div>
                     <div class="row">
                         <label>Электронная почта</label>
-
                         <div class="input-block">
-                            <input type="text" class="email-2" placeholder="или логин или телефон">
+                            <input type="text" class="email-2">
                         </div>
                     </div>
                     <div class="row row-submit">
                         <div class="input-block">
-                            <input type="submit" class="btn btn-red" disabled value="Отправить пароль">
+                            <input type="submit" id="send_password_btn" class="btn btn-red disabled" value="Отправить пароль">
                             <a href="#" class="open-auth-form">Войти</a>
                         </div>
                     </div>
@@ -134,7 +140,7 @@
     </div>
     <div class="popup-footer">
         <a href="#" class="skip-link">Пропустить</a>
-        <button class="popup-submit btn btn-red" disabled>Объединить профили</button>
+        <button class="popup-submit btn btn-red disabled" >Объединить профили</button>
     </div>
 </div>
 
@@ -168,7 +174,7 @@
     </div>
     <div class="popup-footer">
         <a href="#" class="skip-link">Пропустить</a>
-        <button class="popup-submit btn btn-red" disabled>Продолжить</button>
+        <button class="popup-submit btn btn-red disabled" >Продолжить</button>
     </div>
 </div>
 
