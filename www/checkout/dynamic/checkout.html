@@ -401,7 +401,7 @@
             </div>
         </div>
 
-        <div class="btn-calendar"></div>
+        <div class="btn-calendar" onclick="Checkout.openPopup($('#popup_pickups')); return false;"></div>
 
     </div>
 </div>
@@ -554,6 +554,7 @@
                         <div class="popover-content">
                             <div class="error-content"><p>Неверный формат адреса электронной почты. Он должен выглядеть
                                 примерно так:</p>
+
                                 <p class="bold">mail@mail.ru</p></div>
                         </div>
                         <div class="popover-arrow popover-arrow-border"></div>
@@ -914,120 +915,179 @@
 <div class="calendar" id="delivery_calendar"></div>
 
 <div id="popup_pickup" class="popup" style="display: none">
-
     <div class="popup-header">
-        <a href="#" class="item-link popup-title" target="_blank">3D Телевизор Samsung UE50 ES6907U</a>
+        <h2 class="popup-title"><span>Магазин на Чонгарском бульваре</span><span class="badge">удобный</span></h2>
         <a href="#" class="popup-close-btn"></a>
     </div>
-
     <div class="popup-content">
-        <div class="point_take">
-            <h3>Заберите заказ в магазине и получите скидку <span class="bold_red">500 рублей</span></h3>
-            На все заказы, которые вы можете забрать в магазине, предоставляется скидка 500 рублей на следующую покупку.<br>Воспользоваться
-            скидкой вы можете сразу же, выбрав что-то в магазине или на mvideo.ru<br>
+        <div class="map"></div>
+        <div class="info-layout"></div>
+        <div class="info-content">
+            <dl>
+                <dt>Адрес:</dt>
+                <dd class="address-value"><span class="metro">Сретенский бульвар</span><span class="address">Славянский б-р, 13, с. 1</span></dd>
+                <dt>Телефон:</dt>
+                <dd>+7 (495) 777-777-5</dd>
+                <dt>График работы:</dt>
+                <dd><span class="allday">Круглосуточно</span></dd>
+                <dt>Как добраться:</dt>
+                <dd>Первый вагон из центра.<br>Выход из метро налево, далее пешком 25 м.</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+<div id="popup_pickups" class="popup" style="display: none">
+    <div class="popup-header">
+        <h2 class="popup-title">Изменение магазина для самовывоза</h2>
+        <a href="#" class="popup-close-btn"></a>
+    </div>
+    <div class="popup-content">
+        <div class="products-container">
+            <h2>Ваши товары:</h2>
+
+            <p>Встраиваемая индукционная панель незавизимая Hansa <span class="red bold">+</span> Эпилятор Rowenta</p>
+        </div>
+        <div class="stock-container">
+            Акция: заберите заказ и получите скидку <span class="red bold">500 рублей</span> на следующую покупку.
+            Воспользоваться скидкой вы можете
+            сразу же, выбрав что-то в магазине или на mvideo.ru.
+        </div>
+        <div class="search-container">
+            <h2>Ищете конкретный магазин?</h2>
+            <input type="text" placeholder="Укажите улицу или название магазина">
+
+            <div class="checkbox-row">
+                <div class="checkbox"></div>
+                Только магазины, где товар можно получить сегодня
+            </div>
         </div>
 
-        <div class="table-container">
+        <div class="list-container">
 
-            <div class="table-header">
-
-                <div class="corners">
-                    <b class="c7 bg_bababa"></b>
-                    <b class="c5 bg_bababa"><b class="c2 bg_ff7e00"></b></b>
-                    <b class="c4 bg_bababa"><b class="c1 bg_ff7e00"></b></b>
-                    <b class="c3 bg_bababa"><b class="c1 bg_ff7e00"></b></b>
-                    <b class="c2 bg_bababa"><b class="c1 bg_ff7e00"></b></b>
-                    <b class="c1 bg_bababa c_h2"><b class="c1 bg_ff7e00 c_h2"></b></b>
+            <div class="table-head">
+                <div class="cell-address">
+                    <span>Адрес</span>
                 </div>
-
-                <div class="caption">Список магазинов, в которых Вы можете забрать этот товар:</div>
-
-                <table border="0" cellpadding="0" cellspacing="0">
-                    <tbody>
-                    <tr>
-                        <td class="cell-metro">Метро</td>
-                        <td class="cell-address">Адрес</td>
-                        <td class="cell-order">Заказать</td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="cell-time bold">
+                    Режим работы
+                </div>
+                <div class="cell-select">
+                    <span>Выбор магазина</span>
+                </div>
             </div>
+            <div class="scroll-container">
+                <div class="section-header">
+                    Мой магазин
+                </div>
+                <div class="pickup-item">
+                    <div class="pickup-preview">
+                        <div class="cell-address">
+                            <a href="#" class="btn-map"></a>
 
-
-            <div class="table-body">
-
-                <table border="0" cellpadding="0" cellspacing="0">
-                    <tbody>
-                    <tr>
-                        <td id="no_border" colspan="3" class="allshops">
-                            <div>Все магазины</div>
-                        </td>
-                    </tr>
-
-                    <tr class="shop-line" data-id="1" data-name="Имя магазина 1"
-                        data-address="Адрес 1»" data-metro="Метро 1">
-                        <td class="cell-metro">
-                            <a href="#" target="_blank" rel="nofollow">Метро<br>Римская</a>
-                        </td>
-
-                        <td class="cell-address">
-                            <a href="#" target="_blank" rel="nofollow">Адрес 1</a>
-                        </td>
-
-                        <td class="cell-order">
-                            <div class="pickup_ref">
-                                <a href="#">Выбрать</a>
+                            <div class="address">
+                                <div class="line-1">
+                                    <span class="metro">Сретенский бульвар</span>
+                                </div>
+                                <div class="line-2">
+                                    Славянский б-р, 13, с. 1
+                                </div>
                             </div>
-                        </td>
-                    </tr>
+                        </div>
+                        <div class="cell-time">
+                            С 10:00 до 22:00 <span class="star">*</span>
+                        </div>
+                        <div class="cell-select">
+                            <a href="#" class="btn">Выбрать</a>
+                            <span>Сможете забрать уже через час</span>
+                        </div>
+                    </div>
+                    <div class="pickup-map" style="display: none">
+                        <div class="map"></div>
+                    </div>
+                </div>
+                <div class="empty-row"></div>
+                <div class="section-header">
+                    Все магазины
+                </div>
+                <div class="pickup-item">
+                    <div class="pickup-preview">
+                        <div class="cell-address">
+                            <a href="#" class="btn-map"></a>
 
-                    <tr class="shop-line" data-id="2" data-name="Имя магазина 2"
-                        data-address="Адрес 2»" data-metro="Метро 2">
-                        <td class="cell-metro">
-                            <a href="#" target="_blank" rel="nofollow">Метро<br> около м.видео</a>
-                        </td>
-
-                        <td class="cell-address">
-                            <a href="#" target="_blank" rel="nofollow">Адрес 2</a>
-                        </td>
-
-                        <td class="cell-order">
-                            <div class="pickup_ref">
-                                <a href="#">Выбрать</a>
+                            <div class="address">
+                                <div class="line-1">
+                                    <span class="badge">дом</span>
+                                    <span class="metro">Сретенский бульвар</span>
+                                </div>
+                                <div class="line-2">
+                                    Славянский б-р, 13, с. 1
+                                </div>
                             </div>
-                        </td>
-                    </tr>
+                        </div>
+                        <div class="cell-time">
+                            С 10:00 до 22:00 <span class="star">*</span>
+                        </div>
+                        <div class="cell-select">
+                            <a href="#" class="btn">Выбрать</a>
+                            <span>Сможете забрать уже через час</span>
+                        </div>
+                    </div>
+                    <div class="pickup-map" style="display: none">
+                        <div class="map"></div>
+                    </div>
 
-                    <tr class="shop-line" data-id="3" data-name="Имя магазина 3"
-                        data-address="Адрес 3»" data-metro="Метро 3">
-                        <td class="cell-metro">
-                            <a href="#" target="_blank" rel="nofollow">Метро<br> нету</a>
-                        </td>
+                </div>
+                <div class="pickup-item">
+                    <div class="pickup-preview">
+                        <div class="cell-address cell-address-no-border">
+                            <a href="#" class="btn-map"></a>
 
-                        <td class="cell-address">
-                            <a href="#" target="_blank" rel="nofollow">Адрес 3</a>
-                        </td>
-
-                        <td class="cell-order">
-                            <div class="pickup_ref">
-                                <a href="#">Выбрать</a>
+                            <div class="address">
+                                <div class="line-1">
+                                    <span class="metro">Сретенский бульвар</span>
+                                </div>
+                                <div class="line-2">
+                                    Славянский б-р, 13, с. 1
+                                </div>
                             </div>
-                        </td>
-                    </tr>
+                        </div>
+                        <div class="cell-time">
+                            С 10:00 до 22:00 <span class="star">*</span>
+                        </div>
+                        <div class="cell-select">
+                            <a href="#" class="btn">Выбрать</a>
+                            <span>Сможете забрать уже через час</span>
+                        </div>
+                    </div>
+                    <div class="pickup-map" style="display: none">
+                        <div class="map"></div>
+                    </div>
+                </div>
+                <div class="pickup-item pickup-item-no-available">
+                    <div class="pickup-preview">
+                        <div class="cell-address cell-address-no-border">
+                            <a href="#" class="btn-map"></a>
 
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="table-footer">
-                <div class="corners">
-                    <b class="c1 bg_bababa c_h2"><b class="c1 bg_fff c_h2"></b></b>
-                    <b class="c2 bg_bababa"><b class="c1 bg_fff"></b></b>
-                    <b class="c3 bg_bababa"><b class="c1 bg_fff"></b></b>
-                    <b class="c4 bg_bababa"><b class="c1 bg_fff"></b></b>
-                    <b class="c5 bg_bababa"><b class="c2 bg_fff"></b></b>
-                    <b class="c7 bg_bababa"></b>
+                            <div class="address">
+                                <div class="line-1">
+                                    <span class="metro">Сретенский бульвар</span>
+                                </div>
+                                <div class="line-2">
+                                    Славянский б-р, 13, с. 1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-time">
+                            <span class="allday">Круглосуточно</span>
+                        </div>
+                        <div class="cell-select">
+                            <a href="#" class="btn btn-disabled">Нет в наличии</a>
+                        </div>
+                    </div>
+                    <div class="pickup-map" style="display: none">
+                        <div class="map"></div>
+                    </div>
                 </div>
             </div>
         </div>

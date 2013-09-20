@@ -143,7 +143,6 @@ Checkout.openPopup = function ($popup) {
     });
 };
 
-
 jQuery(function ($) {
 
     // Собираю все заказы
@@ -272,7 +271,7 @@ jQuery(function ($) {
     });
 
 
-    // Checkout.openPopup($('#popup_credit'));
+     Checkout.openPopup($('#popup_pickup'));
 
 });
 

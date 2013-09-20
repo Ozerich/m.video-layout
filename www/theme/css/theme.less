@@ -75,6 +75,14 @@ table {
 @import "components/calendar";
 @import "components/autocomplete";
 
+.red {
+  color: #ed1c29;
+}
+
+.bold {
+  font-family: @font_mvideo_bold;
+}
+
 .btn {
   border: 1px solid #d1d1d1;
   .border-radius(5px);
@@ -87,6 +95,8 @@ table {
   width: auto;
   padding: 0 15px;
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 
   &:hover {
     .gradient(#ffffff, #f8f8f8);
@@ -94,6 +104,13 @@ table {
 
   &:active {
     .gradient(#e8e8e8, #ffffff);
+  }
+
+  &[disabled], &.btn-disabled, &.disabled {
+    cursor: default;
+    &:active, &:hover{
+      .gradient(#fdfdfd, #f4f4f4);
+    }
   }
 
   &.btn-red {
@@ -118,11 +135,10 @@ table {
   }
 }
 
-
-.input-eye-wr{
+.input-eye-wr {
   float: left;
   position: relative;
-  i{
+  i {
     cursor: pointer;
     background: url('@{theme_images_dir}/input_eye_hide.png');
     width: 19px;
@@ -132,17 +148,16 @@ table {
     right: 12px;
     display: block;
   }
-  &.input-pass-visible{
-    i{
+  &.input-pass-visible {
+    i {
       background: url('@{theme_images_dir}/input_eye_show.png');
     }
   }
-  input[type=text], input[type=password]{
+  input[type=text], input[type=password] {
     padding-right: 37px;
   }
 
 }
-
 
 input[type=text], input[type=password], input[type=email] {
   height: 22px;
@@ -422,78 +437,77 @@ input[type=text], input[type=password], input[type=email] {
   }
 }
 
-
-.social-icon{
+.social-icon {
   background-image: url('@{theme_images_dir}/socials.png');
   width: 24px;
   height: 24px;
   display: block;
 
-  &.social-icon-big{
+  &.social-icon-big {
     height: 32px;
     width: 32px;
   }
 
-  &.social-icon-small{
+  &.social-icon-small {
     width: 16px;
     height: 16px;
   }
 
-  &.social-icon-facebook{
-    background-position: -12px -309px ;
-    &.social-icon-big{
+  &.social-icon-facebook {
+    background-position: -12px -309px;
+    &.social-icon-big {
       background-position: -58px -305px;
     }
-    &.social-icon-small{
+    &.social-icon-small {
       background-position: -164px -316px;
     }
   }
 
-  &.social-icon-gplus{
-    background-position: -14px -259px ;
-    &.social-icon-big{
-      background-position: -56px -259px ;
+  &.social-icon-gplus {
+    background-position: -14px -259px;
+    &.social-icon-big {
+      background-position: -56px -259px;
     }
   }
 
-  &.social-icon-mailru{
-    background-position: -13px -210px ;
-    &.social-icon-big{
-      background-position: -59px -204px ;
+  &.social-icon-mailru {
+    background-position: -13px -210px;
+    &.social-icon-big {
+      background-position: -59px -204px;
     }
   }
 
-  &.social-icon-odnoklassniki{
-    background-position: -13px -158px ;
-    &.social-icon-big{
-      background-position: -58px -156px ;
+  &.social-icon-odnoklassniki {
+    background-position: -13px -158px;
+    &.social-icon-big {
+      background-position: -58px -156px;
     }
   }
 
-  &.social-icon-twitter{
-    background-position: -15px -110px ;
-    &.social-icon-big{
-      background-position: -58px -106px ;
+  &.social-icon-twitter {
+    background-position: -15px -110px;
+    &.social-icon-big {
+      background-position: -58px -106px;
     }
-    &.social-icon-small{
+    &.social-icon-small {
       background-position: -166px -115px;
     }
   }
 
-  &.social-icon-vk{
-    background-position: -13px -56px ;
-    &.social-icon-big{
-      background-position: -57px -56px ;
+  &.social-icon-vk {
+    background-position: -13px -56px;
+    &.social-icon-big {
+      background-position: -57px -56px;
     }
-    &.social-icon-small{
+    &.social-icon-small {
       background-position: -167px -64px;
     }
   }
 
-  &.social-icon-yandex{
-    background-position: -13px -10px ;
-    &.social-icon-big{
-      background-position: -57px -5px ;
+  &.social-icon-yandex {
+    background-position: -13px -10px;
+    &.social-icon-big {
+      background-position: -57px -5px;
     }
   }
 }
