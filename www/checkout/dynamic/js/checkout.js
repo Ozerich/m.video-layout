@@ -124,7 +124,7 @@ Checkout.Helper = {
     }
 };
 
-Checkout.openPopup = function ($popup) {
+Checkout.openPopup = function ($popup, callback) {
     $popup.find('.popup-close-btn').on('click', function () {
         $.unblockUI();
         return false;
@@ -139,7 +139,8 @@ Checkout.openPopup = function ($popup) {
             width: $popup.outerWidth() + 'px',
             border: 'none',
             cursor: 'auto'
-        }
+        },
+        onBlock: callback
     });
 };
 
@@ -266,12 +267,47 @@ jQuery(function ($) {
             $.unblockUI();
         }
     });
+
     $bonuscard_popup.find('input[type=text]').keydown(function () {
         $(this).removeClass('error');
     });
 
+    var $popup_pickups = $('#popup_pickups');
+    $('.btn-calendar').on('click', function () {
+        Checkout.openPopup($popup_pickups, function () {
 
-     Checkout.openPopup($('#popup_pickup'));
+            $popup_pickups.find('.checkbox').Checkbox(function (value) {
+                if (value) {
+                    $popup_pickups.find('.pickup-item').addClass('hidden');
+                    $popup_pickups.find('.pickup-item[data-today=1]').removeClass('hidden');
+                }
+                else {
+                    $popup_pickups.find('.pickup-item').removeClass('hidden');
+                }
+                $popup_pickups.find('.section').each(function(){
+                    $(this).toggle($(this).find('.pickup-item').not('.hidden').length > 0);
+                });
+                $('.scroll-pane').data('jsp').reinitialise();
+            });
+
+            $popup_pickups.find('.scroll-pane').on('jsp-scroll-y',function (event, scrollPositionY, isAtTop, isAtBottom) {
+                var hasClass = $popup_pickups.find('.fixed-container').hasClass('fixed');
+                $popup_pickups.find('.fixed-container').toggleClass('fixed', scrollPositionY > 115).css('top', scrollPositionY + 'px');
+                $popup_pickups.find('.list-container').toggleClass('fixed', scrollPositionY > 115);
+
+            }).jScrollPane();
+        });
+        return false;
+    });
+
+
+    $popup_pickups.on('click', '.btn-map', function () {
+        $(this).toggleClass('btn-map-opened');
+        $(this).parents('.pickup-item').find('.pickup-map').toggle();
+        var scroll_api = $popup_pickups.find('.scroll-pane').data('jsp');
+        scroll_api.reinitialise();
+        return false;
+    });
 
 });
 
