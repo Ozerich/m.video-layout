@@ -1,5 +1,7 @@
 @import "../../theme/css/theme";
 
+@images_dir: "/thankyou/img";
+
 body {
   background: #fff;
 }
@@ -130,7 +132,7 @@ body > footer {
             }
             .free {
               font-size: 15px;
-              color: #30b457;
+              color: #004b8c;
               font-family: @font_mvideo_bold;
             }
           }
@@ -155,15 +157,18 @@ body > footer {
       }
 
       .summary-container {
-        margin-right: 384px;
+        width: 524px;
+        float: left;
 
         .row {
+          .clearfix;
           label {
             color: #8c99aa;
             font-size: 13px;
             display: block;
           }
           .value-block {
+            .clearfix;
             margin: 12px 0 18px;
             font-size: 15px;
             line-height: 19px;
@@ -176,8 +181,72 @@ body > footer {
             }
 
             .free {
-              color: #30b457;
+              color: #e14248;
               font-family: @font_mvideo_bold;
+            }
+
+            .address-actions {
+              margin-top: 12px;
+              .action {
+                float: left;
+                color: #004b8c;
+                text-decoration: none;
+                > span {
+                  border-bottom: 1px dotted #004b8c;
+                }
+                font-size: 15px;
+                padding-left: 18px;
+                &.action-map {
+                  background: url('@{images_dir}/map-bullet-icon.png') left center no-repeat;
+                  margin-right: 30px;
+                }
+                &.action-shop {
+                  background: url('@{theme_images_dir}/green_checkbox.png') left center no-repeat;
+                }
+              }
+              .my-shop-btn-block {
+                position: relative;
+                &:hover{
+                  .popover{
+                    display: block;
+                  }
+                }
+                .popover {
+                  display: none;
+                  top: -85px;
+                  right: -95px;
+                  color: #000;
+                  font-size: 13px;
+                  line-height: 16px;
+                  .popover-content {
+                    width: 186px;
+                    ul {
+                      margin-top: 7px;
+                      li {
+                        padding-left: 16px;
+                        margin-bottom: 7px;
+                        background: url('@{images_dir}/list-red-bullet.png') left 4px no-repeat;
+                      }
+                    }
+                  }
+                }
+              }
+              .my-shop-success{
+                color: #8c99aa;
+                background: url('@{theme_images_dir}/green_checkbox.png') left 5px no-repeat;
+                margin-left: 179px;
+                padding-left: 16px;
+                width: 300px;
+                > span{
+                  font-size: 15px;
+                  border-bottom: 1px dotted #8c99aa;
+                }
+                p{
+                  display: block;
+                  font-size: 13px;
+                  margin-top: 8px;
+                }
+              }
             }
           }
         }
@@ -454,7 +523,6 @@ body > footer {
   }
 
   .bottom-text-container {
-
 
     .star {
       font-size: 18px;

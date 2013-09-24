@@ -300,12 +300,39 @@ jQuery(function ($) {
         return false;
     });
 
-
     $popup_pickups.on('click', '.btn-map', function () {
         $(this).toggleClass('btn-map-opened');
         $(this).parents('.pickup-item').find('.pickup-map').toggle();
         var scroll_api = $popup_pickups.find('.scroll-pane').data('jsp');
         scroll_api.reinitialise();
+        return false;
+    });
+
+
+    var $popup_address = $('#popup_address');
+
+    $popup_address.find('#popup_address_btn_new').on('click', function(){
+        var $form = $popup_address.find('.address-form').hide();
+        $form.find('.address-form-header').text('Новый адрес');
+        $form.find('.address-form-footer .btn-red').text('Сохранить адрес');
+        $popup_address.find('.address-item').last().after($form);
+        $form.show();
+        return false;
+    });
+
+    $popup_address.find('.edit-address-item-btn').on('click', function(){
+        var $form = $popup_address.find('.address-form').hide();
+        $form.find('.address-form-header').text('Изменение адреса');
+        $form.find('.address-form-footer .btn-red').text('Сохранить изменения');
+        $(this).parents('.address-item').after($form);
+        $form.show();
+        $popup_address.find('.address-item').addClass('disabled');
+        return false;
+    });
+
+    $popup_address.find('.address-form-footer .cancel-btn').on('click', function(){
+        $popup_address.find('.address-form').hide();
+        $popup_address.find('.address-item').removeClass('disabled');
         return false;
     });
 

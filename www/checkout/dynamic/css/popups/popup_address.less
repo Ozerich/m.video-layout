@@ -1,0 +1,203 @@
+#popup_address {
+  width: 660px;
+
+  .popup-footer {
+    .btn {
+      float: left;
+      display: block;
+      margin: 7px 0 0 230px;
+    }
+  }
+
+  .popup-content {
+    > p {
+      font-size: 15px;
+      margin-bottom: 13px;
+      line-height: 20px;
+    }
+
+    .address-item {
+
+      position: relative;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      background: #f9f9f9;
+
+      .disabled-wrapper{
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #eee;
+        opacity: 0.5;
+        z-index: 100000;
+      }
+      &.disabled{
+        .disabled-wrapper{
+          display: block;
+        }
+      }
+
+      &.selected {
+        background: #eef2fb;
+        .selected-label {
+          color: #8c99aa;
+          background: url('@{theme_images_dir}/green_checkbox.png') left center no-repeat;
+          padding-left: 15px;
+        }
+      }
+
+      .left {
+        margin-right: 140px;
+        font-size: 15px;
+        p {
+          margin-bottom: 10px;
+          &.comment {
+            color: #8c99aa;
+          }
+        }
+      }
+
+      .right {
+        float: right;
+        width: 125px;
+        text-align: right;
+
+        .btn {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+
+        a {
+          position: absolute;
+          bottom: 12px;
+          right: 15px;
+          font-size: 13px;
+          float: right;
+          color: #004b8c;
+          border-bottom: 1px dotted #004b8c;
+          text-decoration: none;
+          z-index: 100;
+        }
+      }
+    }
+
+    .address-form {
+      margin-bottom: 10px;
+
+      .address-form-content {
+        background: #eef2fb;
+        padding: 13px 15px;
+      }
+
+      .address-form-footer {
+        .clearfix;
+        background: #f9f9f9;
+        padding: 8px 15px;
+        height: 47px;
+        a {
+          float: left;
+          display: block;
+          color: #969696;
+          text-decoration: none;
+          border-bottom: 1px dotted #969696;
+          margin-top: 19px;
+        }
+        button {
+          margin-top: 8px;
+          float: right;
+        }
+      }
+
+      .address-form-header {
+        color: #0f0f0f;
+        font-size: 15px;
+        .bold;
+      }
+      .row {
+        margin-top: 10px;
+        label {
+          float: left;
+          width: 104px;
+          color: #1b1b1b;
+          font-size: 15px;
+          .small {
+            display: block;
+            color: #8c99aa;
+            font-size: 13px;
+          }
+          .star {
+            .bold;
+            color: #ed1c29;
+          }
+        }
+
+        .row-content {
+          margin-left: 104px;
+          input {
+            width: 480px;
+          }
+        }
+
+        &.row-street-info {
+          .row-content {
+            .clearfix;
+            input {
+              float: left;
+              width: 72px;
+            }
+            label {
+              width: auto;
+              margin: 0 13px 0 16px;
+            }
+          }
+        }
+
+        &.row-phone {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          input {
+            margin-bottom: 5px;
+          }
+          .checkbox-row {
+            .clearfix;
+            color: #1b1b1b;
+            .checkbox-label {
+              float: left;
+              font-size: 13px;
+              line-height: 17px;
+            }
+            .help-icon {
+              float: left;
+              margin: 2px 0 0 8px;
+              position: relative;
+              .popover {
+                display: none;
+                width: 250px;
+                left: 26px;
+                top: -78px;
+                line-height: 15px;
+              }
+              &:hover {
+                .popover {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+
+        &.row-comment {
+          p {
+            color: #8c99aa;
+            font-size: 13px;
+            line-height: 17px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}

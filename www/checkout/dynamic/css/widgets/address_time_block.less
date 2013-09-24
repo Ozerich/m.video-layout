@@ -68,6 +68,27 @@
       }
     }
 
+    .address-preview {
+      background: #f9f9f9;
+      padding: 12px 15px;
+      margin: 10px 0;
+      a {
+        font-size: 13px;
+        float: right;
+        color: #004b8c;
+        border-bottom: 1px dotted #004b8c;
+        text-decoration: none;
+      }
+
+      p {
+        margin-bottom: 10px;
+        font-size: 15px;
+        &.comment {
+          color: #8c99aa
+        }
+      }
+    }
+
     .row {
 
       .row-content {
@@ -223,7 +244,7 @@
 
       .row-content {
 
-        p{
+        p {
           color: #8c99aa;
         }
 
@@ -236,8 +257,7 @@
           line-height: 34px;
           font-size: 15px;
 
-
-          &.selected{
+          &.selected {
             background: #dbe6fc;
           }
 
@@ -260,16 +280,16 @@
           margin-bottom: 18px;
           cursor: pointer;
 
-          .radio-container{
-            span{
+          .radio-container {
+            span {
               font-size: 14px;
             }
-            &.selected{
+            &.selected {
               border-radius: 4px;
             }
           }
 
-          .icon-time{
+          .icon-time {
             background: url('@{images_dir}/time_icon.png') top left no-repeat;
             width: 16px;
             height: 16px;
@@ -323,29 +343,29 @@
             font-size: 13px;
 
             border-bottom: 1px solid #e5e5e5;
-            &.first{
+            &.first {
               border-top: 1px solid #e5e5e5;
             }
 
-            &.selected{
+            &.selected {
               font-weight: bold;
             }
 
-            .period{
+            .period {
               float: left;
               width: 108px;
               display: block;
               font-size: 15px;
             }
 
-            .time{
+            .time {
               float: left;
               width: 120px;
               display: block;
               font-size: 13px;
             }
 
-            .price{
+            .price {
               float: right;
               width: 100px;
               display: block;
