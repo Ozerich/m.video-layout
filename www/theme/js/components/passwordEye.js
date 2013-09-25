@@ -1,7 +1,7 @@
 $.fn.PasswordEye = function (options) {
 
     if($.browser.msie && $.browser.version <= 9){
-        return;
+       // return;
     }
 
     var that = this;

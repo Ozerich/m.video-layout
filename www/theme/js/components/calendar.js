@@ -1,7 +1,7 @@
 function Calendar(_selector) {
     var that = this;
 
-    var month_labels = ['РЇРЅРІР°СЂСЊ', 'Р¤РµРІСЂР°Р»СЊ', 'РњР°СЂС‚', 'РђРїСЂРµР»СЊ', 'РњР°Р№', 'РСЋРЅСЊ', 'РСЋР»СЊ', 'РђРІРіСѓСЃС‚', 'РЎРµРЅС‚СЏР±СЂСЊ', 'РћРєС‚СЏР±СЂСЊ', 'РќРѕСЏР±СЂСЊ', 'Р”РµРєР°Р±СЂСЊ'];
+    var month_labels = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
     var $elem = $(_selector);
     if ($elem.length === 0) {
@@ -14,7 +14,7 @@ function Calendar(_selector) {
         html = '<div class="calendar">';
 
         html += '<p class="month-name">' + month_labels[_date_from.getMonth()] + '</p>';
-        html += '<table><thead><tr><th>РџРЅ</th><th>Р’С‚</th><th>РЎСЂ</th><th>Р§С‚</th><th>РџС‚</th><th>РЎР±</th><th>Р’СЃ</th></tr></thead><tbody>';
+        html += '<table><thead><tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr></thead><tbody>';
 
         var start = new Date(_date_from.getFullYear(), _date_from.getMonth(), _date_from.getDate() - (_date_from.getDay() == 0 ? 7 : _date_from.getDay()) + 1);
         var end = new Date(_date_to.getFullYear(), _date_to.getMonth(), _date_to.getDate() + (7 - (_date_to.getDay() == 0 ? 7 : _date_to.getDay())));
@@ -46,7 +46,7 @@ function Calendar(_selector) {
 
 
             var date_str = (date.getDate() < 10 ? '0' + date.getDate() : date.getDate()) + '.' + (date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth()) + '.' + date.getFullYear();
-            var price = date_str in _prices ? _prices[date_str].toString() : 'Р±РµСЃРїР»Р°С‚РЅРѕ';
+            var price = date_str in _prices ? _prices[date_str].toString() : 'бесплатно';
             html += '<td class="' + classes.join(' ') + '"><span class="day">' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate()) + '</span><span class="price">' + price + '</span></td>';
 
             if (date.getDay() == 0) {
@@ -173,9 +173,9 @@ $.fn.Calendar = function (options) {
         var i, j;
 
         var html = '<table width="100%" cellpadding="0" cellspacing="0" class="calendar-table"><tr class="weekdays">' +
-            '<td class="calendar-day first">РџРЅ</td><td class="calendar-day">Р’С‚</td><td class="calendar-day">РЎСЂ</td>' +
-            '<td class="calendar-day">Р§С‚</td><td class="calendar-day">РџС‚</td>' +
-            '<td class="calendar-day weekend">РЎР±</td><td class="calendar-day weekend last">Р’СЃ</td>' +
+            '<td class="calendar-day first">Пн</td><td class="calendar-day">Вт</td><td class="calendar-day">Ср</td>' +
+            '<td class="calendar-day">Чт</td><td class="calendar-day">Пт</td>' +
+            '<td class="calendar-day weekend">Сб</td><td class="calendar-day weekend last">Вс</td>' +
             '</tr>';
 
         html += '<tr class="days first-line">';
