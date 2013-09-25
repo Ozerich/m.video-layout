@@ -374,7 +374,7 @@
 </div>
 
 <div class="address-preview">
-    <a href="#" onclick="Checkout.openPopup($('#popup_address'));return false;">Изменить</a>
+    <a href="#">Изменить</a>
 
     <p>Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765</p>
 
@@ -417,7 +417,13 @@
             </div>
         </div>
 
-        <div class="btn-calendar"></div>
+        <div class="btn-calendar">
+            <div class="popover popover-top" style="display: none">
+                <div class="popover-content"></div>
+                <div class="popover-arrow popover-arrow-border"></div>
+                <div class="popover-arrow"></div>
+            </div>
+        </div>
 
     </div>
 </div>
@@ -1496,113 +1502,151 @@
         <a href="#" class="popup-close-btn"></a>
     </div>
     <div class="popup-content">
-        <p>Выбранный адрес будет использоваться как основной адрес доставки по умолчанию при следующем заказе.</p>
+        <div class="scroll-pane">
+            <p class="header">Выбранный адрес будет использоваться как основной адрес доставки по умолчанию при
+                следующем заказе.</p>
 
-        <div class="address-item selected"><div class="disabled-wrapper"></div>
-            <div class="right">
-                <span class="selected-label">Выбран</span>
-                <a href="#" class="edit-address-item-btn">Изменить</a>
-            </div>
-            <div class="left">
-                <p>Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765</p>
-
-                <p>+ 7 (926) 123-12-12</p>
-
-                <p class="comment">Этаж 8, подъезд 19, код домофона 123. Приезжайте поскорее.</p>
-            </div>
-        </div>
-        <div class="address-item"><div class="disabled-wrapper"></div>
-            <div class="right">
-                <button class="btn">Выбрать</button>
-                <a href="#" class="edit-address-item-btn">Изменить</a>
-            </div>
-            <div class="left">
-                <p>Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765</p>
-
-                <p>+ 7 (926) 123-12-12</p>
-
-                <p class="comment">Этаж 8, подъезд 19, код домофона 123. Приезжайте поскорее.</p>
-            </div>
-        </div>
-
-        <div class="address-form" style="display: none">
-            <div class="address-form-content">
-                <p class="address-form-header">Новый адрес</p>
-
-                <div class="row">
-                    <label for="address_form_new_city">Город <span class="star">*</span></label>
-
-                    <div class="row-content">
-                        <input type="text" id="address_form_new_city">
-                    </div>
+            <div class="address-item selected">
+                <div class="disabled-wrapper"></div>
+                <div class="right">
+                    <span class="selected-label">Выбран</span>
+                    <a href="#" class="edit-address-item-btn">Изменить</a>
                 </div>
+                <div class="left">
+                    <p>Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765</p>
 
-                <div class="row">
-                    <label for="address_form_new_street">Улица <span class="star">*</span></label>
+                    <p>+ 7 (926) 123-12-12</p>
 
-                    <div class="row-content">
-                        <input type="text" id="address_form_new_street">
-                    </div>
+                    <p class="comment">Этаж 8, подъезд 19, код домофона 123. Приезжайте поскорее.</p>
                 </div>
-
-                <div class="row row-street-info">
-                    <label for="address_form_new_home">Дом, корпус <span class="star">*</span><span class="small">или строение</span></label>
-
-                    <div class="row-content">
-                        <input type="text" maxlength="5" class="home-input" id="address_form_new_home">
-
-                        <label for="address_flat" class="double with-star">Квартира <span class="star">*</span><span
-                                class="small">или офис</span></label>
-                        <input type="text" maxlength="5" class="flat-input" id="address_form_new_flat">
-                    </div>
+            </div>
+            <div class="address-item">
+                <div class="disabled-wrapper"></div>
+                <div class="right">
+                    <button class="btn">Выбрать</button>
+                    <a href="#" class="edit-address-item-btn">Изменить</a>
                 </div>
+                <div class="left">
+                    <p>Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765</p>
 
-                <div class="row row-phone">
-                    <label for="address_form_new_phone">Телефон <span class="star">*</span></label>
+                    <p>+ 7 (926) 123-12-12</p>
 
-                    <div class="row-content">
-                        <input type="text" class="phone-input" id="address_form_new_phone">
+                    <p class="comment">Этаж 8, подъезд 19, код домофона 123. Приезжайте поскорее.</p>
+                </div>
+            </div>
 
-                        <div class="checkbox-row">
-                            <div class="checkbox" id="address_form_new_attach_phone"></div>
-                            <span class="checkbox-label">Привязать номер к профилю</span>
+            <div class="address-item">
+                <div class="disabled-wrapper"></div>
+                <div class="right">
+                    <button class="btn">Выбрать</button>
+                    <a href="#" class="edit-address-item-btn">Изменить</a>
+                </div>
+                <div class="left">
+                    <p>Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765</p>
 
-                            <div class="help-icon">
-                                <div class="popover popover-left">
-                                    <div class="popover-content">
-                                        Именно этот номер мы будем использовать для связи с Вами при доставке заказа.
-                                        Если Вы
-                                        хотите
-                                        указать дополнительный номер, то снимите эту галочку. В этом случае основной
-                                        номер Вы
-                                        сможете указать в блоке «Личные данные»."
+                    <p>+ 7 (926) 123-12-12</p>
+
+                    <p class="comment">Этаж 8, подъезд 19, код домофона 123. Приезжайте поскорее.</p>
+                </div>
+            </div>
+
+            <div class="address-item">
+                <div class="disabled-wrapper"></div>
+                <div class="right">
+                    <button class="btn">Выбрать</button>
+                    <a href="#" class="edit-address-item-btn">Изменить</a>
+                </div>
+                <div class="left">
+                    <p>Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765</p>
+
+                    <p>+ 7 (926) 123-12-12</p>
+
+                    <p class="comment">Этаж 8, подъезд 19, код домофона 123. Приезжайте поскорее.</p>
+                </div>
+            </div>
+
+
+            <div class="address-form" style="display: none">
+                <div class="address-form-content">
+                    <p class="address-form-header">Новый адрес</p>
+
+                    <div class="row">
+                        <label for="address_form_new_city">Город <span class="star">*</span></label>
+
+                        <div class="row-content">
+                            <input type="text" id="address_form_new_city">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="address_form_new_street">Улица <span class="star">*</span></label>
+
+                        <div class="row-content">
+                            <input type="text" id="address_form_new_street">
+                        </div>
+                    </div>
+
+                    <div class="row row-street-info">
+                        <label for="address_form_new_home">Дом, корпус <span class="star">*</span><span class="small">или строение</span></label>
+
+                        <div class="row-content">
+                            <input type="text" maxlength="5" class="home-input" id="address_form_new_home">
+
+                            <label for="address_flat" class="double with-star">Квартира <span class="star">*</span><span
+                                    class="small">или офис</span></label>
+                            <input type="text" maxlength="5" class="flat-input" id="address_form_new_flat">
+                        </div>
+                    </div>
+
+                    <div class="row row-phone">
+                        <label for="address_form_new_phone">Телефон <span class="star">*</span></label>
+
+                        <div class="row-content">
+                            <input type="text" class="phone-input" id="address_form_new_phone">
+
+                            <div class="checkbox-row">
+                                <div class="checkbox" id="address_form_new_attach_phone"></div>
+                                <span class="checkbox-label">Привязать номер к профилю</span>
+
+                                <div class="help-icon">
+                                    <div class="popover popover-left">
+                                        <div class="popover-content">
+                                            Именно этот номер мы будем использовать для связи с Вами при доставке
+                                            заказа.
+                                            Если Вы
+                                            хотите
+                                            указать дополнительный номер, то снимите эту галочку. В этом случае основной
+                                            номер Вы
+                                            сможете указать в блоке «Личные данные»."
+                                        </div>
+                                        <div class="popover-arrow popover-arrow-border"></div>
+                                        <div class="popover-arrow"></div>
                                     </div>
-                                    <div class="popover-arrow popover-arrow-border"></div>
-                                    <div class="popover-arrow"></div>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
 
-                </div>
+                    <div class="row row-comment">
+                        <label for="address_form_new_comment">Комментарий</label>
 
-                <div class="row row-comment">
-                    <label for="address_form_new_comment">Комментарий</label>
+                        <div class="row-content">
+                            <input type="text" class="address-input" id="address_form_new_comment">
 
-                    <div class="row-content">
-                        <input type="text" class="address-input" id="address_form_new_comment">
-
-                        <p>Вы можете указать, например, ближайшую станцию метро, код домофона. Так мы сможем быстрее Вас
-                            найти.</p>
+                            <p>Вы можете указать, например, ближайшую станцию метро, код домофона. Так мы сможем быстрее
+                                Вас
+                                найти.</p>
+                        </div>
                     </div>
+
                 </div>
 
-            </div>
-
-            <div class="address-form-footer">
-                <a href="#" class="cancel-btn">Отменить</a>
-                <button class="btn btn-red">Сохранить адрес</button>
+                <div class="address-form-footer">
+                    <a href="#" class="cancel-btn">Отменить</a>
+                    <button class="btn btn-red">Сохранить адрес</button>
+                </div>
             </div>
         </div>
     </div>

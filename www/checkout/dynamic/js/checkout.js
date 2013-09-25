@@ -273,32 +273,45 @@ jQuery(function ($) {
     });
 
     var $popup_pickups = $('#popup_pickups');
+    /*$('.btn-calendar').on('click', function () {
+     Checkout.openPopup($popup_pickups, function () {
+
+     $popup_pickups.find('.checkbox').Checkbox(function (value) {
+     if (value) {
+     $popup_pickups.find('.pickup-item').addClass('hidden');
+     $popup_pickups.find('.pickup-item[data-today=1]').removeClass('hidden');
+     }
+     else {
+     $popup_pickups.find('.pickup-item').removeClass('hidden');
+     }
+     $popup_pickups.find('.section').each(function(){
+     $(this).toggle($(this).find('.pickup-item').not('.hidden').length > 0);
+     });
+     $('.scroll-pane').data('jsp').reinitialise();
+     });
+
+     $popup_pickups.find('.scroll-pane').on('jsp-scroll-y',function (event, scrollPositionY, isAtTop, isAtBottom) {
+     var hasClass = $popup_pickups.find('.fixed-container').hasClass('fixed');
+     $popup_pickups.find('.fixed-container').toggleClass('fixed', scrollPositionY > 115).css('top', scrollPositionY + 'px');
+     $popup_pickups.find('.list-container').toggleClass('fixed', scrollPositionY > 115);
+
+     }).jScrollPane();
+     });
+     return false;
+     });
+     */
+
+    var calendar = new Calendar('.btn-calendar .popover-content');
+    calendar.setData(new Date(2013, 8, 12), new Date(2013, 8, 30), {
+        "15.08.2013": "500р",
+        "24.08.2013": "700р",
+        "30.08.2013": "900р"
+    });
     $('.btn-calendar').on('click', function () {
-        Checkout.openPopup($popup_pickups, function () {
-
-            $popup_pickups.find('.checkbox').Checkbox(function (value) {
-                if (value) {
-                    $popup_pickups.find('.pickup-item').addClass('hidden');
-                    $popup_pickups.find('.pickup-item[data-today=1]').removeClass('hidden');
-                }
-                else {
-                    $popup_pickups.find('.pickup-item').removeClass('hidden');
-                }
-                $popup_pickups.find('.section').each(function(){
-                    $(this).toggle($(this).find('.pickup-item').not('.hidden').length > 0);
-                });
-                $('.scroll-pane').data('jsp').reinitialise();
-            });
-
-            $popup_pickups.find('.scroll-pane').on('jsp-scroll-y',function (event, scrollPositionY, isAtTop, isAtBottom) {
-                var hasClass = $popup_pickups.find('.fixed-container').hasClass('fixed');
-                $popup_pickups.find('.fixed-container').toggleClass('fixed', scrollPositionY > 115).css('top', scrollPositionY + 'px');
-                $popup_pickups.find('.list-container').toggleClass('fixed', scrollPositionY > 115);
-
-            }).jScrollPane();
-        });
+        $('.btn-calendar').find('.popover').toggle();
         return false;
     });
+
 
     $popup_pickups.on('click', '.btn-map', function () {
         $(this).toggleClass('btn-map-opened');
@@ -311,28 +324,49 @@ jQuery(function ($) {
 
     var $popup_address = $('#popup_address');
 
-    $popup_address.find('#popup_address_btn_new').on('click', function(){
+    $popup_address.find('#popup_address_btn_new').on('click', function () {
         var $form = $popup_address.find('.address-form').hide();
         $form.find('.address-form-header').text('Новый адрес');
         $form.find('.address-form-footer .btn-red').text('Сохранить адрес');
         $popup_address.find('.address-item').last().after($form);
         $form.show();
+
+        $('#popup_address').find('.scroll-pane').data('jsp').reinitialise();
+        $('#popup_address').find('.scroll-pane').data('jsp').scrollToY(+$form.position().top - 10);
+
         return false;
     });
 
-    $popup_address.find('.edit-address-item-btn').on('click', function(){
+    $popup_address.find('.edit-address-item-btn').on('click', function () {
         var $form = $popup_address.find('.address-form').hide();
         $form.find('.address-form-header').text('Изменение адреса');
         $form.find('.address-form-footer .btn-red').text('Сохранить изменения');
         $(this).parents('.address-item').after($form);
         $form.show();
         $popup_address.find('.address-item').addClass('disabled');
+
+        $('#popup_address').find('.scroll-pane').data('jsp').reinitialise();
+        $('#popup_address').find('.scroll-pane').data('jsp').scrollToY(+$form.position().top - 10);
+
         return false;
     });
 
-    $popup_address.find('.address-form-footer .cancel-btn').on('click', function(){
+    $popup_address.find('.address-form-footer .cancel-btn').on('click', function () {
         $popup_address.find('.address-form').hide();
         $popup_address.find('.address-item').removeClass('disabled');
+
+        $('#popup_address').find('.scroll-pane').data('jsp').reinitialise();
+
+        return false;
+    });
+
+
+    $('.address-preview a').on('click', function () {
+        Checkout.openPopup($('#popup_address'), function () {
+            $('#popup_address').find('.scroll-pane').jScrollPane({
+                contentWidth: '0px'
+            });
+        });
         return false;
     });
 

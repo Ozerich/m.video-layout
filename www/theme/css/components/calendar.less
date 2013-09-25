@@ -1,79 +1,95 @@
 .calendar {
   cursor: auto;
-  width: 239px;
-  .weekdays, .days {
 
-  }
-  .days {
-    border: 1px solid #e3e3e3;
-  }
-  .calendar-day {
-    margin: 0;
-    width: 33px;
-    height: 39px;
-    line-height: 39px;
+  @border_color: #e4e4e4;
+
+  .month-name {
+    display: block;
     text-align: center;
-    &.prev-month{
-      color: #c8d1de;
-    }
+    color: #000;
+    .bold;
+    font-size: 15px;
 
-    color: #1b1b1b;
-    font-size: 11px;
-
-    span{
-      border-bottom: 1px dotted #1b1b1b;
+    &.month-name-bottom {
+      color: #989898;
     }
-    &.weekend{
-      color: #df4e51;
-      span{
-        border-bottom: 1px dotted #df4e51;
-      }
-    }
-    &.today{
-      color: #ff953c;
-      span{
-        border-bottom: 1px dotted #ff953c;
-      }
-    }
-
   }
 
-  .days {
-    .calendar-day {
+  table {
+    margin: 17px 0;
+    width: 100%;
+    border-collapse: collapse;
 
-      font-size: 13px;
-      border: 1px solid #e3e3e3;
-      border-width: 0;
-      border-right-width: 1px;
-      border-top-width: 1px;
+    th, td {
+      text-align: center;
+      width: 71px;
+      min-width: 71px;
+    }
+
+    th {
+      padding: 4px 0;
+      border-bottom: 1px solid @border_color;
+    }
+
+    td {
+      height: 40px;
+      padding-top: 12px;
+      border-bottom: 1px solid @border_color;
+      border-right: 1px solid @border_color;
+      font-size: 12px;
       cursor: pointer;
 
-      &:hover{
-        background: #d9e3fa;
-        span{
-          border: 0;
-        }
+      &:hover {
+        background: #d9e4fa;
       }
-
-      &.prev-month{
-        cursor: auto;
-        &:hover{
-          background: inherit;
-        }
-      }
-
 
       &.first {
-        border-right-width: 1px;
+        border-left: 1px solid @border_color;
       }
-      &.last{
-        border-right-width: 0px;
+
+      .day {
+        border-bottom: 1px dotted #000;
+      }
+
+      .price {
+        color: #909092;
+        display: block;
+        margin-top: 4px;
+      }
+
+      &:hover {
+        .day {
+          border-bottom: none !important;
+        }
+      }
+
+      &.disabled {
+        background: #f9f9f9;
+        .day {
+          color: #dadee1 !important;
+          border-bottom: none !important;
+        }
+        .price {
+          display: none;
+        }
+      }
+
+      &.today {
+        .day {
+          color: #ff9239;
+          border-bottom: 1px dotted #ff9239;
+        }
+      }
+
+      &.weekend {
+        .day {
+          color: #de4e57;
+          border-bottom: 1px dotted #de4e57;
+        }
       }
     }
-    &.first-line{
-      .calendar-day{
-        border-top-width: 0;
-      }
-    }
+
   }
+
 }
+

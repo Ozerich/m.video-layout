@@ -1,3 +1,78 @@
+function Calendar(_selector) {
+    var that = this;
+
+    var month_labels = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+
+    var $elem = $(_selector);
+    if ($elem.length === 0) {
+        return null;
+    }
+
+    var html = '';
+
+    this.setData = function (_date_from, _date_to, _prices) {
+        html = '<div class="calendar">';
+
+        html += '<p class="month-name">' + month_labels[_date_from.getMonth()] + '</p>';
+        html += '<table><thead><tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr></thead><tbody>';
+
+        var start = new Date(_date_from.getFullYear(), _date_from.getMonth(), _date_from.getDate() - (_date_from.getDay() == 0 ? 7 : _date_from.getDay()) + 1);
+        var end = new Date(_date_to.getFullYear(), _date_to.getMonth(), _date_to.getDate() + (7 - (_date_to.getDay() == 0 ? 7 : _date_to.getDay())));
+        var today = new Date();
+        var date = new Date(start);
+
+        while (true) {
+
+            if (date.getDay() == 1) {
+                html += '<tr>';
+            }
+
+            var classes = [];
+            if (date.getDay() == 1) {
+                classes.push('first');
+            }
+
+            if (date.getDay() == 0 || date.getDay() == 6) {
+                classes.push('weekend');
+            }
+
+            if (date < _date_from || date > _date_to) {
+                classes.push('disabled');
+            }
+
+            if (date.getDate() == today.getDate() && date.getMonth() == today.getMonth() && date.getFullYear() == today.getFullYear()) {
+                classes.push('today');
+            }
+
+
+            var date_str = (date.getDate() < 10 ? '0' + date.getDate() : date.getDate()) + '.' + (date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth()) + '.' + date.getFullYear();
+            var price = date_str in _prices ? _prices[date_str].toString() : 'бесплатно';
+            html += '<td class="' + classes.join(' ') + '"><span class="day">' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate()) + '</span><span class="price">' + price + '</span></td>';
+
+            if (date.getDay() == 0) {
+                html += '</tr>';
+            }
+
+            date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+
+            if (date.getFullYear() > end.getFullYear())break;
+            if (date.getFullYear() == end.getFullYear() && date.getMonth() > end.getMonth())break;
+            if (date.getFullYear() == end.getFullYear() && date.getMonth() == end.getMonth() && date.getDate() > end.getDate())break;
+        }
+
+        html += '</tbody></table>';
+
+        if (end.getMonth() != start.getMonth()) {
+            html += '<p class="month-name month-name-bottom">' + month_labels[end.getMonth()] + '</p>';
+        }
+
+        html += '</div>'
+        $elem.html(html);
+    };
+
+
+}
+
 $.fn.Calendar = function (options) {
     var that = this;
     var $calendar = $(this);
@@ -7,6 +82,7 @@ $.fn.Calendar = function (options) {
 
     options = $.extend({
         onChange: function () {
+
         }
     }, options);
 
@@ -30,7 +106,7 @@ $.fn.Calendar = function (options) {
         return isEnabled
     };
 
-    function dateToData(date){
+    function dateToData(date) {
 
         var year = date.getFullYear();
         var month = date.getMonth();
@@ -80,10 +156,10 @@ $.fn.Calendar = function (options) {
                     classes.push('today');
                 }
 
-                result += '<td data-date="' + dateToData(printDate) +'" class="calendar-day ' + classes.join(' ') + '"><span>' + _day + '</span></td>';
+                result += '<td data-date="' + dateToData(printDate) + '" class="calendar-day ' + classes.join(' ') + '"><span>' + _day + '</span></td>';
             }
             else {
-                result += '<td data-date="' + dateToData(printDate) +'" class="calendar-day prev-month">' + _day + '</td>';
+                result += '<td data-date="' + dateToData(printDate) + '" class="calendar-day prev-month">' + _day + '</td>';
             }
             printCount++;
             if (printCount % 7 == 0) {
@@ -150,8 +226,8 @@ $.fn.Calendar = function (options) {
 
     this.renderHTML(today.getMonth(), today.getFullYear());
 
-    $(document).click(function(event){
-        if($(event.target).parents('.calendar-table').length === 0){
+    $(document).click(function (event) {
+        if ($(event.target).parents('.calendar-table').length === 0) {
             $calendar.parent().hide();
         }
     })
