@@ -126,6 +126,26 @@ table {
 .input-eye-wr {
   float: left;
   position: relative;
+  padding-left: 7px;
+  padding-right: 37px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &.focus{
+    .box-shadow(0px 0px 10px, #fee69c);
+  }
+
+  input[type=text], input[type=password]{
+    border-radius: 0;
+    border: 0 none;
+    &:focus{
+      box-shadow: none;
+    }
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   i {
     cursor: pointer;
     background: url('@{theme_images_dir}/input_eye_hide.png');
@@ -136,14 +156,13 @@ table {
     right: 12px;
     display: block;
   }
+
   &.input-pass-visible {
     i {
       background: url('@{theme_images_dir}/input_eye_show.png');
     }
   }
-  input[type=text], input[type=password] {
-    padding-right: 37px;
-  }
+
 
 }
 
@@ -503,3 +522,4 @@ input[type=text], input[type=password], input[type=email] {
 
 input[type="password"]::-ms-reveal { display: none; }
 input[type="password"] { font-family: Arial;}
+input[type="text"]::-ms-clear { display: none;}

@@ -306,7 +306,7 @@ body > footer {
       font-family: @font_mvideo_bold;
       margin-bottom: 6px;
     }
-    p {
+    > p {
       color: #010101;
       font-size: 13px;
       line-height: 16px;
@@ -319,6 +319,28 @@ body > footer {
     .help-icon {
       float: left;
       margin-left: 3px;
+      position: relative;
+
+      .popover{
+        color: #000;
+        width: 300px;
+        display: none;
+        left: 25px;
+        top: -45px;
+        p{
+          margin-bottom: 5px;
+          color: #010101;
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+
+      &:hover{
+        .popover{
+          display: block;
+        }
+      }
+
     }
   }
 
@@ -363,6 +385,11 @@ body > footer {
           a {
             color: #ff953c;
             border-bottom: 1px dotted #ff953c;
+          }
+          p{
+            background: url('../img/yarev.jpg') 150px -22px no-repeat;
+            height: 21px;
+            padding-top: 2px;
           }
         }
         &.block-info {
