@@ -10,8 +10,9 @@
     less.env = 'development';</script>
     <script src="../theme/js/thirdparty/less.js" type="text/javascript"></script>
     <script src="../theme/js/thirdparty/jquery-1.8.1.min.js" type="text/javascript"></script>
+    <script src="../theme/js/components/passwordEye.js" type="text/javascript"></script>
 
-    <script src="js/slider.js" type="text/javascript"></script>
+    <script src="js/thankyou.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
     <script src="../theme/js/thirdparty/html5shiv.js"></script>
@@ -32,18 +33,10 @@
 
 <h2>Товары, которые вы только что приобрели</h2>
 
-<section class="order-container">
+<section class="order-container order-container-courier">
     <header>
         <p class="header-title"><strong>Заказ <span class="order-number">№10528354</span></strong> полностью оплачен
         </p>
-
-        <div class="icons">
-            <a href="#" class="social-icon social-icon-small social-icon-vk"></a>
-            <a href="#" class="social-icon social-icon-small social-icon-facebook"></a>
-            <a href="#" class="social-icon social-icon-small social-icon-twitter"></a>
-            <a href="#" class="icon-mail"></a>
-            <a href="#" class="icon-print"></a>
-        </div>
     </header>
     <div class="order-container-content">
 
@@ -53,7 +46,7 @@
 
                 <div class="value">
                     <span class="price">201 292 руб.</span>
-                    <span class="price-info">2 ? 101 646 руб.</span>
+                    <span class="price-info">2 x 101 646 руб.</span>
                 </div>
             </div>
             <div class="row row-item">
@@ -79,7 +72,7 @@
                 </div>
             </div>
             <div class="row">
-                <span class="param">Доставка по Москве</span>
+                <span class="param">Доставка: Москва</span>
 
                 <div class="value">
                     <span class="free">Бесплатно</span>
@@ -109,12 +102,120 @@
                     Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765
                     + 7 (926) 123-12-12
                     <div class="comment">Этаж 8, подъезд 19, код домофона 123. Приезжайте поскорее.</div>
+
+                </div>
+            </div>
+            <div class="row">
+                <label>Дата и время доставки</label>
+
+                <div class="value-block">
+                    Завтра днем (25 сентября с 12:00 до 18:00)
+                </div>
+            </div>
+            <div class="row">
+                <label>Способ оплаты</label>
+
+                <div class="value-block">
+                    По банковской карте VISA с номером XXXX – XXXX – XXXX – 1234
+                    Часть покупки (<span class="free">10 000</span>) оплачена бонусными рублями.
+                </div>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <div class="row row-time">
+                Если Вы сделали заказ в интернет-магазине поздно вечером или ночью, мы перезвоним Вам по телефону
+                <strong>+7
+                    (291) 123-12-12</strong> для подтверждения заказа на следующий день после 9 утра.
+            </div>
+            <div class="row row-car">
+                Курьер привезёт заказ в указанное время. В Вашем присутствии он распечатает товар, продемонстрирует
+                его внешний вид и проверит на работоспособность.
+                <span class="star">*</span>
+            </div>
+            <div class="row row-mail">
+                Для получения дополнительной информации о заказе Вы можете связаться с операторами нашего интернет
+                магазина.<br>По телефону <strong>+7 (123) 123-12-12</strong> или по электронной почте <a href="#">orders@mvideo.ru</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="order-container">
+    <header>
+        <p class="header-title"><strong>Заказ <span class="order-number">№10528354</span></strong> полностью оплачен
+        </p>
+    </header>
+    <div class="order-container-content">
+
+        <div class="price-container">
+            <div class="row row-item">
+                <span class="param">Планшетный компьютер Acer A211 (HT.HADEE.002) 16Gb Silver</span>
+
+                <div class="value">
+                    <span class="price">201 292 руб.</span>
+                    <span class="price-info">2 x 101 646 руб.</span>
+                </div>
+            </div>
+            <div class="row row-item">
+                <span class="param">Эпилятор Rowenta EP1040F4</span>
+
+                <div class="value">
+                    <span class="price">582 руб.</span>
+                    <span class="price-info">2 x 291 руб.</span>
+                </div>
+            </div>
+            <div class="row">
+                <span class="param">Стоимость товаров</span>
+
+                <div class="value">
+                    <span class="price">218 456 руб.</span>
+                </div>
+            </div>
+            <div class="row">
+                <span class="param">Подъем на этаж</span>
+
+                <div class="value">
+                    <span class="free">Бесплатно</span>
+                </div>
+            </div>
+            <div class="row">
+                <span class="param">Доставка: Москва</span>
+
+                <div class="value">
+                    <span class="free">Бесплатно</span>
+                </div>
+            </div>
+            <div class="row row-total">
+                <span class="param">ИТОГО:</span>
+
+                <div class="value">
+                    <span class="price">220 291 руб.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary-container">
+            <div class="row">
+                <label>Способ доставки</label>
+
+                <div class="value-block">
+                    Самовывоз
+                </div>
+            </div>
+            <div class="row">
+                <label>Адрес магазина</label>
+
+                <div class="value-block">
+                    Москва, ул. проспект Сахарова, д. 4, корп. 12, кв. 765
+                    + 7 (926) 123-12-12
+
                     <div class="address-actions">
                         <a href="#" class="action action-map"><span>Посмотреть на карте</span></a>
 
                         <div class="my-shop-btn-block">
                             <a href="#" class="action action-shop"
-                               onclick="$('.my-shop-success').show(); $('.my-shop-btn-block').hide();return false;"><span>Сделать Моим магазинам</span></a>
+                               onclick="$(this).parents('.row').find('.my-shop-success').show(); $(this).parents('.row').find('.my-shop-btn-block').hide();return false;"><span>Сделать Моим магазинам</span></a>
 
                             <div class="popover popover-left">
                                 <div class="popover-content">
@@ -140,7 +241,7 @@
                 </div>
             </div>
             <div class="row">
-                <label>Дата и время доставки</label>
+                <label>Вы можете забрать свой заказ, начиная с</label>
 
                 <div class="value-block">
                     Завтра днем (25 сентября с 12:00 до 18:00)
@@ -150,34 +251,23 @@
                 <label>Способ оплаты</label>
 
                 <div class="value-block">
-                    По банковской карте VISA с номером ???? – ???? – ???? – 1234
-                    Часть покупки (<span class="free">10 000</span>) оплачена бонусными рублями.
+                   Наличными в магазине
                 </div>
             </div>
         </div>
 
         <div class="info-container">
-            <div class="row row-time">
-                Если Вы сделали заказ в интернет-магазине поздно вечером или ночью, мы перезвоним Вам по телефону
-                <strong>+7
-                    (291) 123-12-12</strong> для подтверждения заказа на следующий день после 9 утра.
-            </div>
-            <div class="row row-car">
-                Курьер привезёт заказ в указанное время. В Вашем присутствии он распечатает товар, продемонстрирует
-                его внешний вид и проверит на работоспособность.
-                <span class="star">*</span>
-            </div>
-            <div class="row row-mail">
-                Для получения дополнительной информации о заказе Вы можете связаться с операторами нашего интернет
-                магазина.<br>По телефону <strong>+7 (123) 123-12-12</strong> или по электронной почте <a href="#">orders@mvideo.ru</a>
+            <div class="row row-mail one-line">
+                Как только заказ будет сформирован и готов к выдаче, мы вышлем Вам подтверждение по электронной почте и SMS.
             </div>
         </div>
 
     </div>
 </section>
 
+
 <section class="bonuscard-container">
-    <h1>Карта М.Видео Бонус–Альфа-Банк с номером ???9696???</h1>
+    <h1>Карта М.Видео Бонус–Альфа-Банк с номером xxx969xxx</h1>
 
     <p>За этот заказ мы начислили на вашу бонусную карту <span class="price">10 000</span> бонусных рублей.</p>
     <a href="#" class="help-icon">
@@ -192,6 +282,33 @@
             <div class="popover-arrow"></div>
         </div>
     </a>
+</section>
+
+<section class="account-container">
+
+    <p class="bold header">Виталий, мы заметили, что вы заказывали у нас раньше</p>
+
+    <p>Последний заказ был сделан с адреса: <span class="bold">г. Москва, ул. Балтийская...</span></p>
+
+    <p>Для Вашего удобства мы предлагаем объединить аккаунты на нашем сайт. Вы сможете использовать введёдные данные
+        (например, адрес, номер телефона, любимые магазины), вести единый список заказов и отслеживать их статусы,
+        быстро осуществлять покупки. Введите свой пароль от сайта Мвидео, чтобы объединить аккаунты:</p>
+
+    <div class="block-password">
+        <label>Пароль</label>
+        <input type="password">
+        <a href="#" onclick="$('.block-restore').fadeIn(); return false;">Забыли пароль?</a>
+    </div>
+
+    <div class="block-restore" style="display: none">
+        Мы отправили на Вашу электронную почту <span class="bold">yandex@gmail.ru</span> инструкцию по<br>
+        восстановлению пароля.
+        <a href="#">Перейти на сайт gmail.ru</a>
+    </div>
+
+    <div class="submit-container">
+        <button class="btn btn-red disabled">Сохранить данные</button>
+    </div>
 </section>
 
 <section class="opinion-container">

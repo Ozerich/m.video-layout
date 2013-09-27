@@ -43,4 +43,14 @@ $(function () {
         update();
         return false;
     });
+
+
+
+    $('.account-container input[type=password]').PasswordEye();
+
+    $('.account-container .block-password').on('keyup', 'input', function(){
+        $('.account-container .btn').toggleClass('disabled', $(this).val().length < 6);
+    });
+
+
 });

@@ -131,14 +131,14 @@ body {
           width: 474px;
           border-right: 1px solid #d4d4d4;
           background: url('@{images_dir}/footer_icon_left.png') 17px 28px no-repeat;
-          p{
+          p {
             padding-left: 111px;
           }
         }
         &.right {
           width: 463px;
           background: url('@{images_dir}/footer_icon_right.png') 17px 28px no-repeat;
-          p{
+          p {
             padding-left: 89px;
           }
         }
@@ -183,8 +183,6 @@ body {
     .clearfix;
     position: relative;
   }
-
-
 
   h1 {
     font-size: 24px;
@@ -401,6 +399,32 @@ body {
       }
     }
 
+    .order-set {
+      .order-set-header {
+        padding: 17px 0;
+        span {
+          font-size: 15px;
+          color: #8c99aa;
+          .bold;
+          float: left;
+        }
+
+        .action {
+          float: right;
+          color: #004b8c;
+          font-size: 13px;
+          text-decoration: none;
+          border-bottom: 1px dotted #004b8c;
+        }
+      }
+
+      .order-item{
+        border-bottom: none;
+      }
+
+      border-bottom: 1px solid #e4e4e4;
+    }
+
     .order-item {
       border-bottom: 1px solid #e4e4e4;
       padding: 12px 0;
@@ -436,6 +460,8 @@ body {
       .order-item-price {
         float: right;
 
+
+
         span {
           display: block;
           text-align: right;
@@ -450,6 +476,42 @@ body {
           &.price-additional {
             font-size: 13px;
             color: #8c99aa;
+          }
+
+          &.discount{
+            color: #ed1c29;
+          }
+        }
+      }
+
+      .order-item-services {
+        clear: both;
+        margin-top: 17px;
+        h4 {
+          font-size: 15px;
+          color: #8c99aa;
+          padding: 12px 0;
+        }
+
+        li {
+          background: url('@{images_dir}/bullet_gray.png') left 3px no-repeat;
+          display: block;
+          padding-left: 14px;
+          .clearfix;
+          margin-bottom: 12px;
+          font-size: 13px;
+          .price {
+            float: right;
+            display: block;
+          }
+          .name {
+            width: 190px;
+            display: block;
+            float: left;
+            line-height: 15px;
+            b {
+              .bold;
+            }
           }
         }
       }
@@ -515,8 +577,7 @@ body {
     }
   }
 
-
-  .error-tooltip{
+  .error-tooltip {
     background: #fff;
     color: #000000;
     font-size: 13px;

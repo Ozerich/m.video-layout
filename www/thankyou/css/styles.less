@@ -53,6 +53,7 @@ body > footer {
   .order-container {
     border: 1px solid #d4d4d4;
     padding: 1px;
+    margin-bottom: 15px;
 
     header {
       padding: 0 14px 0 11px;
@@ -70,29 +71,6 @@ body > footer {
           color: #004b8c;
         }
       }
-      .icons {
-        float: right;
-        margin-top: 7px;
-        .icon-print {
-          background: url('../img/icon-print.png');
-          width: 15px;
-          height: 15px;
-          margin-left: 12px;
-          float: left;
-        }
-        .icon-mail {
-          background: url('../img/icon-mail.png');
-          width: 16px;
-          height: 12px;
-          margin-top: 2px;
-          margin-left: 30px;
-          float: left;
-        }
-        .social-icon {
-          float: left;
-          margin-left: 4px;
-        }
-      }
     }
 
     .order-container-content {
@@ -105,6 +83,7 @@ body > footer {
         padding: 15px 10px;
         float: right;
         color: #1b1b1b;
+        margin-bottom: 15px;
 
         .row {
           margin-bottom: 11px;
@@ -258,6 +237,11 @@ body > footer {
 
         .row {
           margin-bottom: 19px;
+          &.one-line{
+
+            padding-top: 8px;
+            height: 22px;
+          }
 
           &.row-time {
             background: url('../img/icon-clock.png') 16px 4px no-repeat;
@@ -299,7 +283,6 @@ body > footer {
     padding-left: 64px;
     .clearfix;
     margin: 27px 0 37px;
-    margin-bottom: 64px;
     h1 {
       color: #000000;
       font-size: 15px;
@@ -344,6 +327,64 @@ body > footer {
     }
   }
 
+  .account-container{
+    font-size: 13px;
+    background: #f9f9f9;
+    padding: 15px;
+    line-height: 17px;
+
+    p{
+      &.header{
+        font-size: 15px;
+      }
+      margin-bottom: 10px;
+    }
+
+    .block-password {
+      .clearfix;
+      margin-bottom: 10px;
+
+      label {
+        float: left;
+        line-height: 32px;
+        margin-right: 14px;
+      }
+
+      input{
+        float: left;
+      }
+
+      a {
+        color: #004b8c;
+        font-size: 13px;
+        border-bottom: 1px dotted #004b8c;
+        text-decoration: none;
+        float: left;
+        margin-left: 25px;
+        margin-top: 8px;
+      }
+    }
+
+    .block-restore {
+      background: #eef2fb;
+      padding: 7px 10px;
+      margin: 0 0 10px 56px;
+      font-size: 13px;
+      .bold {
+        font-weight: bold;
+      }
+      a {
+        text-decoration: none;
+        color: #004b8c;
+      }
+    }
+
+    .submit-container{
+      margin-left: 56px;
+    }
+
+  }
+
   .opinion-container {
     margin: 27px 0 60px;
     .blocks {
@@ -357,7 +398,7 @@ body > footer {
         .opinion-link {
           margin: 69px 0 11px;
           a {
-            text-decoration: none;
+            text-decoration: underline;
             font-family: @font_mvideo_bold;
             font-size: 15px;
           }
@@ -375,7 +416,6 @@ body > footer {
           background: url('../img/mvideo-logo.png') 19px 22px no-repeat;
           a {
             color: #ed1c29;
-            border-bottom: 1px dotted #ed1c29;
           }
         }
         &.block-yandexmarket {
@@ -384,7 +424,6 @@ body > footer {
           background: url('../img/yandex.market-logo.png') 21px 28px no-repeat;
           a {
             color: #ff953c;
-            border-bottom: 1px dotted #ff953c;
           }
           p{
             background: url('../img/yarev.jpg') 150px -22px no-repeat;

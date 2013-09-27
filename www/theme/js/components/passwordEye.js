@@ -1,7 +1,7 @@
 $.fn.PasswordEye = function (options) {
 
-    if($.browser.msie && $.browser.version <= 9){
-       // return;
+    if ($.browser.msie && $.browser.version <= 9) {
+        // return;
     }
 
     var that = this;
@@ -18,16 +18,16 @@ $.fn.PasswordEye = function (options) {
 
     var value = $wrapper.find('input[type=password]').val();
 
-    $wrapper.find('input').on('change', function () {
+    $wrapper.find('input').on('change',function () {
         if ($(this).attr('type') == 'text') {
             $wrapper.find('input[type=password]').val($(this).val());
         }
         else {
             $wrapper.find('input[type=text]').val($(this).val());
         }
-    }).on('focus', function(){
+    }).on('focus',function () {
             $(this).parents('.input-eye-wr').addClass('focus');
-        }).on('blur', function(){
+        }).on('blur', function () {
             $(this).parents('.input-eye-wr').removeClass('focus');
         });
 
