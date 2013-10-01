@@ -99,13 +99,13 @@ Checkout.Helper = {
 
     getItemsCountLabel: function (count) {
         if (count === 1) {
-            return 'С‚РѕРІР°СЂ';
+            return 'товар';
         }
         if (count >= 2 && count <= 4) {
-            return 'С‚РѕРІР°СЂР°';
+            return 'товара';
         }
         if (count >= 5) {
-            return 'С‚РѕРІР°СЂРѕРІ';
+            return 'товаров';
         }
     },
 
@@ -146,7 +146,7 @@ Checkout.openPopup = function ($popup, callback) {
 
 jQuery(function ($) {
 
-    // РЎРѕР±РёСЂР°СЋ РІСЃРµ Р·Р°РєР°Р·С‹
+    // Собираю все заказы
     $('.order-block').find('.order-item').each(function () {
         var $item = $(this);
 
@@ -170,7 +170,7 @@ jQuery(function ($) {
         Checkout.addItem(item);
     });
 
-    // РЎРѕР±РёСЂР°СЋ РІСЃРµ РїСѓРЅРєС‚С‹ СЃР°РјРѕРІС‹РІРѕР·Р°
+    // Собираю все пункты самовывоза
     $('#popup_pickup').find('.shop-line').each(function () {
         var $pickup = $(this);
 
@@ -303,9 +303,9 @@ jQuery(function ($) {
 
     var calendar = new Calendar('.btn-calendar .popover-content');
     calendar.setData(new Date(2013, 8, 12), new Date(2013, 8, 30), {
-        "15.08.2013": "500СЂ",
-        "24.08.2013": "700СЂ",
-        "30.08.2013": "900СЂ"
+        "15.08.2013": "500р",
+        "24.08.2013": "700р",
+        "30.08.2013": "900р"
     });
     $('.btn-calendar').on('click', function () {
         $('.btn-calendar').find('.popover').toggle();
@@ -326,8 +326,8 @@ jQuery(function ($) {
 
     $popup_address.find('#popup_address_btn_new').on('click', function () {
         var $form = $popup_address.find('.address-form').hide();
-        $form.find('.address-form-header').text('РќРѕРІС‹Р№ Р°РґСЂРµСЃ');
-        $form.find('.address-form-footer .btn-red').text('РЎРѕС…СЂР°РЅРёС‚СЊ Р°РґСЂРµСЃ');
+        $form.find('.address-form-header').text('Новый адрес');
+        $form.find('.address-form-footer .btn-red').text('Сохранить адрес');
         $popup_address.find('.address-item').last().after($form);
         $form.show();
 
@@ -339,8 +339,8 @@ jQuery(function ($) {
 
     $popup_address.find('.edit-address-item-btn').on('click', function () {
         var $form = $popup_address.find('.address-form').hide();
-        $form.find('.address-form-header').text('РР·РјРµРЅРµРЅРёРµ Р°РґСЂРµСЃР°');
-        $form.find('.address-form-footer .btn-red').text('РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ');
+        $form.find('.address-form-header').text('Изменение адреса');
+        $form.find('.address-form-footer .btn-red').text('Сохранить изменения');
         $(this).parents('.address-item').after($form);
         $form.show();
         $popup_address.find('.address-item').addClass('disabled');

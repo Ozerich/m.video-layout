@@ -51,7 +51,7 @@ function Widget(_id) {
 
                 if ($input) {
                     if (error.label) {
-                        tooltipHtml += '<li><span>вЂ“</span> ' + error.label + '</li>';
+                        tooltipHtml += '<li><span>–</span> ' + error.label + '</li>';
                     }
                     else {
                         $input.addClass('error-with-tooltip');
@@ -106,9 +106,9 @@ function Widget(_id) {
             case "address_city":
                 if (value.length === 0) {
                     return {
-                        label: 'Р“РѕСЂРѕРґ',
+                        label: 'Город',
                         input: input,
-                        error: 'РќРµ Р·Р°РїРѕР»РЅРµРЅ РіРѕСЂРѕРґ'
+                        error: 'Не заполнен город'
                     };
                 }
                 break;
@@ -116,9 +116,9 @@ function Widget(_id) {
             case "address_street":
                 if (value.length === 0) {
                     return {
-                        label: 'РђРґСЂРµСЃ',
+                        label: 'Адрес',
                         input: input,
-                        error: 'РќРµ Р·Р°РїРѕР»РЅРµРЅ РђРґСЂРµСЃ'
+                        error: 'Не заполнен Адрес'
                     };
                 }
                 break;
@@ -126,9 +126,9 @@ function Widget(_id) {
             case "address_home":
                 if (value.length === 0) {
                     return {
-                        label: 'Р”РѕРј',
+                        label: 'Дом',
                         input: input,
-                        error: 'РќРµ Р·Р°РїРѕР»РЅРµРЅ Р”РѕРј'
+                        error: 'Не заполнен Дом'
                     };
                 }
                 break;
@@ -136,9 +136,9 @@ function Widget(_id) {
             case "address_phone":
                 if (value.length === 0) {
                     return {
-                        label: 'РўРµР»РµС„РѕРЅ',
+                        label: 'Телефон',
                         input: input,
-                        error: 'РќРµ Р·Р°РїРѕР»РЅРµРЅ РўРµР»РµС„РѕРЅ'
+                        error: 'Не заполнен Телефон'
                     };
                 }
                 break;
@@ -146,9 +146,9 @@ function Widget(_id) {
             case "address_flat":
                 if (value.length === 0) {
                     return {
-                        label: 'РљРІР°СЂС‚РёСЂР°',
+                        label: 'Квартира',
                         input: input,
-                        error: 'РќРµ Р·Р°РїРѕР»РЅРµРЅ РљРІР°СЂС‚РёСЂР°'
+                        error: 'Не заполнен Квартира'
                     };
                 }
                 break;
@@ -159,15 +159,15 @@ function Widget(_id) {
             case "personal_email":
                 if (value.length === 0) {
                     return {
-                        label: 'Р­Р»РµРєС‚СЂРѕРЅРЅР°СЏ РїРѕС‡С‚Р°',
+                        label: 'Электронная почта',
                         input: input,
-                        error: 'РќРµ Р·Р°РїРѕР»РЅРµРЅ E-mail'
+                        error: 'Не заполнен E-mail'
                     };
                 }
                 else if (Checkout.Helper.validateEmail(value) === false) {
                     return {
                         input: input,
-                        error: '<p>РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚ Р°РґСЂРµСЃР° СЌР»РµРєС‚СЂРѕРЅРЅРѕР№ РїРѕС‡С‚С‹. РћРЅ РґРѕР»Р¶РµРЅ РІС‹РіР»СЏРґРµС‚СЊ РїСЂРёРјРµСЂРЅРѕ С‚Р°Рє:</p><p class="bold">mail@mail.ru</p>'
+                        error: '<p>Неверный формат адреса электронной почты. Он должен выглядеть примерно так:</p><p class="bold">mail@mail.ru</p>'
                     };
                 }
                 break;
@@ -175,9 +175,9 @@ function Widget(_id) {
             case "personal_name":
                 if (value.length === 0) {
                     return {
-                        label: 'РРјСЏ',
+                        label: 'Имя',
                         input: input,
-                        error: 'РРјСЏ'
+                        error: 'Имя'
                     };
                 }
                 break;
@@ -192,7 +192,7 @@ function Widget(_id) {
                     return {
                         label: '',
                         input: null,
-                        error: 'Р’С‹ РЅРµ РїСЂРёРЅСЏР»Рё СЃРѕРіР»Р°С€РµРЅРёРµ'
+                        error: 'Вы не приняли соглашение'
                     };
                 }
 
@@ -267,7 +267,7 @@ function Widget(_id) {
 
                     $pickup.show().removeClass('example');
 
-                    $pickup.find('.block-line-header h3').text('РЎР°РјРѕРІС‹РІРѕР· (' + deliveryData.pickups[i].pickup.name + ')');
+                    $pickup.find('.block-line-header h3').text('Самовывоз (' + deliveryData.pickups[i].pickup.name + ')');
 
                     var item_names = [];
                     for (var j = 0; j < deliveryData.pickups[i].items.length; j++) {
@@ -406,7 +406,7 @@ function Widget(_id) {
                         $row.addClass('first');
                     }
 
-                    $row.find('.item-pickup span').text(deliveryData.pickups[i].pickup ? 'РЎР°РјРѕРІС‹РІРѕР·' : 'Р”РѕСЃС‚Р°РІРєР° РєСѓСЂСЊРµСЂРѕРј');
+                    $row.find('.item-pickup span').text(deliveryData.pickups[i].pickup ? 'Самовывоз' : 'Доставка курьером');
                     $row.find('.item-pickup a').text(deliveryData.pickups[i].pickup ? deliveryData.pickups[i].pickup.name : '');
 
                     var item_names = [];
@@ -445,10 +445,10 @@ function Widget(_id) {
 
             if (deliveryData.hasCourier) {
 
-                $block.find('.address-container .address').text($('#address_city').val() + ', ' + $('#address_street').val() + ', Рґ.' +
+                $block.find('.address-container .address').text($('#address_city').val() + ', ' + $('#address_street').val() + ', д.' +
                     $('#address_home').val() + ', ' +
-                    ($('#address_korpus').val().length ? 'РєРѕСЂРї. ' + $('#address_korpus').val() + ', ' : '') +
-                    'РєРІ. ' + $('#address_flat').val()
+                    ($('#address_korpus').val().length ? 'корп. ' + $('#address_korpus').val() + ', ' : '') +
+                    'кв. ' + $('#address_flat').val()
                 );
 
                 $block.find('.address-container .phone').text($('#address_phone').val());
@@ -477,7 +477,7 @@ function Widget(_id) {
 
                 var $pickup = $block.find('.pickups-container .pickup.example').clone();
                 $pickup.removeClass('example').show();
-                $pickup.find('.param').text('РЎР°РјРѕРІС‹РІРѕР· (' + deliveryData.pickups[i].pickup.name + ')');
+                $pickup.find('.param').text('Самовывоз (' + deliveryData.pickups[i].pickup.name + ')');
 
                 $block.find('.pickups-container').append($pickup);
             }
@@ -585,16 +585,16 @@ function Widget(_id) {
             });
 
 
-            // РџРѕРїР°Рї РґР»СЏ СЃР°РјРѕРІС‹РІРѕР·Р°
+            // Попап для самовывоза
             var $popup = $('#popup_pickup');
 
-            // РќР°Р¶Р°С‚РёРµ РЅР° "Р—Р°РєСЂС‹С‚СЊ РїРѕРїР°Рї"
+            // Нажатие на "Закрыть попап"
             $popup.find('.popup-close-btn').click(function () {
                 $.unblockUI();
                 return false;
             });
 
-            // РќР°Р¶Р°С‚РёРµ РЅР° РІС‹Р±РѕСЂ РјР°РіР°Р·РёРЅР°
+            // Нажатие на выбор магазина
             $popup.find('.table-body .cell-order a').click(function () {
 
                 var itemModel = Checkout.findItemById($popup.data('id'));
@@ -609,7 +609,7 @@ function Widget(_id) {
                 return false;
             });
 
-            // РќР°Р¶Р°С‚РёРµ РЅР° "РР·РјРµРЅРёС‚СЊ РјРµСЃС‚Рѕ РґРѕСЃС‚Р°РІРєРё"
+            // Нажатие на "Изменить место доставки"
             $item.find('.change-pickup').click(function () {
                 var model = $(this).parents('.item').data('model');
                 $popup.data('id', model.id);
@@ -665,8 +665,8 @@ function Widget(_id) {
         $widget.find('#delivery_calendar').Calendar({
             onChange: function (date) {
 
-                var month_names = ['СЏРЅРІР°СЂСЏ', 'С„РµРІСЂР°Р»СЏ', 'РјР°СЂС‚Р°', 'Р°РїСЂРµР»СЏ', 'РјР°СЏ', 'РёСЋРЅСЏ', 'РёСЋР»СЏ', 'Р°РІРіСѓСЃС‚Р°', 'СЃРµРЅС‚СЏР±СЂСЏ', 'РѕРєС‚СЏР±СЂСЏ', 'РЅРѕСЏР±СЂСЏ', 'РґРµРєР°Р±СЂСЏ'];
-                var week_names = ['РїРѕРЅРµРґРµР»СЊРЅРёРє', 'РІС‚РѕСЂРЅРёРє', 'СЃСЂРµРґР°', 'С‡РµС‚РІРµСЂРі', 'РїСЏС‚РЅРёС†Р°', 'СЃСѓР±Р±РѕС‚Р°', 'РІРѕСЃРєСЂРµСЃРµРЅСЊРµ'];
+                var month_names = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+                var week_names = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
 
                 var $day = $widget.find('.row-day .day.last');
 
@@ -683,7 +683,7 @@ function Widget(_id) {
             prepareItem: function (object, request) {
                 return '<span class="city"><strong>' + object.city.substr(0, request.length) + '</strong>' + object.city.substr(request.length) + '</span><span class="full">' + object.full + '</span>'
             },
-            noItemsHtml: '<p class="no-found">РќРµС‚ СЃРѕРІРїР°РґРµРЅРёР№</p>',
+            noItemsHtml: '<p class="no-found">Нет совпадений</p>',
             onSelect: function (object) {
                 return object.city;
             }

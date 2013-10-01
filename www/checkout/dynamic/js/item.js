@@ -17,7 +17,7 @@ function Item(_id) {
         $deliveryBlock = $('#delivery_method_block').find('.item[data-id=' + this.id + ']');
 
         if ($deliveryBlock.length === 0) {
-            throw "Div РґР»СЏ РІС‹Р±РѕСЂР° РґРѕСЃС‚Р°РІРєРё РЅРµ РЅР°Р№РґРµРЅ";
+            throw "Div для выбора доставки не найден";
         }
 
         $deliveryBlock.data('model', this);
