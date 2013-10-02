@@ -10,7 +10,9 @@ module.exports = function(grunt) {
                     yuicompress: true
 				},
 				files: {
-					"checkout/dynamic/css/styles.css": "checkout/dynamic/css/styles.less"
+					"checkout/dynamic/css/styles.css": "checkout/dynamic/css/styles.less",
+					"thankyou/css/styles.css": "thankyou/css/styles.less",
+					"auth/css/styles.css": "auth/css/styles.less"
 				}
 			}
 		},
