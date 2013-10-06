@@ -370,6 +370,5 @@ jQuery(function ($) {
         return false;
     });
 
-    Checkout.openPopup($('#popup_address_conflict'));
 });
 
