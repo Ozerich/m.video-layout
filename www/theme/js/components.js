@@ -366,6 +366,7 @@ $.fn.PasswordEye = function (options) {
     $wrapper.find('i').on('click', function () {
         $wrapper.toggleClass('input-pass-visible');
         $wrapper.find('input').toggle();
+        $wrapper.find('input:visible').focus();
     });
 
 };;
