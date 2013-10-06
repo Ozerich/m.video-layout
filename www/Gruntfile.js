@@ -56,13 +56,14 @@ module.exports = function (grunt) {
                 src: ["theme/js/components/min/*.js"],
                 dest: "theme/js/components.min.js"
             }
-        }
+        },
 
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
     grunt.registerTask('build', ['less:build', 'uglify:plugins', 'uglify:components', 'concat:plugins', 'concat:components_min', 'concat:components']);

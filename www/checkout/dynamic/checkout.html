@@ -109,8 +109,8 @@
 
         <div class="order-set">
             <div class="order-set-header">
-            <span>Комплект со скидкой</span>
-            <a href="#" class="action">Подробная стоимость</a>
+                <span>Комплект со скидкой</span>
+                <a href="#" class="action">Подробная стоимость</a>
             </div>
 
             <div class="order-item" data-id="20024698" data-price="1291" data-count="2" data-pickup="0">
@@ -1713,6 +1713,78 @@
     </div>
     <div class="popup-footer">
         <a href="#" id="popup_address_btn_new" class="btn popup-submit">Добавить еще один адрес</a>
+    </div>
+</div>
+
+<div id="popup_bonuscard_payment" class="popup" style="display: none">
+    <div class="popup-header">
+        <h2 class="popup-title">Оплата бонусными рублями</h2>
+        <a href="#" class="popup-close-btn"></a>
+    </div>
+    <div class="popup-content">
+        <div class="row row-first">
+            <p class="header-text">Для добавления скидки <span class="price">1 500 рублей</span> введите пароль,
+                полученный в SMS</p>
+
+            <p class="step-1">SMS с паролем будет отправлен на номер: +7 925 890 54 54</p>
+
+            <p class="step-2" style="display: none">Пароль успешно отправлен на номер: +7 925 890 54 54</p>
+        </div>
+        <div class="row row-second">
+            <div class="param">
+                <span class="param-label">Сумма заказа</span>
+                <span class="param-value">5 000 руб.</span>
+            </div>
+            <div class="param param-discount">
+                <span class="param-label">Сумма с учетом скидки</span>
+                <span class="param-value">3 500 руб.</span>
+            </div>
+        </div>
+        <div class="password-container">
+            <div class="form-block" style="display: none">
+                <label for="popup_bonuscard_payment_password">Пароль</label>
+                <input type="password" id="popup_bonuscard_payment_password">
+                <a href="#">Отправить еще раз</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup-footer">
+        <a href="#" class="btn-cancel">Вернуться в корзину</a>
+        <a href="#" class="btn btn-red" id="popup_bonuscard_payment_btn_send_password">Отправить пароль</a>
+        <a href="#" class="btn btn-red" id="popup_bonuscard_payment_btn_submit" style="display: none">Применить</a>
+    </div>
+    <script>
+        $('#popup_bonuscard_payment').find('#popup_bonuscard_payment_btn_send_password').on('click', function () {
+            $('#popup_bonuscard_payment_btn_send_password').hide();
+            $('#popup_bonuscard_payment_btn_submit').show();
+            $('#popup_bonuscard_payment').find('.step-1').hide();
+            $('#popup_bonuscard_payment').find('.step-2, .form-block').show();
+            return false;
+        });
+
+        $('#popup_bonuscard_payment').find('.btn-cancel').on('click', function () {
+            $('#popup_bonuscard_payment').find('.popup-close-btn').trigger('click');
+            return false;
+        });
+    </script>
+</div>
+
+<div id="popup_address_conflict" class="popup" style="display: none">
+    <div class="popup-header">
+        <h2 class="popup-title">Противоречие данных при оформлении заказа</h2>
+        <a href="#" class="popup-close-btn"></a>
+    </div>
+    <div class="popup-content">
+        <p>Вы выбрали товар в городе <span class="city">Нижний Новгород</span>,<br>а доставку заказали в город <span
+                class="city">Москва</span>.</p>
+        <div class="columns">
+            <div class="column column-left">
+                <a href="#">Изменить адрес доставки</a>
+            </div>
+            <div class="column column-right">
+                Перейдите на сайт<br><a href="http://www.mvideo.ru/">«М.Видео»  Москва</a>
+            </div>
+        </div>
     </div>
 </div>
 
