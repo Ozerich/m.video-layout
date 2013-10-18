@@ -132,7 +132,7 @@ Checkout.openPopup = function ($popup, callback) {
 
     $.blockUI({
         message: $popup,
-        baseZ: 1000000000,
+        baseZ: 999999,
         css: {
             top: ($(window).height() - $popup.outerHeight()) / 2 + 'px',
             left: ($(window).width() - $popup.outerWidth()) / 2 + 'px',
